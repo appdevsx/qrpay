@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
-import '../../utils/dimensions.dart';
+import '../../utils/assets.dart';
+
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration:  const BoxDecoration(
-     
-      ),
+      decoration: const BoxDecoration(),
       child: Scaffold(
         backgroundColor: Colors.white,
         body: SizedBox(
@@ -20,40 +19,14 @@ class SplashScreen extends StatelessWidget {
     );
   }
 
-  // body widget contain all the widgets
+  
   _bodyWidget(BuildContext context) {
-    return Padding(
-      padding: EdgeInsets.only(
-        left: Dimensions.defaultPaddingSize,
-        right: Dimensions.defaultPaddingSize,
-        top: Dimensions.defaultPaddingSize,
-        bottom: Dimensions.defaultPaddingSize,
-      ),
-      child: Column(
-        children: [
-          _mainBodyWidget(context),
-        ],
-      ),
-    );
-  }
-
-  _mainBodyWidget(BuildContext context) {
-    return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.90,
-      width: MediaQuery.of(context).size.width,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-       //   Image.asset(Strings.splashScreenLogoImagePath),
-          SizedBox(
-            height: Dimensions.heightSize * 2,
-          ),
-          // Text(
-          //   Strings.splashScreenMessage,
-          //   style: CustomStyle.splashScreenSubTextTitle,
-          //   textAlign: TextAlign.center,
-          // ),
-        ],
+    return Container(
+      alignment: Alignment.center,
+      child: Image.asset(
+        Assets.appLogo,
+        height: MediaQuery.of(context).size.height * 0.3,
+        width: MediaQuery.of(context).size.width * 0.5,
       ),
     );
   }
