@@ -57,15 +57,19 @@ flutter_app_name:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/logo/logo.png"
+  image_path: "assets/Logo/QRPay-Logo-Update.png"
 flutter:
 
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/BG/
+    - assets/Clipart/
+    - assets/Icon/
+    - assets/Onboard/
+    - assets/Logo/
+    
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
