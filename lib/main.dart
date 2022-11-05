@@ -42,7 +42,7 @@ class MyApp extends StatelessWidget {
 
 
         navigatorKey: Get.key,
-               initialRoute: Routes.splashScreen,
+               initialRoute: Routes.onboardScreen,
         getPages: Pages.list,
         builder: (context, widget) {
           ScreenUtil.init(context);

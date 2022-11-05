@@ -1,8 +1,9 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Dimensions {
+  static double onboardTitle=48.00.sp;
+  static double onboardsubTitle=24.00.sp;
   static double extraLargeTextSize = 22.00.sp;
-
   static double defaultTextSize = 18.00.sp;
   static double mediumTextSize = 16.00.sp;
   static double smallTextSize = 15.00.sp;

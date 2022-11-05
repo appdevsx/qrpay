@@ -1,4 +1,6 @@
+import 'dart:async';
 import 'package:get/get.dart';
+import '../../routes/routes.dart';
 
 
 class SplashController extends GetxController {
@@ -9,9 +11,9 @@ class SplashController extends GetxController {
   }
 
   _goToScreen() async {
-    // Timer(
-    //   const Duration(seconds: 3),
-    //   () => Get.offAllNamed(Routes.onboardScreen),
-    // );
+    Timer(
+      const Duration(seconds: 3),
+      () => Get.offAllNamed(Routes.onboardScreen),
+    );
   }
 }
