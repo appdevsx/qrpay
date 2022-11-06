@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:get/get.dart';
+import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
@@ -18,9 +19,14 @@ class Pages {
         );
       }),
     ),
-    GetPage(
+        GetPage(
       name: Routes.onboardScreen,
       page: () =>   OnboardSceen(),
     ),
+    GetPage(
+      name: Routes.signUpScreen,
+      page: () =>   const SignUpScreen(),
+    ),
+    
   ];
 }

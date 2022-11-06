@@ -1,34 +1,24 @@
-import 'dart:math';
+// ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'package:qrpay/controller/onboard_controller/onboard_controller.dart';
+import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/size.dart';
+import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/onboard_widget/onboard_widget.dart';
 
 import '../../data/onbaord_data.dart';
-import '../../utils/custom_color.dart';
+import '../../utils/dimensions.dart';
 
-final controler = Get.put(OnboardController());
+class OnboardSceen extends StatelessWidget {
+  OnboardSceen({Key? key}) : super(key: key);
 
-class OnboardSceen extends StatefulWidget {
-  const OnboardSceen({Key? key}) : super(key: key);
-
-  @override
-  _OnboardSceen createState() => _OnboardSceen();
-}
-
-class _OnboardSceen extends State<OnboardSceen> {
-  late LiquidController liquidController;
-  late UpdateType updateType;
-
-  @override
-  void initState() {
-    liquidController = LiquidController();
-    super.initState();
-  }
-
+  final controller = Get.put(OnboardController());
+   final lQcontroller= LiquidController();
+ 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,18 +28,19 @@ class _OnboardSceen extends State<OnboardSceen> {
 
   _bodyWidget(BuildContext context) {
     // return Obx(() {
-      return Stack(
-        children: [
-          _liquiedSwipeWIdget(context),
-          _slideWidget(context),
-          _skipWidget(context),
-        ],
-      );
+    return Stack(
+      children: [
+        _liquiedSwipeWIdget(context),
+        _slideWidget(context),
+        _skipWidget(context),
+      ],
+    );
     // });
   }
 
   _liquiedSwipeWIdget(BuildContext context) {
     return LiquidSwipe.builder(
+      
       itemCount: onboardData.length,
       itemBuilder: (context, index) {
         return OnboardWidget(
@@ -60,12 +51,26 @@ class _OnboardSceen extends State<OnboardSceen> {
           text3: onboardData[index].text3,
         );
       },
+      slideIconWidget: InkWell(
+        onTap: (){
+          controller.onPressdLiquidBUtton();
+        },
+        child: const CircleAvatar(
+          radius: 20,
+          child: CircleAvatar(
+            radius: 18,
+            child: Icon(
+              Icons.arrow_forward_ios,
+            ),
+          ),
+        ),
+      ),
+      
       positionSlideIcon: 0.8,
-      slideIconWidget: const Icon(Icons.arrow_back_ios),
-      onPageChangeCallback: controler.pageChangeCallback,
+      onPageChangeCallback: controller.pageChangeCallback,
       waveType: WaveType.liquidReveal,
-      liquidController: liquidController,
-      fullTransitionValue: 880,
+      liquidController: lQcontroller,
+      fullTransitionValue: 888,
       enableSideReveal: true,
       enableLoop: true,
       ignoreUserGestureWhileAnimating: true,
@@ -87,6 +92,10 @@ class _OnboardSceen extends State<OnboardSceen> {
     );
   }
 
+  Widget _buildDot(int index) {
+    return Container();
+  }
+
   _skipWidget(BuildContext context) {
     return Row(
       mainAxisAlignment: mainSpaceBet,
@@ -94,56 +103,45 @@ class _OnboardSceen extends State<OnboardSceen> {
         Align(
           alignment: Alignment.topLeft,
           child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: ElevatedButton(
-              onPressed: () {
-                liquidController.jumpToPage(
-                    page: liquidController.currentPage + 1 >
-                            onboardData.length - 1
-                        ? 0
-                        : liquidController.currentPage + 1);
+            padding: EdgeInsets.only(
+                top: Dimensions.defaultPaddingSize * 1.8,
+                left: Dimensions.defaultPaddingSize),
+            child: InkWell(
+              onTap: (){
+                lQcontroller.jumpToPage(page: 2);
               },
-              child: const Text("Next"),
+              child: Text(
+                Strings.qrpay,
+                style: GoogleFonts.inter(
+                  fontSize: Dimensions.extraLargeTextSize,
+                  fontWeight: FontWeight.w600,
+                  color: controller.selectedPageIndex.value == 0
+                      ? CustomColor.primaryTextColor
+                      : CustomColor.whiteColor,
+                ),
+              ),
             ),
           ),
         ),
         Align(
           alignment: Alignment.topRight,
           child: Padding(
-            padding: const EdgeInsets.all(25.0),
-            child: ElevatedButton(
-              onPressed: () {
-                liquidController.animateToPage(
-                    page: onboardData.length - 1, duration: 700);
-              },
-              child:  const Text("Skip to End"),
+            padding: EdgeInsets.only(
+                top: Dimensions.defaultPaddingSize * 1.8,
+                right: Dimensions.defaultPaddingSize),
+            child: Text(
+              Strings.skip,
+              style: GoogleFonts.inter(
+                fontSize: Dimensions.smallTextSize,
+                fontWeight: FontWeight.w500,
+                color: controller.selectedPageIndex.value == 0
+                    ? CustomColor.primaryTextColor
+                    : CustomColor.whiteColor,
+              ),
             ),
           ),
         ),
       ],
-    );
-  }
-
-  Widget _buildDot(int index) {
-    double selectedness = Curves.easeOut.transform(
-      max(
-        0.0,
-        1.0 - ((controler.page ?? 0) - index).abs(),
-      ),
-    );
-    double zoom = 1.0 + (2.0 - 1.0) * selectedness;
-    return SizedBox(
-      width: 25.0,
-      child: Center(
-        child: Material(
-          color: CustomColor.secondaryTextColor,
-          type: MaterialType.card,
-          child: SizedBox(
-            width: 8.0 * zoom,
-            height: 8.0 * zoom,
-          ),
-        ),
-      ),
     );
   }
 }

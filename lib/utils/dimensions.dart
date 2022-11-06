@@ -1,7 +1,7 @@
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Dimensions {
-  static double onboardTitle=48.00.sp;
+  static double titleText=48.00.sp;
   static double onboardsubTitle=24.00.sp;
   static double extraLargeTextSize = 22.00.sp;
   static double defaultTextSize = 18.00.sp;
@@ -25,5 +25,5 @@ class Dimensions {
   static double iconSizeSmall = 12.00.h;
   static double iconSizeDefault = 20.00.h;
   static double iconSizeLarge = 25.00.h;
-  static double defaultAppBarHeight = 65.00.h;
+ 
 }

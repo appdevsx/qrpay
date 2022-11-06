@@ -41,7 +41,7 @@ class OnboardWidget extends StatelessWidget {
             Text(
               text2,
               style: GoogleFonts.inter(
-                fontSize: Dimensions.onboardTitle,
+                fontSize: Dimensions.titleText,
                 fontWeight: FontWeight.w700,
                 color: CustomColor.primaryTextColor,
               ),

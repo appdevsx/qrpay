@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:qrpay/routes/routes.dart';
 
 import '../../data/onbaord_data.dart';
 
 class OnboardController extends GetxController {
-
-
   int page = 0;
   pageChangeCallback(int lpage) {
-   page= lpage;
+    page = lpage;
   }
-
-
-
-
 
   var selectedPageIndex = 0.obs;
   var pageController = PageController();
@@ -38,6 +33,10 @@ class OnboardController extends GetxController {
       duration: 300.milliseconds,
       curve: Curves.ease,
     );
+  }
+
+  void onPressdLiquidBUtton() {
+    Get.toNamed(Routes.signUpScreen);
   }
 
 // navigate to the welcome screen
