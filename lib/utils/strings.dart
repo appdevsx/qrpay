@@ -23,7 +23,7 @@ class Strings {
       'Use Secure & Instant Money Transfer App Now';
   static const String phoneNumber = 'Phone Number';
   static const String continues = 'Continue';
-  static const String alreadyHaveAnAccount = 'Already have an account?';
+  static const String alreadyHaveAnAccount = 'Already have an account? ';
   static const String signIn = 'Sign In';
 
   //Otp verification
@@ -52,7 +52,7 @@ class Strings {
   static const String password = 'Password';
   static const String enterPassword = 'Enter Password';
   static const String confirmPassword = 'Confirm Password';
-  static const String enterConPass = 'Enter Confirm Password';
+  static const String enterConfirmPassword = 'Enter Confirm Password';
   static const String byUsing =
       'By using QRPay’s you agree to our Privacy Policy & User Agreement.';
 

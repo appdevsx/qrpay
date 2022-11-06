@@ -38,6 +38,10 @@ dependencies:
   get: ^4.6.5
   liquid_swipe: ^3.0.0
   google_fonts: ^3.0.1
+  flutter_svg: ^1.0.3
+  pin_code_fields: ^7.4.0
+  country_code_picker: ^2.0.2
+  dotted_border: ^2.0.0+3
 
 dev_dependencies:
   flutter_test:

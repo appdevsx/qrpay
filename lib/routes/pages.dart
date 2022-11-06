@@ -1,6 +1,8 @@
 // ignore_for_file: unused_import
 
 import 'package:get/get.dart';
+import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
+import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
 import '../binding/splash_binding.dart';
@@ -25,7 +27,15 @@ class Pages {
     ),
     GetPage(
       name: Routes.signUpScreen,
-      page: () =>   const SignUpScreen(),
+      page: () =>    SignUpScreen(),
+    ),
+     GetPage(
+      name: Routes.otpVerificationScreen,
+      page: () =>    OtpVerificationScreen(),
+    ),
+      GetPage(
+      name: Routes.kYCFromScreen,
+      page: () =>    KYCFromScreen(),
     ),
     
   ];
