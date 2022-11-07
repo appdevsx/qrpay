@@ -75,6 +75,16 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
      fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w500,
   );
-
+//dialoge 
+static var forgotTitleTextStyle = GoogleFonts.inter(
+    color: CustomColor.textButtonColor,
+     fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  static var forgotSubTitleTextStyle = GoogleFonts.inter(
+    color: CustomColor.thirdTextColor,
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w500,
+  );
   
 }

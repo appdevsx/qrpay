@@ -5,7 +5,6 @@ import 'package:get/get.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:qrpay/routes/routes.dart';
 
-
 class OtpVerificationController extends GetxController {
   final otpCodeController = TextEditingController();
   bool hasError = false;
@@ -56,5 +55,7 @@ class OtpVerificationController extends GetxController {
     Get.toNamed(Routes.kYCFromScreen);
   }
 
- 
+  void onPressedSigninOTPSubmit() {
+    Get.toNamed(Routes.resetPasswordScreen);
+  }
 }

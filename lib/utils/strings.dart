@@ -84,7 +84,7 @@ class Strings {
   static const String welcomeBackto = 'Welcome Back to';
   static const String signInWith = ' Sign In with ';
   static const String forgotPasswordd = 'Forgot Password?';
-  static const String newQRPay = 'New to QRPay?';
+  static const String newQRPay = 'New to QRPay? ';
   static const String enterYourPhoneNumber =
       'Enter your Phone Number to Reset your account';
   static const String cancel = 'Cancel';

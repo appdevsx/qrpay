@@ -9,4 +9,7 @@ class Routes {
   static const String facelockEnterScreen = '/facelockEnterScreen';
   static const String waitForApprovalScreen = '/waitForApprovalScreen';
   static const String signInOptionsScreen = '/signInOptionsScreen';
+  static const String signInScreen = '/signInScreen';
+  static const String signinOTPVerificationScreen = '/signinOTPVerificationScreen';
+  static const String resetPasswordScreen = '/resetPasswordScreen';
 }
