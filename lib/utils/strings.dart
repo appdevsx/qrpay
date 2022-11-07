@@ -129,6 +129,8 @@ class Strings {
 
   //money transfer
   static const String moneyTransfer = 'Money Transfer';
+  static const String qrAddress = 'QR Address';
+  static const String qrCode = '7QRpdfhgb351gaj';
   static const String qC0135689 = 'QC0135689';
   static const String recipient = 'Recipient';
   static const String architBarhum = 'Archit Barhum';
@@ -138,6 +140,7 @@ class Strings {
   static const String uSD = 'USD';
   static const String transferFee = 'Transfer Fee:';
   static const String uSD2 = ' 2.00 USD';
+  static const String paste = 'Paste';
 
   //preview
   static const String preview = 'Preview';

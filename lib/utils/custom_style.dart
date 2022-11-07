@@ -75,6 +75,11 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
      fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w500,
   );
+  static var pasteTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor.withOpacity(0.8),
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w600,
+  );
 //dialoge 
 static var forgotTitleTextStyle = GoogleFonts.inter(
     color: CustomColor.textButtonColor,

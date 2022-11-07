@@ -9,13 +9,13 @@ class PrimaryInputWidget extends StatefulWidget {
   final String labelText;
   final String hintText;
   final int maxLines;
-  final Icon? prefixIcon;
+  final Widget? suffix;
   final TextEditingController controller;
   const PrimaryInputWidget({
     Key? key,
     required this.controller,
     this.maxLines = 1,
-    this.prefixIcon,
+    this.suffix,
     required this.hintText,
     required this.labelText,
   }) : super(key: key);
@@ -68,6 +68,7 @@ class _PrimaryInputWidgetState extends State<PrimaryInputWidget> {
              floatingLabelBehavior: FloatingLabelBehavior.always,
               labelText: widget.labelText,
               hintText: widget.hintText,
+              suffixIcon: widget.suffix,
               labelStyle: GoogleFonts.inter(
                 color: focusNode!.hasFocus
                     ? CustomColor.primaryColor

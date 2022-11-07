@@ -23,7 +23,7 @@ class BottomNavBarScreen extends StatelessWidget {
       () => Scaffold(
         drawer: const CustomDrawer(),
         key: scaffoldKey,
-        appBar: appbarWidget(context),
+        // appBar:AppBar(bottom: ),
         // extendBody: true,
         backgroundColor: Colors.white,
         bottomNavigationBar:
@@ -32,6 +32,8 @@ class BottomNavBarScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: bottomNavBarController
             .page[bottomNavBarController.selectedIndex.value],
+
+            
       ),
     );
   }

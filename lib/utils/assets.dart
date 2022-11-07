@@ -8,7 +8,7 @@ class Assets {
   static const String onboard3 = 'assets/Onboard/Onboard-3.png';
 
   //Bg
-  static const String dashboard = 'assets/BG/dashboard.svg';
+  static const String dashboard = 'assets/BG/dashboard.png';
   static const String drawerMenu = 'assets/BG/drawer_menu.svg';
   static const String myWallett = 'assets/BG/my_wallet.svg';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';

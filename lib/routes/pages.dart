@@ -18,6 +18,7 @@ import '../views/bottom_navbar/bottom_navbar.dart';
 import '../views/bottom_navbar/dashboard_screen.dart';
 import '../views/confirmation_screens/confirmation_screen.dart';
 import '../views/confirmation_screens/wait_for_aproval_screen.dart';
+import '../views/scan_qr_screens/money_transfer_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
 import 'routes.dart';
 
@@ -91,6 +92,10 @@ class Pages {
      GetPage(
       name: Routes.dashBordScreen,
       page: () => const DashBordScreen(),
+    ),
+     GetPage(
+      name: Routes.moneyTransferScreen,
+      page: () =>  MoneyTransferScreen(),
     ),
   ];
 }
