@@ -34,15 +34,10 @@ class MyApp extends StatelessWidget {
         title: Strings.appName,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-      primaryColor:
-     CustomColor.primaryColor,
+          primaryColor: CustomColor.primaryColor,
         ),
-
-
-
-
         navigatorKey: Get.key,
-               initialRoute: Routes.signInScreen,
+        initialRoute: Routes.resetPasswordScreen,
         getPages: Pages.list,
         builder: (context, widget) {
           ScreenUtil.init(context);

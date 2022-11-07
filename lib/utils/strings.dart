@@ -96,7 +96,7 @@ class Strings {
 
   //congratulation
   static const String congratulations = 'Congratulations';
-  static const String your =
+  static const String yourPasswordHasBeen =
       'Your password has been reset Successfully, Sign in again now.';
   static const String opps = 'Opss!!';
   static const String somethingWentWrong =

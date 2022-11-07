@@ -14,6 +14,7 @@ import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
 import '../views/auth/sign_in_screens/signin_otp_verification.dart';
+import '../views/confirmation_screens/confirmation_screen.dart';
 import '../views/confirmation_screens/wait_for_aproval_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
 import 'routes.dart';
@@ -57,25 +58,29 @@ class Pages {
       name: Routes.facelockEnterScreen,
       page: () => FacelockEnterScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.waitForApprovalScreen,
       page: () => WaitForApprovalScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.signInOptionsScreen,
-      page: () =>  SignInOptionsScreen(),
+      page: () => SignInOptionsScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.signInScreen,
-      page: () =>  const SignInScreen(),
+      page: () => const SignInScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.signinOTPVerificationScreen,
-      page: () =>  SigninOTPVerificationScreen(),
+      page: () => SigninOTPVerificationScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.resetPasswordScreen,
-      page: () =>  const ResetPasswordScreen(),
+      page: () => ResetPasswordScreen(),
+    ),
+      GetPage(
+      name: Routes.congratulationScreen,
+      page: () => CongratulationScreen(),
     ),
   ];
 }
