@@ -7,6 +7,7 @@ class CustomColor {
   static const Color primaryTextColor = Color(0xFF1D1D1D);
   static const Color secondaryTextColor = Color(0xFF828282);
   static const Color thirdTextColor = Color(0xFF4F4F4F);
+  static const Color textButtonColor = Color(0xFF282828);
 
   static const Color borderColor = Color(0xFFBDBDBD);
   static const Color transparentColor = Colors.transparent;

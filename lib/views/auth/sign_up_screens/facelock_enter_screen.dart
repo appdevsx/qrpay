@@ -8,17 +8,17 @@ import 'package:qrpay/widgets/button_widget/primary_button.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../controller/auth/sign_up_controllers/fingerPrint_controller.dart';
+import '../../../controller/auth/sign_up_controllers/facelock_capture_controller.dart';
 import '../../../utils/assets.dart';
 
-class FingerPrintScreen extends StatelessWidget {
-   FingerPrintScreen({super.key});
-  final controller =Get.put(FingerPrintColotroller());
+class FacelockEnterScreen extends StatelessWidget {
+  FacelockEnterScreen({super.key});
+  final controller = Get.put(FacelockColotroller());
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: Strings.fingerprint),
+      appBar: CustomAppBar(title: Strings.facelock),
       body: _bodyWidget(context),
     );
   }
@@ -43,11 +43,11 @@ class FingerPrintScreen extends StatelessWidget {
     return Column(
       children: [
         Text(
-          Strings.fingerprintAuthentication,
+          Strings.facelockAuthentication,
           style: CustomStyle.boldTitleTextStyle,
         ),
         Text(
-          Strings.useFingerPrintSystem,
+          Strings.useFacelockSystem,
           style: CustomStyle.defaultSubTitleTextStyle,
         ),
       ],
@@ -61,16 +61,7 @@ class FingerPrintScreen extends StatelessWidget {
       ),
       child: Column(
         children: [
-          SvgPicture.asset(Assets.fingerlock),
-          addVerticalSpace(Dimensions.heightSize * 2.4),
-          Text(
-            Strings.fourtyPercent,
-            style: CustomStyle.percentTextStyle,
-          ),
-          Text(
-            Strings.complete,
-            style: CustomStyle.priColorTextStyle,
-          ),
+          SvgPicture.asset(Assets.facelock),
         ],
       ),
     );
@@ -82,15 +73,15 @@ class FingerPrintScreen extends StatelessWidget {
         PrimaryButtonWidget(
           text: Strings.confirm,
           onPressed: () {
-            controller.onPressedConfirm();
+            controller.onPressedconfirm();
           },
         ),
         addVerticalSpace(
           Dimensions.heightSize * 2,
         ),
         InkWell(
-          onTap: (){
-           controller.onPressedSkipNow();
+          onTap: () {
+            controller.onPressedSkipNow();
           },
           child: Text(
             Strings.skipNow,

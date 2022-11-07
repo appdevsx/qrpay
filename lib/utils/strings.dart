@@ -55,6 +55,7 @@ class Strings {
   static const String enterConfirmPassword = 'Enter Confirm Password';
   static const String byUsing = 'By using QRPay’s you agree to our ';
   static const String userAgreement = ' User Agreement.';
+  static const String or = 'or';
 
   //fingetprint
   static const String fingerprint = 'Fingerprint';
@@ -81,7 +82,7 @@ class Strings {
 
   //sign In
   static const String welcomeBackto = 'Welcome Back to';
-  static const String withs = 'with';
+  static const String signInWith = ' Sign In with ';
   static const String forgotPasswordd = 'Forgot Password?';
   static const String newQRPay = 'New to QRPay?';
   static const String enterYourPhoneNumber =

@@ -48,7 +48,7 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
     fontWeight: FontWeight.w500,
   );
    static var resendTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryTextColor,
+    color: CustomColor.textButtonColor,
      fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
   );
@@ -62,6 +62,17 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
    static var smallestTExtStyle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
      fontSize: Dimensions.smallestTextSize*0.9,
+    fontWeight: FontWeight.w500,
+  );
+  //
+   static var percentTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor,
+     fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w700,
+  );
+  static var priColorTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor,
+     fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w500,
   );
 
