@@ -14,6 +14,8 @@ import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
 import '../views/auth/sign_in_screens/signin_otp_verification.dart';
+import '../views/bottom_navbar/bottom_navbar.dart';
+import '../views/bottom_navbar/dashboard_screen.dart';
 import '../views/confirmation_screens/confirmation_screen.dart';
 import '../views/confirmation_screens/wait_for_aproval_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
@@ -81,6 +83,14 @@ class Pages {
       GetPage(
       name: Routes.congratulationScreen,
       page: () => CongratulationScreen(),
+    ),
+      GetPage(
+      name: Routes.bottomNavBarScreen,
+      page: () => BottomNavBarScreen(),
+    ),
+     GetPage(
+      name: Routes.dashBordScreen,
+      page: () => const DashBordScreen(),
     ),
   ];
 }

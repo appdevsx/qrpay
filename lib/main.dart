@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           primaryColor: CustomColor.primaryColor,
         ),
         navigatorKey: Get.key,
-        initialRoute: Routes.resetPasswordScreen,
+        initialRoute: Routes.bottomNavBarScreen,
         getPages: Pages.list,
         builder: (context, widget) {
           ScreenUtil.init(context);

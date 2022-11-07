@@ -86,5 +86,21 @@ static var forgotTitleTextStyle = GoogleFonts.inter(
      fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w500,
   );
+  //notification
+   static var smallTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryTextColor,
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  static var notificationSubTextStyle = GoogleFonts.inter(
+    color: CustomColor.secondaryTextColor,
+     fontSize: Dimensions.smallestTextSize,
+    fontWeight: FontWeight.w600,
+  );
+    static var dateTextStyle = GoogleFonts.inter(
+    color: CustomColor.secondaryTextColor,
+     fontSize: Dimensions.smallestTextSize,
+    fontWeight: FontWeight.w500,
+  );
   
 }

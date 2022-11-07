@@ -13,4 +13,6 @@ class Routes {
   static const String signinOTPVerificationScreen = '/signinOTPVerificationScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String congratulationScreen = '/congratulationScreen';
+  static const String bottomNavBarScreen = '/bottomNavBarScreen';
+  static const String dashBordScreen = '/dashBordScreen';
 }
