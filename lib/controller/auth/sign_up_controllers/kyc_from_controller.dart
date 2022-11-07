@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:qrpay/routes/routes.dart';
 
 class KYCFromController extends GetxController {
   final firstNameController = TextEditingController();
@@ -24,5 +25,16 @@ class KYCFromController extends GetxController {
     passwordController.dispose();
     confirmPasswordController.dispose();
     super.dispose();
+  }
+
+  void onPressedSignIn() {}
+
+  void onPressedUserAgriment() {}
+
+  void onPressedPrivacy() {}
+  
+
+  void onPresedcontinue() {
+    Get.toNamed(Routes.fingerPrintScreen);
   }
 }

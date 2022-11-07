@@ -8,6 +8,7 @@ import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/button_widget/primary_button.dart';
+import 'package:qrpay/widgets/input_widget/country_phone_input_widget.dart';
 
 import '../../../utils/custom_color.dart';
 import '../../../widgets/button_widget/custom_text_button.dart';
@@ -22,12 +23,11 @@ class SignUpScreen extends StatelessWidget {
   }
 
   _bodyWidget(BuildContext context) {
-    return Column(
-      crossAxisAlignment: crossStart,
+    return ListView(
       children: [
         _logoWidget(context),
         _textWidget(context),
-        // _inputFieldWidget(context),
+        _inputFieldWidget(context),
         _buttonWidget(context),
       ],
     );
@@ -35,7 +35,7 @@ class SignUpScreen extends StatelessWidget {
 
   _logoWidget(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: Dimensions.marginSize * 2.4),
+      margin: EdgeInsets.only(top: Dimensions.marginSize * 2),
       child: Center(
         child: Image.asset(
           Assets.appLogo,
@@ -50,7 +50,7 @@ class SignUpScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(
         top: Dimensions.marginSize * 2,
-        bottom: Dimensions.marginSize * 4,
+        bottom: Dimensions.marginSize * 3,
       ),
       padding: EdgeInsets.only(
         left: Dimensions.defaultPaddingSize * 0.9,
@@ -82,20 +82,23 @@ class SignUpScreen extends StatelessWidget {
     );
   }
 
-  // _inputFieldWidget(BuildContext context) {
-  //   return Container(
-  //     padding: EdgeInsets.symmetric(
-  //       horizontal: Dimensions.defaultPaddingSize * 6,
-  //     ),
-  //     child: PhoneNumberWithCountryCodeInput(
-  //         controller: controller.phoneNumberController,
-  //         hintText: Strings.phoneNumber),
-  //   );
-  // }
+  _inputFieldWidget(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(
+          horizontal: Dimensions.defaultPaddingSize * 0.6,
+          vertical: Dimensions.defaultPaddingSize * 0.4),
+      child: CountryPhoneWidget(
+        controller: controller.phoneNumberController,
+        hintText: "XXX XXXX XXX",
+        labelText: Strings.phoneNumber,
+      ),
+    );
+  }
 
   _buttonWidget(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
+        vertical: Dimensions.defaultPaddingSize,
         horizontal: Dimensions.defaultPaddingSize * 0.6,
       ),
       child: Column(
@@ -121,7 +124,7 @@ class SignUpScreen extends StatelessWidget {
                     onPressed: () {
                       controller.onPressedSignIn();
                     },
-                     text: Strings.signIn,
+                    text: Strings.signIn,
                   ),
                 ),
               ],

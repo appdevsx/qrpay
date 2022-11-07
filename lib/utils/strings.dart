@@ -53,8 +53,8 @@ class Strings {
   static const String enterPassword = 'Enter Password';
   static const String confirmPassword = 'Confirm Password';
   static const String enterConfirmPassword = 'Enter Confirm Password';
-  static const String byUsing =
-      'By using QRPay’s you agree to our Privacy Policy & User Agreement.';
+  static const String byUsing = 'By using QRPay’s you agree to our ';
+  static const String userAgreement = ' User Agreement.';
 
   //fingetprint
   static const String fingerprint = 'Fingerprint';

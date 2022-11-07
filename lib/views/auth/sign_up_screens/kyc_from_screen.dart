@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/custom_style.dart';
@@ -14,6 +15,7 @@ import 'package:qrpay/widgets/input_widget/primary_input_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:dotted_border/dotted_border.dart';
 import '../../../controller/auth/sign_up_controllers/kyc_from_controller.dart';
+import '../../../widgets/button_widget/custom_text_button.dart';
 
 class KYCFromScreen extends StatelessWidget {
   KYCFromScreen({super.key});
@@ -209,9 +211,43 @@ class KYCFromScreen extends StatelessWidget {
           hintText: Strings.enterConfirmPassword,
           labelText: Strings.confirmPassword,
         ),
-        addVerticalSpace(
-          Dimensions.heightSize,
+        RichText(
+          text: TextSpan(
+            text: Strings.byUsing,
+            style: GoogleFonts.inter(
+              fontSize: Dimensions.smallTextSize,
+              color: CustomColor.primaryTextColor,
+              fontWeight: FontWeight.w600,
+            ),
+            children: [
+              WidgetSpan(
+                child: CustomTextButton(
+                  onPressed: () {
+                    controller.onPressedPrivacy();
+                  },
+                  text: Strings.privacyPolicy,
+                ),
+              ),
+              TextSpan(
+                text: " &",
+                style: GoogleFonts.inter(
+                  fontSize: Dimensions.smallTextSize,
+                  color: CustomColor.primaryTextColor,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+              WidgetSpan(
+                child: CustomTextButton(
+                  onPressed: () {
+                    controller.onPressedUserAgriment();
+                  },
+                  text: Strings.userAgreement,
+                ),
+              ),
+            ],
+          ),
         ),
+        addVerticalSpace(Dimensions.heightSize*1.5),
       ],
     );
   }
@@ -223,7 +259,9 @@ class KYCFromScreen extends StatelessWidget {
       ),
       child: PrimaryButtonWidget(
         text: Strings.continues,
-        onPressed: () {},
+        onPressed: () {
+          controller.onPresedcontinue();
+        },
       ),
     );
   }

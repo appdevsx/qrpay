@@ -5,9 +5,9 @@ import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
 
 class CustomTextButton extends StatelessWidget {
- final String text;
- final VoidCallback onPressed;
- final Color color;
+  final String text;
+  final VoidCallback onPressed;
+  final Color color;
   const CustomTextButton({
     Key? key,
     required this.onPressed,
@@ -16,16 +16,16 @@ class CustomTextButton extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) { 
+  Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:onPressed,
+      onTap: onPressed,
       child: Text(
         text,
-         style: GoogleFonts.inter(
-                  fontSize: Dimensions.mediumTextSize,
-                  color: CustomColor.primaryColor,
-                  fontWeight: FontWeight.w500,
-                ),
+        style: GoogleFonts.inter(
+          fontSize: Dimensions.smallTextSize,
+          color: CustomColor.primaryColor,
+          fontWeight: FontWeight.w600,
+        ),
       ),
     );
   }

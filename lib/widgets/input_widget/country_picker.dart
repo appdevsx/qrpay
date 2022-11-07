@@ -48,11 +48,10 @@ class SignUpCountryCodePickerWidget extends StatelessWidget {
               controller.text = value.name!;
               signUpController.countryCode.value = value.dialCode.toString();
             },
-            // onChanged: onChanged,
+            
             showOnlyCountryWhenClosed: true,
             showDropDownButton: true,
-            // initialSelection: f,
-            // initialSelection: controller.text,
+           
             backgroundColor: Colors.transparent,
             alignLeft: true,
             // onInit: (code) => {profileController.countryController.text = code?.name},

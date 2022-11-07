@@ -42,7 +42,7 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
     fontWeight: FontWeight.w700,
   );
 
-    static var oTPsubTitleTextStyle = GoogleFonts.inter(
+    static var defaultSubTitleTextStyle = GoogleFonts.inter(
     color: CustomColor.thirdTextColor,
     fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w500,

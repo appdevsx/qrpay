@@ -50,7 +50,7 @@ class OtpVerificationScreen extends StatelessWidget {
         Text(
           Strings.enterYourVerificationCode,
           textAlign: TextAlign.center,
-          style: CustomStyle.oTPsubTitleTextStyle,
+          style: CustomStyle.defaultSubTitleTextStyle,
         ),
         addVerticalSpace(Dimensions.heightSize * 2),
       ],

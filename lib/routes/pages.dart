@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:get/get.dart';
+import 'package:qrpay/views/auth/sign_up_screens/fingerprint_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
@@ -37,6 +38,9 @@ class Pages {
       name: Routes.kYCFromScreen,
       page: () =>    KYCFromScreen(),
     ),
-    
+      GetPage(
+      name: Routes.fingerPrintScreen,
+      page: () =>    const FingerPrintScreen(),
+    ),
   ];
 }
