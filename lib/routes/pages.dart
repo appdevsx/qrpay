@@ -10,6 +10,7 @@ import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
+import 'package:qrpay/views/scan_qr_screen/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
@@ -101,6 +102,10 @@ class Pages {
       GetPage(
       name: Routes.previewScreen,
       page: () =>   PreviewScreen(),
+    ),
+      GetPage(
+      name: Routes.scanQrScreen,
+      page: () =>   ScanQrScreen(),
     ),
   ];
 }

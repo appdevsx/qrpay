@@ -19,4 +19,6 @@ class SignInController extends GetxController {
   }
 
   void onPressedSignUP() {}
+
+  void onPresedEdit() {}
 }

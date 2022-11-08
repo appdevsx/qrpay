@@ -50,7 +50,7 @@ class PreviewScreen extends StatelessWidget {
             ),
             child: Text(
               Strings.amountInformation,
-              style: CustomStyle.amountTilteTextStyle,
+              style: CustomStyle.feeTextStyle,
             ),
           ),
           addVerticalSpace(Dimensions.heightSize * 0.6),
@@ -81,7 +81,7 @@ class PreviewScreen extends StatelessWidget {
               ),
               Text(
                 Strings.uSD100,
-                style: CustomStyle.amountTilteTextStyle,
+                style: CustomStyle.feeTextStyle,
               ),
             ],
           ),
@@ -94,7 +94,7 @@ class PreviewScreen extends StatelessWidget {
               ),
               Text(
                 Strings.uSD100,
-                style: CustomStyle.amountTilteTextStyle,
+                style: CustomStyle.feeTextStyle,
               ),
             ],
           )

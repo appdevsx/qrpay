@@ -61,7 +61,19 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
     fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w600,
   );
+   static var currentAmountTexStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.currentAmountTextSize,
+    fontWeight: FontWeight.w700,
+  );
+  static var whiteCurrentTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w500,
+
+  );
   //primary color text style
+  
    static var inputTextStyle = GoogleFonts.inter(
     color: CustomColor.primaryColor.withOpacity(0.6),
     fontSize: Dimensions.defaultTextSize,
@@ -119,18 +131,14 @@ static var forgotTitleTextStyle = GoogleFonts.inter(
      fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
   );
-  static var notificationSubTextStyle = GoogleFonts.inter(
-    color: CustomColor.secondaryTextColor,
-     fontSize: Dimensions.smallestTextSize,
-    fontWeight: FontWeight.w600,
-  );
+ 
     static var dateTextStyle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
      fontSize: Dimensions.smallestTextSize,
     fontWeight: FontWeight.w500,
   );
   //preview 
-   static var amountTilteTextStyle= GoogleFonts.inter(
+   static var amountTilteText= GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
      fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w600,
@@ -141,6 +149,11 @@ static var feeTextStyle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
      fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w500,
+  );
+    static var recentTransactionTextStyle = GoogleFonts.inter(
+    color: CustomColor.blackColor,
+    fontSize: Dimensions.extraLargeTextSize,
+    fontWeight: FontWeight.w700,
   );
 
   

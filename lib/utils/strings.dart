@@ -119,6 +119,10 @@ class Strings {
   static const String uSD100 = '100.00 USD';
   static const String usd269 = '269.73 USD';
   static const String scanQR = 'SCAN QR';
+  static const String billPay = 'Bill Pay';
+  static const String mobileTopUp = 'Mobile Top Up';
+  static const String buyGiftcard = 'Buy Giftcard';
+  static const String myGiftcard = 'My Giftcard';
 
   //Scan QR
   static const String forIndivisual = 'For Indivisuals';

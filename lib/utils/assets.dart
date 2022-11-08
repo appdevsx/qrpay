@@ -19,6 +19,9 @@ class Assets {
   static const String myqr = 'assets/Clipart/my_qr.svg';
   static const String warn = 'assets/Clipart/warn.svg';
   static const String wrong = 'assets/Clipart/wrong.svg';
+  static const String profile = 'assets/Clipart/profile.png';
+  static const String iconBG = 'assets/Clipart/iconBG.png';
+  static const String qrCode = 'assets/Clipart/qrCodes.png';
 
 //icon
   static const String twoFaSecurit = 'assets/Icon/2FA_Security.svg';
@@ -62,4 +65,9 @@ class Assets {
   static const String updatekycForm = 'assets/Icon/update_kyc_form.svg';
   static const String updateProfile = 'assets/Icon/update_profile.svg';
   static const String verified = 'assets/Icon/verified.svg';
+  static const String billPay = 'assets/Icon/billPay.svg';
+  static const String buyGiftCard = 'assets/Icon/buyGift.svg';
+  static const String mobileTopUp = 'assets/Icon/mobileTopUP.svg';
+  static const String myGiftcard = 'assets/Icon/myGiftcard.svg';
+  static const String virtualCards = 'assets/Icon/virtualCards.svg';
 }

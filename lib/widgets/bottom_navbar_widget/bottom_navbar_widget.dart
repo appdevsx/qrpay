@@ -7,25 +7,22 @@ import '../../utils/size.dart';
 
 buildBottomNavigationMenu(context, bottomNavBarController) {
   return Container(
-    height: Dimensions.heightSize*4,
+    height: Dimensions.heightSize * 4,
     width: MediaQuery.of(context).size.width,
-    decoration:  const BoxDecoration(
+    decoration: const BoxDecoration(
       color: CustomColor.primaryColor,
-      
     ),
     child: BottomAppBar(
       color: CustomColor.primaryColor,
       child: Container(
-        margin: const EdgeInsets.symmetric(vertical: 9, horizontal: 12),
+        margin: const EdgeInsets.symmetric(vertical: 7, horizontal: 12),
         child: Row(
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            bottomItemWidget(Assets.home2, 
-             
-            bottomNavBarController, 0),
-            addHorizontalSpace(Dimensions.widthSize*11),
-            bottomItemWidget(Assets.notification, bottomNavBarController, 1),
+            bottomItemWidget(Assets.home2, bottomNavBarController, 0),
+            addHorizontalSpace(Dimensions.widthSize * 11),
+            bottomItemWidget(Assets.inbox, bottomNavBarController, 1),
           ],
         ),
       ),
@@ -41,10 +38,11 @@ bottomItemWidget(var icon, bottomNavBarController, page) {
       },
       child: SvgPicture.asset(
         icon,
+        
         color: bottomNavBarController.selectedIndex.value == page
             ? CustomColor.whiteColor
             : CustomColor.whiteColor.withOpacity(0.5),
-        height: 22,
+        height: 26,
       ),
     ),
   );

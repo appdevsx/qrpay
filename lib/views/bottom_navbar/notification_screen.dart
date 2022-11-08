@@ -3,7 +3,8 @@ import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
-import 'package:qrpay/widgets/bottom_navbar_widget/notification_widget.dart';
+import 'package:qrpay/widgets/others/custom_appbar.dart';
+import 'package:qrpay/widgets/transaction_widget/notification_widget.dart';
 
 class NotificationScreen extends StatelessWidget {
   const NotificationScreen({super.key});
@@ -11,6 +12,7 @@ class NotificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(title: Strings.notification),
       body: _bodyWidget(context),
     );
   }
@@ -26,66 +28,76 @@ class NotificationScreen extends StatelessWidget {
 
   _notificatinWidget(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: Dimensions.defaultPaddingSize * 0.3,
-      left: Dimensions.defaultPaddingSize*0.6,
-      right: Dimensions.defaultPaddingSize*0.6,
+      margin: EdgeInsets.only(
+        top: Dimensions.defaultPaddingSize * 0.3,
+        left: Dimensions.defaultPaddingSize * 0.6,
+        right: Dimensions.defaultPaddingSize * 0.6,
       ),
       child: Column(
-        children:  [
+        children: [
           const NotificationWidget(
             img: Assets.notification,
             title: Strings.qRPayUpdate,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.offer,
             title: Strings.moreOffer,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.notification,
             title: Strings.qRPayUpdate,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.offer,
             title: Strings.moreOffer,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.notification,
             title: Strings.qRPayUpdate,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.offer,
             title: Strings.moreOffer,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.notification,
             title: Strings.qRPayUpdate,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-         const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.offer,
             title: Strings.moreOffer,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
-           const NotificationWidget(
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
+          const NotificationWidget(
             img: Assets.notification,
             title: Strings.qRPayUpdate,
             subTitle: Strings.updateYourAppRight,
             dateText: Strings.firstOct,
-          ),addVerticalSpace(Dimensions.heightSize*0.8),
+          ),
+          addVerticalSpace(Dimensions.heightSize * 0.8),
         ],
       ),
     );

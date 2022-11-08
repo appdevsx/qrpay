@@ -13,11 +13,13 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
 
   final String title;
   List<Widget>? actions;
+  final Widget ledeaing;
 
   final double elevation;
 
   DashboardAppBar({
     Key? key,
+    required this.ledeaing,
     required this.title,
     this.elevation = 2,
     this.actions,
@@ -27,7 +29,7 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: InkWell(onTap: () {}, child: SvgPicture.asset(Assets.menu)),
+      leading:ledeaing,
       title: Text(
         title,
         style: GoogleFonts.poppins(

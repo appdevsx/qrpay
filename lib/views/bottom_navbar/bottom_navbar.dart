@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:qrpay/widgets/button_widget/back_button_widget.dart';
 import '../../controller/bottom_navbar_controller/bottom_navbar_controller.dart';
+import '../../controller/dashboard_controller/dashboard_controller.dart';
 import '../../utils/assets.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/custom_style.dart';
@@ -11,6 +12,8 @@ import '../../utils/strings.dart';
 import '../../widgets/bottom_navbar_widget/bottom_navbar_widget.dart';
 import '../../widgets/drawer_widget/custom_drawer_widget.dart';
 
+
+final controller=Get.put(DashBordController());
 class BottomNavBarScreen extends StatelessWidget {
   final bottomNavBarController =
       Get.put(BottomNavBarController(), permanent: false);
@@ -32,21 +35,30 @@ class BottomNavBarScreen extends StatelessWidget {
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: bottomNavBarController
             .page[bottomNavBarController.selectedIndex.value],
-
-            
       ),
     );
   }
 
   _midButtonWidget(BuildContext context) {
-    return InkWell(
-      onTap: () {
-        bottomNavBarController.onPressedMidIcon();
-      },
-      child: SvgPicture.asset(
-        Assets.appLogo,
-        color: Colors.red,
-      ),
+    return CircleAvatar(
+      radius: 45,
+      backgroundColor: CustomColor.whiteColor,
+      child: CircleAvatar(
+          radius: 40,
+          backgroundColor: CustomColor.primaryColor.withOpacity(0.4),
+          child: CircleAvatar(
+            radius: 36,
+            backgroundColor: CustomColor.primaryColor,
+            child: InkWell(
+              onTap: () {
+                controller.onPresedQRScan();
+              },
+              child: SvgPicture.asset(
+                Assets.scanqr,
+                color: Colors.white,
+              ),
+            ),
+          )),
     );
   }
 
@@ -54,9 +66,10 @@ class BottomNavBarScreen extends StatelessWidget {
     return AppBar(
       backgroundColor: bottomNavBarController.selectedIndex.value == 0
           ? CustomColor.transparentColor
-          :CustomColor.whiteColor,
+          : CustomColor.whiteColor,
       elevation: bottomNavBarController.selectedIndex.value == 0 ? 3 : 0,
-      centerTitle:bottomNavBarController.selectedIndex.value == 0? true:false,
+      centerTitle:
+          bottomNavBarController.selectedIndex.value == 0 ? true : false,
       leading: bottomNavBarController.selectedIndex.value == 0
           ? InkWell(
               onTap: () {
