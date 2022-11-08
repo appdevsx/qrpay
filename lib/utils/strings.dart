@@ -150,6 +150,8 @@ class Strings {
 
   //preview
   static const String preview = 'Preview';
+  static const String tRX2136987 = 'TRX2136987';
+  static const String transactionNo = 'Transaction No';
   static const String confirmSend = 'Confirm Send';
   static const String enteredAmount = 'Entered Amount';
   static const String recipientInformation = 'Recipient Information';
@@ -163,6 +165,9 @@ class Strings {
   static const String uSD98 = '98.00 USD';
   static const String yourMoneyHasBeenSave =
       'Your money has been send Successfully. Thanks for using QRPay';
+  static const String sayok="Sayok M.";    
+  static const String sayokGmail="sayok@gmail.com";    
+  static const String qRAddress="QR Address";    
 
   //Notification
   static const String notification = 'Notification';

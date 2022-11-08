@@ -84,7 +84,7 @@ class DashBordScreen extends StatelessWidget {
           ),
           Text(
             Strings.currentBalance,
-            style: CustomStyle.whiteCurrentTextStyle,
+            style: CustomStyle.transactionTextStyle,
           ),
         ],
       ),

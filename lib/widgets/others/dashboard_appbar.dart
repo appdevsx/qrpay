@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:qrpay/utils/assets.dart';
 
 import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
@@ -14,7 +12,7 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
   List<Widget>? actions;
   final Widget ledeaing;
-
+ final bool? centerTitle;
   final double elevation;
 
   DashboardAppBar({
@@ -22,7 +20,8 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
     required this.ledeaing,
     required this.title,
     this.elevation = 2,
-    this.actions,
+    this.actions,  
+    this.centerTitle=true,
   })  : preferredSize = const Size.fromHeight(50.0),
         super(key: key);
 
@@ -38,9 +37,9 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
           fontWeight: FontWeight.w600,
         ),
       ),
-      elevation: 0,
+      elevation: elevation,
       actions: actions,
-      centerTitle: true,
+      centerTitle: centerTitle,
       backgroundColor: CustomColor.transparentColor,
     );
   }
