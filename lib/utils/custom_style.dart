@@ -20,16 +20,7 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
     fontSize: Dimensions.largeTextSize,
     fontWeight: FontWeight.w600,
   );
-  static var inputTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryColor.withOpacity(0.6),
-    fontSize: Dimensions.defaultTextSize,
-    fontWeight: FontWeight.w600,
-  );
-   static var labelTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryColor.withOpacity(0.6),
-    fontSize: Dimensions.defaultTextSize,
-    fontWeight: FontWeight.w600,
-  );
+
    static var hintTextStyle = GoogleFonts.inter(
     color: CustomColor.borderColor,
     fontSize: Dimensions.defaultTextSize,
@@ -64,10 +55,31 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
      fontSize: Dimensions.smallestTextSize*0.9,
     fontWeight: FontWeight.w500,
   );
-  //
+  //white color text style 
+  static var whiteColorTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.mediumTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  //primary color text style
+   static var inputTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor.withOpacity(0.6),
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w600,
+  );
+   static var labelTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor.withOpacity(0.6),
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w600,
+  );
    static var percentTextStyle = GoogleFonts.inter(
     color: CustomColor.primaryColor,
      fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w700,
+  );
+  static var recipientTilteTextStyle= GoogleFonts.inter(
+    color: CustomColor.primaryColor,
+     fontSize: Dimensions.defaultTextSize,
     fontWeight: FontWeight.w700,
   );
   static var priColorTextStyle = GoogleFonts.inter(
@@ -75,10 +87,20 @@ static var welcomeTitleTextTitle = GoogleFonts.inter(
      fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w500,
   );
-  static var pasteTextStyle = GoogleFonts.inter(
+  static var amountColorTextStyle = GoogleFonts.inter(
     color: CustomColor.primaryColor.withOpacity(0.8),
      fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
+  );
+  static var detailsColorTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor.withOpacity(0.8),
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  static var transferFeeTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor.withOpacity(0.8),
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w500,
   );
 //dialoge 
 static var forgotTitleTextStyle = GoogleFonts.inter(
@@ -107,5 +129,19 @@ static var forgotTitleTextStyle = GoogleFonts.inter(
      fontSize: Dimensions.smallestTextSize,
     fontWeight: FontWeight.w500,
   );
+  //preview 
+   static var amountTilteTextStyle= GoogleFonts.inter(
+    color: CustomColor.secondaryTextColor,
+     fontSize: Dimensions.mediumTextSize,
+    fontWeight: FontWeight.w600,
+  );
+
+
+static var feeTextStyle = GoogleFonts.inter(
+    color: CustomColor.secondaryTextColor,
+     fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w500,
+  );
+
   
 }

@@ -141,15 +141,20 @@ class Strings {
   static const String transferFee = 'Transfer Fee:';
   static const String uSD2 = ' 2.00 USD';
   static const String paste = 'Paste';
+  static const String limit = 'LImit:';
+  static const String limitAmount = '10.00 USD - 10000.00 USD';
 
   //preview
   static const String preview = 'Preview';
+  static const String confirmSend = 'Confirm Send';
+  static const String enteredAmount = 'Entered Amount';
   static const String recipientInformation = 'Recipient Information';
   static const String name = 'Name';
   static const String email = 'Email';
   static const String number623 = '623 6983 231';
   static const String amountInformation = 'Amount Information';
   static const String youTransfer = 'You Transfer';
+  static const String totalPayable = 'Total Payable';
   static const String recipientReceived = 'Recipient Received';
   static const String uSD98 = '98.00 USD';
   static const String yourMoneyHasBeenSave =

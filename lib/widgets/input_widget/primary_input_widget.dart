@@ -68,7 +68,13 @@ class _PrimaryInputWidgetState extends State<PrimaryInputWidget> {
              floatingLabelBehavior: FloatingLabelBehavior.always,
               labelText: widget.labelText,
               hintText: widget.hintText,
-              suffixIcon: widget.suffix,
+              suffixIcon: Padding(
+                padding:  EdgeInsets.symmetric(
+                  vertical: Dimensions.defaultPaddingSize*0.3,
+                  horizontal: Dimensions.defaultPaddingSize*0.3
+                ),
+                child: widget.suffix,
+              ),
               labelStyle: GoogleFonts.inter(
                 color: focusNode!.hasFocus
                     ? CustomColor.primaryColor
