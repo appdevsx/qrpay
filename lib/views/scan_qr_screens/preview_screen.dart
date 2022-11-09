@@ -7,13 +7,15 @@ import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
+import 'package:qrpay/widgets/button_widget/primary_button.dart';
 import 'package:qrpay/widgets/others/dashboard_appbar.dart';
 
+import '../../controller/scan_qr_controlellers/preview_controller.dart';
 import '../../utils/dimensions.dart';
 
 class PreviewScreen extends StatelessWidget {
-  const PreviewScreen({super.key});
-
+   PreviewScreen({super.key});
+final controller=Get.put(PreviewController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,23 +49,37 @@ class PreviewScreen extends StatelessWidget {
   }
 
   _appbarWidget(BuildContext context) {
-    return DashboardAppBar(
-        elevation: 0,
-        centerTitle: false,
-        ledeaing: Container(
-          padding: EdgeInsets.symmetric(vertical: Dimensions.heightSize * 0.8),
-          child: GestureDetector(
-            onTap: () {
-              Get.back();
-            },
-            child: SvgPicture.asset(
-              Assets.backward,
-              color: CustomColor.whiteColor,
-              height: Dimensions.heightSize,
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: <Color>[
+            CustomColor.whiteColor.withOpacity(0.0),
+            CustomColor.whiteColor.withOpacity(0.1)
+          ],
+          tileMode: TileMode.mirror,
+        ),
+      ),
+      child: DashboardAppBar(
+          elevation: 0,
+          centerTitle: false,
+          ledeaing: Container(
+            padding:
+                EdgeInsets.symmetric(vertical: Dimensions.heightSize * 0.8),
+            child: GestureDetector(
+              onTap: () {
+                Get.back();
+              },
+              child: SvgPicture.asset(
+                Assets.backward,
+                color: CustomColor.whiteColor,
+                height: Dimensions.heightSize,
+              ),
             ),
           ),
-        ),
-        title: Strings.preview);
+          title: Strings.preview),
+    );
   }
 
   _transactionWidget(BuildContext context) {
@@ -120,7 +136,7 @@ class PreviewScreen extends StatelessWidget {
           ),
           addVerticalSpace(Dimensions.heightSize * 0.5),
           Divider(
-            color: CustomColor.primaryColor.withOpacity(0.3),
+            color: CustomColor.primaryColor.withOpacity(0.5),
             height: 2,
           ),
           addVerticalSpace(
@@ -199,7 +215,7 @@ class PreviewScreen extends StatelessWidget {
           ),
           addVerticalSpace(Dimensions.heightSize * 0.5),
           Divider(
-            color: CustomColor.primaryColor.withOpacity(0.3),
+            color: CustomColor.primaryColor.withOpacity(0.5),
             height: 2,
           ),
           addVerticalSpace(
@@ -275,73 +291,115 @@ class PreviewScreen extends StatelessWidget {
   }
 
   _buttonWidget(BuildContext context) {
-    return Card(
-      elevation: 5,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(Dimensions.radius * 2),
-          topRight: Radius.circular(Dimensions.radius * 2),
-        ),
+    return Container(
+      padding: EdgeInsets.only(
+        top: Dimensions.defaultPaddingSize * 1.2,
+        left: Dimensions.marginSize,
+        right: Dimensions.marginSize,
+        bottom: Dimensions.marginSize,
       ),
-      margin: EdgeInsets.zero,
-      child: InkWell(
-        onTap: () {},
+      height: Dimensions.heightSize * 8,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: <Color>[
+              CustomColor.whiteColor.withOpacity(0.1),
+              CustomColor.whiteColor.withOpacity(0.1)
+            ],
+            tileMode: TileMode.mirror,
+          ),
+          borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimensions.radius * 2),
+            topRight: Radius.circular(Dimensions.radius * 2),
+          )),
+      child: GestureDetector(
+        onTap: () {
+          showBottomSheet(context);
+        },
         child: Container(
-            padding: EdgeInsets.only(
-              top: Dimensions.defaultPaddingSize * 1.2,
-              left: Dimensions.marginSize,
-              right: Dimensions.marginSize,
-              bottom: Dimensions.marginSize,
+          height: Dimensions.heightSize * 4.2,
+          width: MediaQuery.of(context).size.width * 0.7,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
+              color: CustomColor.primaryColor),
+          child: Center(
+            child: Row(
+              mainAxisAlignment: mainCenter,
+              children: [
+                SvgPicture.asset(
+                  Assets.send,
+                  color: CustomColor.whiteColor,
+                  height: Dimensions.heightSize * 1.5,
+                  width: Dimensions.widthSize * 2,
+                ),
+                addHorizontalSpace(
+                  Dimensions.widthSize * 0.7,
+                ),
+                Text(
+                  Strings.confirmSend,
+                  style: GoogleFonts.inter(
+                    fontSize: Dimensions.extraLargeTextSize,
+                    color: CustomColor.whiteColor,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
             ),
-            height: Dimensions.heightSize * 8,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: <Color>[
-                    CustomColor.whiteColor.withOpacity(0.1),
-                    CustomColor.whiteColor.withOpacity(0.1)
-                  ],
-                  tileMode: TileMode.mirror,
-                ),
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(Dimensions.radius * 2),
-                  topRight: Radius.circular(Dimensions.radius * 2),
-                )),
-            child: Container(
-              height: Dimensions.heightSize * 4.2,
-              width: MediaQuery.of(context).size.width * 0.7,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
-                
-              ),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: mainCenter,
-                  children: [
-                    SvgPicture.asset(
-                      Assets.send,
-                      color: CustomColor.whiteColor,
-                      height: Dimensions.heightSize * 1.5,
-                      width: Dimensions.widthSize * 2,
-                    ),
-                    addHorizontalSpace(
-                      Dimensions.widthSize * 0.7,
-                    ),
-                    Text(
-                      Strings.confirmSend,
-                      style: GoogleFonts.inter(
-                        fontSize: Dimensions.extraLargeTextSize,
-                        color: CustomColor.whiteColor,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            )),
+          ),
+        ),
       ),
     );
   }
+
+  showBottomSheet(BuildContext context) => 
+  showModalBottomSheet<void>(
+    shape: RoundedRectangleBorder(
+      borderRadius: BorderRadius.only(
+         topLeft: Radius.circular(Dimensions.radius * 1.5),
+              topRight: Radius.circular(Dimensions.radius * 1.5),
+      )
+    ),
+        elevation: 0,
+        backgroundColor: CustomColor.whiteColor,
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(Dimensions.radius * 1.5),
+              topRight: Radius.circular(Dimensions.radius * 1.5),
+            )),
+            padding: EdgeInsets.all(Dimensions.marginSize * 0.9),
+            height: MediaQuery.of(context).size.height * 0.42,
+            child: Column(
+              mainAxisAlignment: mainCenter,
+              children: [
+                SvgPicture.asset(
+                  Assets.confirm,
+                  height: Dimensions.heightSize * 9,
+                  width: Dimensions.heightSize * 10,
+                ),
+                addVerticalSpace(Dimensions.heightSize),
+                Text(
+                  Strings.transferSuccess,
+                  style: CustomStyle.boldTitleTextStyle,
+                ),
+                Text(
+                  Strings.yourmoneySenSuccess,
+                  textAlign: TextAlign.center,
+                  style: CustomStyle.defaultSubTitleTextStyle,
+                ),
+                addVerticalSpace(Dimensions.heightSize * 2),
+                PrimaryButtonWidget(
+                    text: Strings.backtoHome,
+                    onPressed: () {
+                      controller.onPresedbackToHome();
+                    }),
+              ],
+            ),
+          );
+        },
+      );
 }

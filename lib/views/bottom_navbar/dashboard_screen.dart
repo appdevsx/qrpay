@@ -1,19 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:get/get.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/dashboard_appbar.dart';
 import 'package:qrpay/widgets/transaction_widget/recen_transaction_widget.dart';
-
+import '../../controller/bottom_navbar_controller/dashboard_controller.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/bottom_navbar_widget/categories_widget.dart';
 
 class DashBordScreen extends StatelessWidget {
-  const DashBordScreen({super.key});
-
+  DashBordScreen({super.key});
+  final controller = Get.put(DashBoardController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -103,38 +104,78 @@ class DashBordScreen extends StatelessWidget {
         alignment: WrapAlignment.spaceBetween,
         spacing: Dimensions.widthSize,
         runSpacing: Dimensions.widthSize * 1.8,
-        children: const [
-          CategoriesWidget(
-            img: Assets.send,
-            text: Strings.send,
+        children: [
+          GestureDetector(
+            onTap: () {
+              controller.onTapSend();
+            },
+            child: const CategoriesWidget(
+              img: Assets.send,
+              text: Strings.send,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.receive,
-            text: Strings.receive,
+          GestureDetector(
+            onTap: () {
+              controller.onTabreceiveMoney();
+            },
+            child: const CategoriesWidget(
+              img: Assets.receive,
+              text: Strings.receive,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.remittance,
-            text: Strings.remittance,
+          GestureDetector(
+            onTap: () {
+              controller.onTapRemittance();
+            },
+            child: const CategoriesWidget(
+              img: Assets.remittance,
+              text: Strings.remittance,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.virtualCards,
-            text: Strings.virtualCard,
+          GestureDetector(
+            onTap: () {
+              controller.onTapVirtualCard();
+            },
+            child: const CategoriesWidget(
+              img: Assets.virtualCards,
+              text: Strings.virtualCard,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.billPay,
-            text: Strings.billPay,
+          GestureDetector(
+            onTap: () {
+              controller.onTapBillPay();
+            },
+            child: const CategoriesWidget(
+              img: Assets.billPay,
+              text: Strings.billPay,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.mobileTopUp,
-            text: Strings.mobileTopUp,
+          GestureDetector(
+            onTap: () {
+              controller.onTapMobileTopUp();
+            },
+            child: const CategoriesWidget(
+              img: Assets.mobileTopUp,
+              text: Strings.mobileTopUp,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.buyGiftCard,
-            text: Strings.buyGiftcard,
+          GestureDetector(
+            onTap: () {
+              controller.onTapBuyGift();
+            },
+            child: const CategoriesWidget(
+              img: Assets.buyGiftCard,
+              text: Strings.buyGiftcard,
+            ),
           ),
-          CategoriesWidget(
-            img: Assets.myGiftcard,
-            text: Strings.myGiftcard,
+          GestureDetector(
+            onTap: () {
+              controller.onTapMyGift();
+            },
+            child: const CategoriesWidget(
+              img: Assets.myGiftcard,
+              text: Strings.myGiftcard,
+            ),
           ),
         ],
       ),
@@ -208,7 +249,6 @@ class DashBordScreen extends StatelessWidget {
             addVerticalSpace(
               Dimensions.heightSize,
             ),
-           
           ],
         ),
       ),

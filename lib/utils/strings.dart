@@ -147,6 +147,8 @@ class Strings {
   static const String paste = 'Paste';
   static const String limit = 'LImit:';
   static const String limitAmount = '10.00 USD - 10000.00 USD';
+  static const String  useQRPaydetails= 'Use QRPay app for instant money transfer. Scan or Place this QRcode for receiving money in your wallet. Share this QR for instant money receiving.';
+
 
   //preview
   static const String preview = 'Preview';
@@ -168,6 +170,13 @@ class Strings {
   static const String sayok="Sayok M.";    
   static const String sayokGmail="sayok@gmail.com";    
   static const String qRAddress="QR Address";    
+  static const String transferSuccess="Transfer Success";    
+  static const String yourmoneySenSuccess="Your money has been send Successfully. Thanks for using QRPay";    
+  static const String backtoHome="Back to Home";    
+  static const String transferFailed="Transfer Failed";    
+  static const String yourMoneyhasBeeenFailed="Your money has been Failed..!! Try Again! Thanks for using QRPay";    
+  static const String tryAgain="Try Again";    
+  static const String addPlus="Add +";    
 
   //Notification
   static const String notification = 'Notification';
@@ -202,8 +211,10 @@ class Strings {
   static const String sendingCountry = 'Sending Country';
   static const String receivingCountry = 'Receiving Country';
   static const String receipient = 'Receipient';
+  static const String addReceipient = ' Add Receipient';
   static const String australia = 'Australia';
   static const String unitedState = 'United State';
+  static const String uploadImage = 'Upload Image';
 
   //Virtual Card
   static const String virtualCardDetails =

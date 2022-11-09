@@ -9,6 +9,8 @@ import 'package:qrpay/views/auth/sign_up_screens/fingerprint_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
+import 'package:qrpay/views/categories_screen/remitance/add_receipient_screen.dart';
+import 'package:qrpay/views/categories_screen/remitance/remittance_screen.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
 import 'package:qrpay/views/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
@@ -94,7 +96,7 @@ class Pages {
     ),
      GetPage(
       name: Routes.dashBordScreen,
-      page: () => const DashBordScreen(),
+      page: () =>  DashBordScreen(),
     ),
      GetPage(
       name: Routes.moneyTransferScreen,
@@ -102,7 +104,7 @@ class Pages {
     ),
       GetPage(
       name: Routes.previewScreen,
-      page: () =>   const PreviewScreen(),
+      page: () =>    PreviewScreen(),
     ),
       GetPage(
       name: Routes.scanQrScreen,
@@ -111,6 +113,14 @@ class Pages {
     GetPage(
       name: Routes.moneyReceiveScreen,
       page: () =>    MoneyReceiveScreen(),
+    ),
+    GetPage(
+      name: Routes.remittanceScreen,
+      page: () =>    RemittanceScreen(),
+    ),
+     GetPage(
+      name: Routes.addReceipientScreen,
+      page: () =>    AddReceipientScreen(),
     ),
   ];
 }

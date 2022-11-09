@@ -2,11 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qrpay/utils/size.dart';
-
-import '../../utils/assets.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
-import '../../utils/strings.dart';
 
 class CustomBottomShet extends StatelessWidget {
   const CustomBottomShet({super.key, required this.ontap, required this.text,  this.img});

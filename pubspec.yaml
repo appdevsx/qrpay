@@ -45,6 +45,7 @@ dependencies:
   local_auth: ^2.1.2
   country_phone_code_picker: ^0.0.41
   percent_indicator: ^4.2.2
+  image_picker: ^0.8.6
 
 dev_dependencies:
   flutter_test:

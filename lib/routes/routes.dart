@@ -19,4 +19,6 @@ class Routes {
   static const String previewScreen = '/previewScreen';
   static const String scanQrScreen = '/scanQrScreen';
   static const String moneyReceiveScreen = '/moneyReceiveScreen';
+  static const String remittanceScreen = '/remittanceScreen';
+  static const String addReceipientScreen = '/addReceipientScreen';
 }

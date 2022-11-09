@@ -19,7 +19,7 @@ class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
     Key? key,
     required this.ledeaing,
     required this.title,
-    this.elevation = 2,
+    this.elevation = 0,
     this.actions,  
     this.centerTitle=true,
   })  : preferredSize = const Size.fromHeight(50.0),

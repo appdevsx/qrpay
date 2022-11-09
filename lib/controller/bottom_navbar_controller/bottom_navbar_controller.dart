@@ -6,7 +6,7 @@ import '../../views/bottom_navbar/notification_screen.dart';
 class BottomNavBarController extends GetxController {
   final RxInt selectedIndex = 0.obs;
   final List page = [
-   const DashBordScreen(),
+    DashBordScreen(),
    const NotificationScreen(),
 
   

@@ -91,6 +91,11 @@ class CustomStyle {
     fontSize: Dimensions.defaultTextSize,
     fontWeight: FontWeight.w600,
   );
+  static var addUsdTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w600,
+  );
   static var costTextStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor.withOpacity(0.8),
     fontSize: Dimensions.smallTextSize,
