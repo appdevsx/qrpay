@@ -14,13 +14,27 @@ class DashBoardController extends GetxController {
     Get.toNamed(Routes.remittanceScreen);
   }
 
-  void onTapVirtualCard() {}
+  void onTapVirtualCard() {
+    Get.toNamed(Routes.virtualCardScreen);
+  }
 
-  void onTapBillPay() {}
+  void onTapBillPay() {
+    Get.toNamed(Routes.billPayScreen);
+  }
 
-  void onTapMobileTopUp() {}
+  void onTapMobileTopUp() {
+    Get.toNamed(Routes.mobileTopUpScreen);
+  }
 
-  void onTapBuyGift() {}
+  void onTapBuyGift() {
+    Get.toNamed(Routes.buyGiftCardScreen);
+  }
 
-  void onTapMyGift() {}
+  void onTapMyGift() {
+    Get.toNamed(Routes.myGiftCardScreen);
+  }
+
+  void onPresedQRScan() {
+    Get.toNamed(Routes.scanQrScreen);
+  }
 }

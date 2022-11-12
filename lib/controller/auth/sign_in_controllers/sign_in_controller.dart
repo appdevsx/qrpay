@@ -17,11 +17,13 @@ class SignInController extends GetxController {
     Get.toNamed(Routes.signInScreen);
   }
 
-  void onPressedSignUP() {}
+  void onPressedSignUP() {
+    Get.toNamed(Routes.signUpScreen);
+  }
 
   void onPresedEdit() {}
 
- 
-
- 
+  void onTapContinue() {
+    Get.toNamed(Routes.bottomNavBarScreen);
+  }
 }

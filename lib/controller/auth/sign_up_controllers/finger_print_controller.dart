@@ -1,4 +1,4 @@
-// ignore: file_names
+
 import 'package:get/get.dart';
 import '../../../routes/routes.dart';
 

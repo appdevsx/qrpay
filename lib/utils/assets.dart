@@ -70,4 +70,7 @@ class Assets {
   static const String mobileTopUp = 'assets/Icon/mobileTopUP.svg';
   static const String myGiftcard = 'assets/Icon/myGiftcard.svg';
   static const String virtualCards = 'assets/Icon/virtualCards.svg';
+  static const String details = 'assets/Icon/details.svg';
+  static const String found = 'assets/Icon/found.svg';
+  static const String transaction = 'assets/Icon/transaction.svg';
 }

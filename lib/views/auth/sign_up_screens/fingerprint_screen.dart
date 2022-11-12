@@ -8,7 +8,7 @@ import 'package:qrpay/widgets/button_widget/primary_button.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../controller/auth/sign_up_controllers/fingerPrint_controller.dart';
+import '../../../controller/auth/sign_up_controllers/finger_print_controller.dart';
 import '../../../utils/assets.dart';
 
 class FingerPrintScreen extends StatelessWidget {

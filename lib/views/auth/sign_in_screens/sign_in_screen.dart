@@ -127,7 +127,9 @@ class SignInScreen extends StatelessWidget {
         children: [
           PrimaryButtonWidget(
             text: Strings.continues,
-            onPressed: () {},
+            onPressed: () {
+              controller.onTapContinue();
+            },
           ),
           addVerticalSpace(Dimensions.heightSize),
           RichText(

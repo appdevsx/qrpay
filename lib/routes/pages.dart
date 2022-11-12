@@ -9,8 +9,16 @@ import 'package:qrpay/views/auth/sign_up_screens/fingerprint_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
+import 'package:qrpay/views/categories_screen/billpay_screen.dart';
+import 'package:qrpay/views/categories_screen/buy_giftcard/buy_giftcard_screen.dart';
+import 'package:qrpay/views/categories_screen/mobile_top_up_screen.dart';
+import 'package:qrpay/views/categories_screen/my_giftcard_screen.dart';
 import 'package:qrpay/views/categories_screen/remitance/add_receipient_screen.dart';
 import 'package:qrpay/views/categories_screen/remitance/remittance_screen.dart';
+import 'package:qrpay/views/categories_screen/virtual_card_screens/details_screen.dart';
+import 'package:qrpay/views/categories_screen/virtual_card_screens/found_screen.dart';
+import 'package:qrpay/views/categories_screen/virtual_card_screens/transaction_screen.dart';
+import 'package:qrpay/views/categories_screen/virtual_card_screens/virtual_card_screen.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
 import 'package:qrpay/views/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
@@ -86,41 +94,73 @@ class Pages {
       name: Routes.resetPasswordScreen,
       page: () => ResetPasswordScreen(),
     ),
-      GetPage(
+    GetPage(
       name: Routes.congratulationScreen,
       page: () => CongratulationScreen(),
     ),
-      GetPage(
+    GetPage(
       name: Routes.bottomNavBarScreen,
       page: () => BottomNavBarScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.dashBordScreen,
-      page: () =>  DashBordScreen(),
+      page: () => DashBordScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.moneyTransferScreen,
-      page: () =>  MoneyTransferScreen(),
+      page: () => MoneyTransferScreen(),
     ),
-      GetPage(
+    GetPage(
       name: Routes.previewScreen,
-      page: () =>    PreviewScreen(),
+      page: () => PreviewScreen(),
     ),
-      GetPage(
+    GetPage(
       name: Routes.scanQrScreen,
-      page: () =>   ScanQrScreen(),
+      page: () => ScanQrScreen(),
     ),
     GetPage(
       name: Routes.moneyReceiveScreen,
-      page: () =>    MoneyReceiveScreen(),
+      page: () => MoneyReceiveScreen(),
     ),
     GetPage(
       name: Routes.remittanceScreen,
-      page: () =>    RemittanceScreen(),
+      page: () => RemittanceScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.addReceipientScreen,
-      page: () =>    AddReceipientScreen(),
+      page: () => AddReceipientScreen(),
+    ),
+    GetPage(
+      name: Routes.virtualCardScreen,
+      page: () => VirtualCardScreen(),
+    ),
+    GetPage(
+      name: Routes.detailsScreen,
+      page: () => const DetailsScreen(),
+    ),
+    GetPage(
+      name: Routes.foundScreen,
+      page: () => const FoundScreen(),
+    ),
+    GetPage(
+      name: Routes.transactionScreen,
+      page: () => const TransactionScreen(),
+    ),
+    GetPage(
+      name: Routes.billPayScreen,
+      page: () => const BillPayScreen(),
+    ),
+    GetPage(
+      name: Routes.mobileTopUpScreen,
+      page: () => const MobileTopUpScreen(),
+    ),
+    GetPage(
+      name: Routes.myGiftCardScreen,
+      page: () => const MyGiftCardScreen(),
+    ),
+    GetPage(
+      name: Routes.buyGiftCardScreen,
+      page: () => const BuyGiftCardScreen(),
     ),
   ];
 }

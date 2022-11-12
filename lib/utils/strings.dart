@@ -147,8 +147,8 @@ class Strings {
   static const String paste = 'Paste';
   static const String limit = 'LImit:';
   static const String limitAmount = '10.00 USD - 10000.00 USD';
-  static const String  useQRPaydetails= 'Use QRPay app for instant money transfer. Scan or Place this QRcode for receiving money in your wallet. Share this QR for instant money receiving.';
-
+  static const String useQRPaydetails =
+      'Use QRPay app for instant money transfer. Scan or Place this QRcode for receiving money in your wallet. Share this QR for instant money receiving.';
 
   //preview
   static const String preview = 'Preview';
@@ -167,16 +167,18 @@ class Strings {
   static const String uSD98 = '98.00 USD';
   static const String yourMoneyHasBeenSave =
       'Your money has been send Successfully. Thanks for using QRPay';
-  static const String sayok="Sayok M.";    
-  static const String sayokGmail="sayok@gmail.com";    
-  static const String qRAddress="QR Address";    
-  static const String transferSuccess="Transfer Success";    
-  static const String yourmoneySenSuccess="Your money has been send Successfully. Thanks for using QRPay";    
-  static const String backtoHome="Back to Home";    
-  static const String transferFailed="Transfer Failed";    
-  static const String yourMoneyhasBeeenFailed="Your money has been Failed..!! Try Again! Thanks for using QRPay";    
-  static const String tryAgain="Try Again";    
-  static const String addPlus="Add +";    
+  static const String sayok = "Sayok M.";
+  static const String sayokGmail = "sayok@gmail.com";
+  static const String qRAddress = "QR Address";
+  static const String transferSuccess = "Transfer Success";
+  static const String yourmoneySenSuccess =
+      "Your money has been send Successfully. Thanks for using QRPay";
+  static const String backtoHome = "Back to Home";
+  static const String transferFailed = "Transfer Failed";
+  static const String yourMoneyhasBeeenFailed =
+      "Your money has been Failed..!! Try Again! Thanks for using QRPay";
+  static const String tryAgain = "Try Again";
+  static const String addPlus = "Add +";
 
   //Notification
   static const String notification = 'Notification';
@@ -215,6 +217,8 @@ class Strings {
   static const String australia = 'Australia';
   static const String unitedState = 'United State';
   static const String uploadImage = 'Upload Image';
+  static const String bankDeposit = 'Bank Deposit';
+  static const String aud = 'AUD';
 
   //Virtual Card
   static const String virtualCardDetails =
@@ -230,6 +234,10 @@ class Strings {
   static const String nineElevent = '09/11';
   static const String nineSix = '963';
   static const String buyNow = 'Buy Now';
+  static const String agencyFb = '9864 1326 7135 3126';
+  static const String details = 'Details';
+  static const String found = 'Found';
+  static const String transaction= 'Transaction';
 
   //Profile
   static const String profile = 'Profile';

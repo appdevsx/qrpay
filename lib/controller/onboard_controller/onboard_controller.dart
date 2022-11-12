@@ -1,39 +1,19 @@
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:liquid_swipe/Helpers/Helpers.dart';
+import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
+import 'package:qrpay/data/onbaord_data.dart';
 import 'package:qrpay/routes/routes.dart';
 
-import '../../data/onbaord_data.dart';
-
 class OnboardController extends GetxController {
-  int page = 0;
-  pageChangeCallback(int lpage) {
+  var page = onboardData.length.obs;
+
+  pageChangeCallback(var lpage) {
     page = lpage;
   }
 
-  var selectedPageIndex = 0.obs;
-  var pageController = PageController();
+  late final UpdateType updateType;
 
-  bool get isLastPage => selectedPageIndex.value == onboardData.length;
-  bool get isFirstPage => selectedPageIndex.value == 0;
-  bool get isSecondPage => selectedPageIndex.value == 1;
-  bool get isThirdPage => selectedPageIndex.value == 2;
-
-  void nextPage() {
-    if (isLastPage) {
-    } else {
-      pageController.nextPage(
-        duration: 300.milliseconds,
-        curve: Curves.ease,
-      );
-    }
-  }
-
-  void backPage() {
-    pageController.previousPage(
-      duration: 300.milliseconds,
-      curve: Curves.ease,
-    );
-  }
+  var liquidController = LiquidController();
 
   void onPressdLiquidBUtton() {
     Get.toNamed(Routes.signUpScreen);

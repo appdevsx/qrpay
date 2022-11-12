@@ -10,11 +10,7 @@ class CustomStyle {
     fontSize: Dimensions.onboardsubTitle,
     fontWeight: FontWeight.w500,
   );
-  static var welcomeTitleTextTitle = GoogleFonts.inter(
-    color: CustomColor.primaryTextColor,
-    fontSize: Dimensions.titleText,
-    fontWeight: FontWeight.w700,
-  );
+ 
   static var defaultTitleTextTitle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
     fontSize: Dimensions.largeTextSize,
@@ -27,11 +23,7 @@ class CustomStyle {
     fontWeight: FontWeight.w600,
   );
   //otp verification
-  static var boldTitleTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryTextColor,
-    fontSize: Dimensions.onboardsubTitle,
-    fontWeight: FontWeight.w700,
-  );
+ 
 
   static var defaultSubTitleTextStyle = GoogleFonts.inter(
     color: CustomColor.thirdTextColor,
@@ -56,6 +48,11 @@ class CustomStyle {
     fontWeight: FontWeight.w500,
   );
   //white color text style
+  static var expiryTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor.withOpacity(0.6),
+    fontSize: Dimensions.mediumTextSize,
+    fontWeight: FontWeight.w600,
+  );
   static var whiteColorTextStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.mediumTextSize,
@@ -66,6 +63,7 @@ class CustomStyle {
     fontSize: Dimensions.onboardsubTitle,
     fontWeight: FontWeight.w700,
   );
+ 
   static var nameTexStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.mediumTextSize * 1.06,
@@ -134,7 +132,7 @@ class CustomStyle {
     fontWeight: FontWeight.w600,
   );
   static var detailsColorTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryColor.withOpacity(0.8),
+    color: CustomColor.primaryColor,
     fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
   );
@@ -155,11 +153,7 @@ class CustomStyle {
     fontWeight: FontWeight.w500,
   );
   //notification
-  static var smallTextStyle = GoogleFonts.inter(
-    color: CustomColor.primaryTextColor,
-    fontSize: Dimensions.smallTextSize,
-    fontWeight: FontWeight.w600,
-  );
+  
 
   static var dateTextStyle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
@@ -182,5 +176,25 @@ class CustomStyle {
     color: CustomColor.blackColor,
     fontSize: Dimensions.extraLargeTextSize,
     fontWeight: FontWeight.w700,
+  );
+  static var smallTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryTextColor,
+    fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w600,
+  );
+   static var boldTitleTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryTextColor,
+    fontSize: Dimensions.onboardsubTitle,
+    fontWeight: FontWeight.w700,
+  );
+   static var welcomeTitleTextTitle = GoogleFonts.inter(
+    color: CustomColor.primaryTextColor,
+    fontSize: Dimensions.titleText,
+    fontWeight: FontWeight.w700,
+  );
+   static var welcmeTitleTextTitle = GoogleFonts.inter(
+    color: CustomColor.primaryTextColor,
+    fontSize: Dimensions.smallTextSize,
+    fontWeight: FontWeight.w500,
   );
 }

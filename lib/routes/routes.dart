@@ -21,4 +21,13 @@ class Routes {
   static const String moneyReceiveScreen = '/moneyReceiveScreen';
   static const String remittanceScreen = '/remittanceScreen';
   static const String addReceipientScreen = '/addReceipientScreen';
+  static const String virtualCardScreen = '/virtualCardScreen';
+  static const String detailsScreen = '/detailsScreen';
+  static const String foundScreen = '/foundScreen';
+  static const String transactionScreen = '/transactionScreen';
+  static const String billPayScreen = '/billPayScreen';
+  static const String mobileTopUpScreen = '/mobileTopUpScreen';
+  static const String myGiftCardScreen = '/myGiftCardScreen';
+  static const String buyGiftCardScreen = '/buyGiftCardScreen';
+  static const String withBuilder = '/WithBuilder';
 }

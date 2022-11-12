@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:liquid_swipe/Helpers/Helpers.dart';
+import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
@@ -15,8 +17,11 @@ class OnboardWidget extends StatelessWidget {
   });
   final String img, text1, text2, text3;
  final Color bgColor;
+
   @override
   Widget build(BuildContext context) {
+     int page = 0;
+
     return Container(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
@@ -43,7 +48,9 @@ class OnboardWidget extends StatelessWidget {
               style: GoogleFonts.inter(
                 fontSize: Dimensions.titleText,
                 fontWeight: FontWeight.w700,
-                color: CustomColor.primaryTextColor,
+                color: page == 0
+                        ? CustomColor.primaryTextColor
+                        : CustomColor.whiteColor,
               ),
             ),
             Text(

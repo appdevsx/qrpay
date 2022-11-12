@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:qrpay/widgets/button_widget/back_button_widget.dart';
 import '../../controller/bottom_navbar_controller/bottom_navbar_controller.dart';
-import '../../controller/dashboard_controller/dashboard_controller.dart';
+import '../../controller/bottom_navbar_controller/dashboard_controller.dart';
 import '../../utils/assets.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/custom_style.dart';
@@ -13,7 +13,7 @@ import '../../widgets/bottom_navbar_widget/bottom_navbar_widget.dart';
 import '../../widgets/drawer_widget/custom_drawer_widget.dart';
 
 
-final controller=Get.put(DashBordController());
+final controller=Get.put(DashBoardController());
 class BottomNavBarScreen extends StatelessWidget {
   final bottomNavBarController =
       Get.put(BottomNavBarController(), permanent: false);
