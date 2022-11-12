@@ -28,6 +28,6 @@ class Routes {
   static const String billPayScreen = '/billPayScreen';
   static const String mobileTopUpScreen = '/mobileTopUpScreen';
   static const String myGiftCardScreen = '/myGiftCardScreen';
+  static const String cardViewScreen = '/CardViewScreen';
   static const String buyGiftCardScreen = '/buyGiftCardScreen';
-  static const String withBuilder = '/WithBuilder';
 }

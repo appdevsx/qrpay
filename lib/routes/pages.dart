@@ -11,6 +11,7 @@ import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
 import 'package:qrpay/views/categories_screen/billpay_screen.dart';
 import 'package:qrpay/views/categories_screen/buy_giftcard/buy_giftcard_screen.dart';
+import 'package:qrpay/views/categories_screen/buy_giftcard/card_view_screen.dart';
 import 'package:qrpay/views/categories_screen/mobile_top_up_screen.dart';
 import 'package:qrpay/views/categories_screen/my_giftcard_screen.dart';
 import 'package:qrpay/views/categories_screen/remitance/add_receipient_screen.dart';
@@ -160,7 +161,11 @@ class Pages {
     ),
     GetPage(
       name: Routes.buyGiftCardScreen,
-      page: () =>  const BuyGiftCardScreen(),
+      page: () =>   BuyGiftCardScreen(),
+    ),
+     GetPage(
+      name: Routes.cardViewScreen,
+      page: () =>   CardViewScreen(),
     ),
   ];
 }

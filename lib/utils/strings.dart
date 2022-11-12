@@ -263,6 +263,23 @@ class Strings {
   static const String mobileTopUpSuccess="Mobile Top Up Success";
   static const String yourMobileTopUp="Your mobile top up has been Successfull. Thanks for using QRPay";
 
+  //buy giftCard 
+  static const String googlePlay="Google Play";
+  static const String googlePlayGiftCard="Google Play Gift Card";
+  static const String category="Category";
+  static const String five="5";
+  static const String cards="/cards";
+  static const String priceCard="Price/card";
+  static const String moreInfo="More Info";
+  static const String price="Price";
+  static const String cardDetails="Card Details";
+  static const String quantity="Quantity";
+  static const String giftcardPurchase="Giftcard Purchase";
+  static const String uSDzero="0.00 USD";
+  static const String subCategory="Sub Category";
+  static const String googlePlay60="Google Play 60";
+  static const String yourGiffCard="Your Giftcard has been purchase Successfully. Thanks for using QRPay";
+
   //Profile
   static const String profile = 'Profile';
   static const String myWallet = 'My Wallet';

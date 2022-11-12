@@ -11,13 +11,17 @@ import '../../controller/bottom_navbar_controller/dashboard_controller.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
 import '../../widgets/bottom_navbar_widget/categories_widget.dart';
+import '../../widgets/drawer_widget/custom_drawer_widget.dart';
 
 class DashBordScreen extends StatelessWidget {
   DashBordScreen({super.key});
   final controller = Get.put(DashBoardController());
+  final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: scaffoldKey,
+      drawer: const CustomDrawer(),
       body: Stack(
         children: [
           Container(
@@ -45,7 +49,9 @@ class DashBordScreen extends StatelessWidget {
   _customAppbar(BuildContext context) {
     return DashboardAppBar(
       ledeaing: InkWell(
-        onTap: () {},
+        onTap: () {
+          scaffoldKey.currentState!.openDrawer();
+        },
         child: Padding(
           padding: EdgeInsets.only(
               left: Dimensions.defaultPaddingSize,

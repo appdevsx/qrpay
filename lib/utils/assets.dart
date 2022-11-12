@@ -9,6 +9,7 @@ class Assets {
 
   //Bg
   static const String dashboard = 'assets/BG/dashboard.png';
+  static const String buyCard = 'assets/BG/buyCard.png';
   static const String drawerMenu = 'assets/BG/drawer_menu.svg';
   static const String myWallett = 'assets/BG/my_wallet.svg';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
@@ -74,5 +75,6 @@ class Assets {
   static const String details = 'assets/Icon/details.svg';
   static const String found = 'assets/Icon/found.svg';
   static const String transaction = 'assets/Icon/transaction.svg';
-  static const String  coin= 'assets/Icon/coin.svg';
+  static const String coin = 'assets/Icon/coin.svg';
+  static const String playstore = 'assets/Icon/playstore.svg';
 }
