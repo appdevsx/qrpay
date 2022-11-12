@@ -99,7 +99,7 @@ class MoneyTransferScreen extends StatelessWidget {
                   mainAxisAlignment: mainCenter,
                   children: [
                     Text(
-                      controller.selectGender.value,
+                      controller.selectCurrency.value,
                       style: CustomStyle.whiteColorTextStyle,
                     ),
                     addHorizontalSpace(0),
@@ -109,14 +109,14 @@ class MoneyTransferScreen extends StatelessWidget {
                       iconSize: Dimensions.heightSize * 2,
                       dropdownColor: CustomColor.whiteColor,
                       underline: Container(height: 0),
-                      items: controller.genderList
+                      items: controller.currencyList
                           .map<DropdownMenuItem<String>>((value) {
                         return DropdownMenuItem<String>(
                           value: value.toString(),
                           child: Text(
                             value.toString(),
                             style: TextStyle(
-                              color: controller.selectGender.value == value
+                              color: controller.selectCurrency.value == value
                                   ? CustomColor.primaryColor
                                   : CustomColor.primaryTextColor,
                             ),
@@ -124,7 +124,7 @@ class MoneyTransferScreen extends StatelessWidget {
                         );
                       }).toList(),
                       onChanged: (String? value) {
-                        controller.selectGender.value = value!;
+                        controller.selectCurrency.value = value!;
                       },
                     ),
                   ],

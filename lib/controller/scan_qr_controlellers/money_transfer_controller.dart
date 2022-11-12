@@ -6,9 +6,9 @@ class MoneyTransferController extends GetxController {
   final qrAddressController = TextEditingController();
   final amountController = TextEditingController();
 
-  RxString selectGender = "USD".obs;
+  RxString selectCurrency = "USD".obs;
 
-  List<String> genderList = ["USD", "AUD"];
+  List<String> currencyList = ["USD", "AUD"];
 
   void onpresedSend() {
     Get.toNamed(Routes.previewScreen);

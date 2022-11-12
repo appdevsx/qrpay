@@ -140,7 +140,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.foundScreen,
-      page: () => const FoundScreen(),
+      page: () =>  FoundScreen(),
     ),
     GetPage(
       name: Routes.transactionScreen,
@@ -148,19 +148,19 @@ class Pages {
     ),
     GetPage(
       name: Routes.billPayScreen,
-      page: () => const BillPayScreen(),
+      page: () =>  BillPayScreen(),
     ),
     GetPage(
       name: Routes.mobileTopUpScreen,
-      page: () => const MobileTopUpScreen(),
+      page: () =>  MobileTopUpScreen(),
     ),
     GetPage(
       name: Routes.myGiftCardScreen,
-      page: () => const MyGiftCardScreen(),
+      page: () =>  const MyGiftCardScreen(),
     ),
     GetPage(
       name: Routes.buyGiftCardScreen,
-      page: () => const BuyGiftCardScreen(),
+      page: () =>  const BuyGiftCardScreen(),
     ),
   ];
 }

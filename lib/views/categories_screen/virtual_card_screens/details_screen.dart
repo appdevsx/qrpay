@@ -66,12 +66,10 @@ class DetailsScreen extends StatelessWidget {
   }
 
   _cardDetailsWidget(BuildContext context) {
-    return Container(
-      child: Column(
-        children: const [
-          Text("dsfkh"),
-        ],
-      ),
+    return Column(
+      children: const [
+        Text("dsfkh"),
+      ],
     );
   }
 }

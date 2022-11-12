@@ -48,6 +48,11 @@ class CustomStyle {
     fontWeight: FontWeight.w500,
   );
   //white color text style
+   static var enterAmountTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor.withOpacity(0.6),
+    fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w500,
+  );
   static var expiryTextStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor.withOpacity(0.6),
     fontSize: Dimensions.mediumTextSize,
@@ -82,6 +87,11 @@ class CustomStyle {
   static var recipientInformationTexStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w700,
+  );
+   static var addAmountTexStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.subTitleText,
     fontWeight: FontWeight.w700,
   );
   static var transactionTextStyle = GoogleFonts.inter(
@@ -157,6 +167,11 @@ class CustomStyle {
 
   static var dateTextStyle = GoogleFonts.inter(
     color: CustomColor.secondaryTextColor,
+    fontSize: Dimensions.smallestTextSize,
+    fontWeight: FontWeight.w500,
+  );
+  static var billTypeTextStyle = GoogleFonts.inter(
+    color: CustomColor.thirdTextColor,
     fontSize: Dimensions.smallestTextSize,
     fontWeight: FontWeight.w500,
   );

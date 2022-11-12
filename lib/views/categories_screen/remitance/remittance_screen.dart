@@ -264,7 +264,7 @@ class RemittanceScreen extends StatelessWidget {
   _sendingAmountWidet(BuildContext context) {
     return Column(
       children: [
-        //sending Amount input Widget
+      
         Row(
           mainAxisAlignment: mainSpaceBet,
           children: [
@@ -305,9 +305,7 @@ class RemittanceScreen extends StatelessWidget {
         ),
         addVerticalSpace(Dimensions.heightSize),
 
-        //transfer fee exchange rate Text
-
-        //add receipient get
+       
         Row(
           mainAxisAlignment: mainSpaceBet,
           children: [

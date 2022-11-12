@@ -16,6 +16,7 @@ class Assets {
   //Clipart
   static const String twoFaSecurity = 'assets/Clipart/2fa_security.svg';
   static const String confirm = 'assets/Clipart/confirm.svg';
+  static const String confirms = 'assets/Clipart/confirm.png';
   static const String myqr = 'assets/Clipart/my_qr.svg';
   static const String warn = 'assets/Clipart/warn.svg';
   static const String wrong = 'assets/Clipart/wrong.svg';
@@ -73,4 +74,5 @@ class Assets {
   static const String details = 'assets/Icon/details.svg';
   static const String found = 'assets/Icon/found.svg';
   static const String transaction = 'assets/Icon/transaction.svg';
+  static const String  coin= 'assets/Icon/coin.svg';
 }

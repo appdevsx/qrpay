@@ -239,6 +239,30 @@ class Strings {
   static const String found = 'Found';
   static const String transaction= 'Transaction';
 
+  //bill pay
+  static const String  selectBillCategory="Select Bill Category";
+  static const String  enterBillNumber="Enter Bill Number";
+  static const String  billType="Bill Type";
+  static const String  billNumber="Bill Number";
+  static const String  payBill="Pay Bill";
+  static const String  paymentSuccess="Payment Success";
+  static const String  electicity="Electicity";
+  static const String  charge="Charge";
+  static const String  receivedAmount="Received Amount";
+  static const String  bN135678951="B/N135678951";
+  static const String  yourBillHasBeenPaid="Your bill has been paid Successfully. Thanks for using QRPay";
+
+  //mobile top up
+  static const String mobileNumber="Mobile Number";
+  static const String enterMobileNumber="Enter Mobile Number";
+  static const String mobileTopUpType="Mobile Top Up Type";
+  static const String selectMobileCategory="Select Mobile Category";
+  static const String aTtMobility="AT&T Mobility";
+  static const String plus1611="+1 611 2357 896";
+  static const String topUpNow="Top Up Now";
+  static const String mobileTopUpSuccess="Mobile Top Up Success";
+  static const String yourMobileTopUp="Your mobile top up has been Successfull. Thanks for using QRPay";
+
   //Profile
   static const String profile = 'Profile';
   static const String myWallet = 'My Wallet';
@@ -250,6 +274,10 @@ class Strings {
   //my virtual cards
   static const String nineEight = '9864  5689  4623  1475';
   static const String plusBuyNewCard = '+ Buy New Card';
+  static const String enterAmount = 'Enter Amount';
+  static const String addFund = 'Add Fund';
+  static const String addFundSucces= 'Add Fund Success';
+  static const String yourMoneyAddedSucces= 'Your money has been added Successfully. Thanks for using QRPay';
 
   //update profile && update kyc
   static const String uploadPassportNidDri =

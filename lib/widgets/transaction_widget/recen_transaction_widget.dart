@@ -18,61 +18,64 @@ class TransactionWidget extends StatelessWidget {
   final String img, title, subTitle, dateText, amount;
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 4,
-      margin: EdgeInsets.zero,
-      child: Container(
-        padding: EdgeInsets.only(
-          bottom: Dimensions.defaultPaddingSize*0.1,
-          right: Dimensions.defaultPaddingSize * 0.4),
-        height: Dimensions.heightSize * 5,
-        child: Row(
-          children: [
-            Expanded(
-              flex: 2,
-              child: SvgPicture.asset(img),
-            ),
-            Expanded(
-              flex: 9,
-              child: Column(
-                crossAxisAlignment: crossStart,
-                children: [
-                  addVerticalSpace(Dimensions.heightSize),
-                  Row(
-                    mainAxisAlignment: mainSpaceBet,
-                    children: [
-                      Text(
-                        title,
-                        style: CustomStyle.smallTextStyle,
-                      ),
-                      Text(
-                        dateText,
-                        style: CustomStyle.dateTextStyle,
-                      ),
-                    ],
-                  ),
-                  addVerticalSpace(Dimensions.widthSize*0.7),
-                  Row(
-                    mainAxisAlignment: mainSpaceBet,
-                    children: [
-                      Text(
-                        subTitle,
-                        style: GoogleFonts.inter(
-                          color: CustomColor.secondaryTextColor,
-                          fontSize: Dimensions.smallTextSize,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                      Text(
-                        amount,
-                        style: CustomStyle.recipientTilteTextStyle,
-                      ),
-                    ],
-                  ),
-                ],
+    return Padding(
+      padding: EdgeInsets.only(bottom: Dimensions.defaultPaddingSize * 0.3),
+      child: Card(
+        elevation: 4,
+        margin: EdgeInsets.zero,
+        child: Container(
+          padding: EdgeInsets.only(
+              bottom: Dimensions.defaultPaddingSize * 0.1,
+              right: Dimensions.defaultPaddingSize * 0.4),
+          height: Dimensions.heightSize * 5,
+          child: Row(
+            children: [
+              Expanded(
+                flex: 2,
+                child: SvgPicture.asset(img),
               ),
-            ),
-          ],
+              Expanded(
+                flex: 9,
+                child: Column(
+                  crossAxisAlignment: crossStart,
+                  children: [
+                    addVerticalSpace(Dimensions.heightSize),
+                    Row(
+                      mainAxisAlignment: mainSpaceBet,
+                      children: [
+                        Text(
+                          title,
+                          style: CustomStyle.smallTextStyle,
+                        ),
+                        Text(
+                          dateText,
+                          style: CustomStyle.dateTextStyle,
+                        ),
+                      ],
+                    ),
+                    addVerticalSpace(Dimensions.widthSize * 0.7),
+                    Row(
+                      mainAxisAlignment: mainSpaceBet,
+                      children: [
+                        Text(
+                          subTitle,
+                          style: GoogleFonts.inter(
+                            color: CustomColor.secondaryTextColor,
+                            fontSize: Dimensions.smallTextSize,
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                        Text(
+                          amount,
+                          style: CustomStyle.recipientTilteTextStyle,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );

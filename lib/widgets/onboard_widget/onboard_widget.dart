@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:liquid_swipe/Helpers/Helpers.dart';
-import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
