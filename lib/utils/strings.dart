@@ -322,7 +322,7 @@ class Strings {
   static const String privacyPolicy = 'Privacy & Policy';
   static const String aboutUs = 'About Us';
   static const String colnelArichart = 'Colnel Arichart';
-  static const String colnelGmail= 'Colnelarichart@gmail.com';
+  static const String colnelGmail = 'Colnelarichart@gmail.com';
   static const String signOut = 'Sign Out';
   static const String savedReceipients = 'Saved Receipients';
   static const String giftcardLog = 'Giftcard Log';
@@ -330,36 +330,41 @@ class Strings {
   static const String mobileTopUpLog = 'Mobile Top Up Log';
 
   //save receipient
- static const String admanWarm="Adman Warm";
- static const String admangmail="admanwarm@gmail.com";
- static const String anthonyGolsambir="Anthony Golsambir";
- static const String antonygmail="anthony@gmail.com";
- static const String dostanZim="Dostan Zim";
- static const String dostanZimgmail="zim@gmail.com";
- static const String henryGems="Henry Gems";
- static const String henryGemsGmail="henrygems@gmail.com";
- static const String nagasuki="Nagasuki";
- static const String nagasukigmail="nagasuki@gmail.com";
- static const String sayokM="Sayok M.";
- static const String sayokgmail="sayok@gmail.com ";
- static const String zYaafil="Z. Yaafil";
- static const String yaafilgmail="yaafil@gmail.com";
- static const String wingston="Wingston";
- static const String wingstonGmail="wingston@gmail.com";
+  static const String admanWarm = "Adman Warm";
+  static const String admangmail = "admanwarm@gmail.com";
+  static const String anthonyGolsambir = "Anthony Golsambir";
+  static const String antonygmail = "anthony@gmail.com";
+  static const String dostanZim = "Dostan Zim";
+  static const String dostanZimgmail = "zim@gmail.com";
+  static const String henryGems = "Henry Gems";
+  static const String henryGemsGmail = "henrygems@gmail.com";
+  static const String nagasuki = "Nagasuki";
+  static const String nagasukigmail = "nagasuki@gmail.com";
+  static const String sayokM = "Sayok M.";
+  static const String sayokgmail = "sayok@gmail.com ";
+  static const String zYaafil = "Z. Yaafil";
+  static const String yaafilgmail = "yaafil@gmail.com";
+  static const String wingston = "Wingston";
+  static const String wingstonGmail = "wingston@gmail.com";
 
- //giftcard 
- static const String buyCard='Buy Card';
- static const String cN20236598='#CN-20236598';
- static const String usd15='15.00 USD';
- static const String usd5='5.00 USD';
- static const String usd10='10.00 USD';
- static const String redeemCard='Redeem Card';
- static const String tMobileUS='T-Mobile US';
- static const String verizon='Verizon';
- static const String education='Education';
- static const String gassBill='GassBill';
- static const String internet='Internet';
- static const String telephone='Telephone';
+  //giftcard
+  static const String buyCard = 'Buy Card';
+  static const String cN20236598 = '#CN-20236598';
+  static const String usd15 = '15.00 USD';
+  static const String usd5 = '5.00 USD';
+  static const String usd10 = '10.00 USD';
+  static const String redeemCard = 'Redeem Card';
+  static const String tMobileUS = 'T-Mobile US';
+  static const String verizon = 'Verizon';
+  static const String education = 'Education';
+  static const String gassBill = 'GassBill';
+  static const String internet = 'Internet';
+  static const String telephone = 'Telephone';
+  static const String trX9VW3SWKA9Y = 'TRX-6J9VW3SWKA9Y';
+  static const String trxNet99 = 'TRX-Netflix 99';
+  static const String netflixGiftCards = 'Netflix Gift Cards';
+  static const String netflix99 = 'Netflix 99';
+
   //setting
   static const String changePassword = 'Change Password';
   static const String changeLanguage = 'Change Language';

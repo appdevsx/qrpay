@@ -47,6 +47,7 @@ dependencies:
   percent_indicator: ^4.2.2
   image_picker: ^0.8.6
   timelines: ^0.1.0
+  flip_card: ^0.6.0
 
 dev_dependencies:
   flutter_test:

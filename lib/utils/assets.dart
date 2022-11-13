@@ -13,8 +13,10 @@ class Assets {
   static const String man2 = 'assets/BG/man2.png';
   static const String man3 = 'assets/BG/man3.png';
   static const String man4 = 'assets/BG/man4.png';
+  static const String man5 = 'assets/BG/man5.png';
   static const String women = 'assets/BG/women.png';
   static const String buyCard = 'assets/BG/buyCard.png';
+  static const String redCard = 'assets/BG/redCard.png';
   static const String drawerBg = 'assets/BG/drawerBg.png';
   static const String myWallett = 'assets/BG/my_wallet.svg';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
@@ -83,4 +85,5 @@ class Assets {
   static const String coin = 'assets/Icon/coin.svg';
   static const String playstore = 'assets/Icon/playstore.svg';
   static const String receipient = 'assets/Icon/receipient.svg';
+  static const String netflix = 'assets/Icon/netflix.svg';
 }

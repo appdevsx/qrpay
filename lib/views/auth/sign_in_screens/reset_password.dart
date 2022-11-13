@@ -12,6 +12,7 @@ import '../../../controller/auth/sign_in_controllers/reset_password_controller.d
 class ResetPasswordScreen extends StatelessWidget {
   ResetPasswordScreen({super.key});
   final controller = Get.put(ResetPasswordController());
+ final resetPasswordKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
@@ -36,8 +37,10 @@ class ResetPasswordScreen extends StatelessWidget {
 
   _inputWidget(BuildContext context) {
     return Container(
-        margin: EdgeInsets.only(
-            top: Dimensions.marginSize, bottom: Dimensions.marginSize * 2.2),
+      margin: EdgeInsets.only(
+          top: Dimensions.marginSize, bottom: Dimensions.marginSize * 2.2),
+      child: Form(
+        key: resetPasswordKey,
         child: Column(
           children: [
             PasswordInputWidget(
@@ -54,12 +57,16 @@ class ResetPasswordScreen extends StatelessWidget {
               labelText: Strings.confirmPassword,
             ),
           ],
-        ),);
+        ),
+      ),
+    );
   }
-  
+
   _buttonWidget(BuildContext context) {
-    return PrimaryButtonWidget(text: Strings.resetPassword, onPressed: (){
-   controller.onPressedResetPass();
-    });
+    return PrimaryButtonWidget(
+        text: Strings.resetPassword,
+        onPressed: () {
+          controller.onPressedResetPass();
+        });
   }
 }

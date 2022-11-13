@@ -199,11 +199,11 @@ class Pages {
     ),
     GetPage(
       name: Routes.settingScreen,
-      page: () => const SettingScreen(),
+      page: () =>  SettingScreen(),
     ),
     GetPage(
       name: Routes.changePasswordScreen,
-      page: () => const ChangePasswordScreen(),
+      page: () =>  ChangePasswordScreen(),
     ),
   ];
 }

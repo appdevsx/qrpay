@@ -29,12 +29,15 @@ class SaveReceipientWidget extends StatelessWidget {
                     color: CustomColor.primaryTextColor,
                     fontWeight: FontWeight.w600),
               ),
-              subtitle: Text(
-                gmail,
-                style: GoogleFonts.inter(
-                    fontSize: Dimensions.smallTextSize,
-                    color: CustomColor.borderColor,
-                    fontWeight: FontWeight.w500),
+              subtitle: Padding(
+                padding:  EdgeInsets.only(top:Dimensions.defaultPaddingSize*0.2),
+                child: Text(
+                  gmail,
+                  style: GoogleFonts.inter(
+                      fontSize: Dimensions.smallTextSize,
+                      color: CustomColor.borderColor,
+                      fontWeight: FontWeight.w500),
+                ),
               ),
             )),
       ),

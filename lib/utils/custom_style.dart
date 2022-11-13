@@ -22,7 +22,11 @@ class CustomStyle {
     fontSize: Dimensions.defaultTextSize,
     fontWeight: FontWeight.w600,
   );
-  //otp verification
+  static var settingTextStyle = GoogleFonts.inter(
+    color: CustomColor.thirdTextColor,
+    fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w600,
+  );
 
   static var defaultSubTitleTextStyle = GoogleFonts.inter(
     color: CustomColor.thirdTextColor,
@@ -30,7 +34,6 @@ class CustomStyle {
     fontWeight: FontWeight.w500,
   );
 
-  //kyc from
   static var borderColorText = GoogleFonts.inter(
     color: CustomColor.borderColor,
     fontSize: Dimensions.defaultTextSize,
@@ -62,7 +65,7 @@ class CustomStyle {
     fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w600,
   );
- 
+
   static var qrAddressTextStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.smallestTextSize * 1.06,
@@ -104,7 +107,7 @@ class CustomStyle {
     fontSize: Dimensions.subTitleText,
     fontWeight: FontWeight.w700,
   );
-   static var currentAmountTexStyle = GoogleFonts.inter(
+  static var currentAmountTexStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.onboardsubTitle,
     fontWeight: FontWeight.w700,
