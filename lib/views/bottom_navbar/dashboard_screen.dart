@@ -26,8 +26,9 @@ class DashBordScreen extends StatelessWidget {
         children: [
           Container(
             decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(Assets.dashboard), fit: BoxFit.cover)),
+              image: DecorationImage(
+                  image: AssetImage(Assets.dashboard), fit: BoxFit.cover),
+            ),
           ),
           _bodyWidget(context),
         ],

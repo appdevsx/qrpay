@@ -160,6 +160,11 @@ class CustomStyle {
     fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
   );
+  static var profileTextStyle = GoogleFonts.inter(
+    color: CustomColor.primaryColor,
+    fontSize: Dimensions.largeTextSize,
+    fontWeight: FontWeight.w600,
+  );
 
   static var percentTextStyle = GoogleFonts.inter(
     color: CustomColor.primaryColor,

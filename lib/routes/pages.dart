@@ -28,6 +28,11 @@ import 'package:qrpay/views/drawer_screens/change_password_screen.dart';
 import 'package:qrpay/views/drawer_screens/settings_screen.dart';
 import 'package:qrpay/views/drawer_screens/transactions_log_screen.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
+import 'package:qrpay/views/profile_screens/my_wallet_screen.dart';
+import 'package:qrpay/views/profile_screens/profile_screen.dart';
+import 'package:qrpay/views/profile_screens/two_factor_secuirity_screen.dart';
+import 'package:qrpay/views/profile_screens/update_kyc_screen.dart';
+import 'package:qrpay/views/profile_screens/update_profile_screen.dart';
 import 'package:qrpay/views/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
@@ -199,11 +204,31 @@ class Pages {
     ),
     GetPage(
       name: Routes.settingScreen,
-      page: () =>  SettingScreen(),
+      page: () => SettingScreen(),
     ),
     GetPage(
       name: Routes.changePasswordScreen,
-      page: () =>  ChangePasswordScreen(),
+      page: () => ChangePasswordScreen(),
+    ),
+    GetPage(
+      name: Routes.profileScreen,
+      page: () =>  ProfileScreen(),
+    ),
+    GetPage(
+      name: Routes.myWalletScreen,
+      page: () => const MyWalletScreen(),
+    ),
+    GetPage(
+      name: Routes.updateProfileScreen,
+      page: () =>  UpdateProfileScreen(),
+    ),
+    GetPage(
+      name: Routes.updateKycScreen,
+      page: () => const UpdateKycScreen(),
+    ),
+    GetPage(
+      name: Routes.twoFactorSecuirityScreen,
+      page: () =>  TwoFactorSecuirityScreen(),
     ),
   ];
 }

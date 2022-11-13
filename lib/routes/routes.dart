@@ -40,4 +40,14 @@ class Routes {
   static const String mobileTopUpLogScreen = '/MobileTopUpLogScreen';
   static const String settingScreen = '/SettingScreen';
   static const String changePasswordScreen = '/ChangePasswordScreen';
+
+  //profile
+
+  static const String profileScreen = '/profileScreen';
+  static const String myWalletScreen = '/myWalletScreen';
+  static const String updateProfileScreen = '/updateProfileScreen';
+  static const String updateKycScreen = '/updateKycScreen';
+  static const String twoFactorSecuirityScreen = '/twoFactorSecuirityScreen';
+  
+
 }
