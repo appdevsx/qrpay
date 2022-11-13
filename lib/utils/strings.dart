@@ -327,7 +327,7 @@ class Strings {
   static const String savedReceipients = 'Saved Receipients';
   static const String giftcardLog = 'Giftcard Log';
   static const String billPaymentLog = 'Bill Payment Log';
-  static const String mobileTopUpLog = 'Mobile Top Up LogOut';
+  static const String mobileTopUpLog = 'Mobile Top Up Log';
 
   //setting
   static const String changePassword = 'Change Password';

@@ -17,7 +17,7 @@ class CustomDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Drawer(
-        width: MediaQuery.of(context).size.width / 1.35,
+        width: MediaQuery.of(context).size.width / 1.34,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
           topRight: Radius.circular(Dimensions.radius * 2),
@@ -28,7 +28,7 @@ class CustomDrawer extends StatelessWidget {
             image: DecorationImage(
                 image: AssetImage(Assets.drawerMenu), fit: BoxFit.cover),
           ),
-          child: Column(
+          child: ListView(
             children: [
               _userImgWidget(context),
               _userTextwidget(context),
@@ -43,9 +43,10 @@ class CustomDrawer extends StatelessWidget {
   _userImgWidget(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(
-        top: Dimensions.defaultPaddingSize * 3,
-        bottom: Dimensions.defaultPaddingSize * 0.8,
-      ),
+          top: Dimensions.defaultPaddingSize * 2,
+          bottom: Dimensions.defaultPaddingSize * 0.8,
+          left: Dimensions.defaultPaddingSize * 2.3,
+          right: Dimensions.defaultPaddingSize * 2.3),
       height: Dimensions.heightSize * 8.4,
       width: Dimensions.widthSize * 10.4,
       decoration: BoxDecoration(
@@ -75,6 +76,7 @@ class CustomDrawer extends StatelessWidget {
             color: CustomColor.whiteColor,
           ),
         ),
+        addVerticalSpace(Dimensions.heightSize * 2)
       ],
     );
   }
@@ -102,14 +104,15 @@ class CustomDrawer extends StatelessWidget {
       onTap: onTap,
       child: Padding(
         padding: EdgeInsets.symmetric(
-          horizontal: Dimensions.defaultPaddingSize * 1.1,
-          vertical: Dimensions.defaultPaddingSize * 0.5,
+          horizontal: Dimensions.defaultPaddingSize * 1,
+          vertical: Dimensions.defaultPaddingSize * 0.2,
         ),
         child: Row(
           crossAxisAlignment: crossStart,
           mainAxisAlignment: mainStart,
           children: [
             Container(
+              padding: EdgeInsets.all(Dimensions.widthSize * 0.5),
               alignment: Alignment.center,
               height: Dimensions.heightSize * 2.5,
               width: Dimensions.widthSize * 3.3,
@@ -120,6 +123,8 @@ class CustomDrawer extends StatelessWidget {
               child: SvgPicture.asset(
                 icon,
                 color: CustomColor.whiteColor,
+                height: 30,
+                width: 30,
               ),
             ),
             addHorizontalSpace(Dimensions.widthSize),

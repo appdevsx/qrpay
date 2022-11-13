@@ -7,6 +7,13 @@ class BillPaymentLogScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(appBar: CustomAppBar(title: Strings.billPaymentLog),);
+    return Scaffold(
+      appBar: CustomAppBar(title: Strings.billPaymentLog),
+      body: _bodyWidget(context),
+    );
+  }
+  
+  _bodyWidget(BuildContext context) {
+  
   }
 }

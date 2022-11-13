@@ -13,6 +13,7 @@ class Assets {
   static const String drawerMenu = 'assets/BG/drawer_menu.png';
   static const String myWallett = 'assets/BG/my_wallet.svg';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
+  static const String drawerbg = 'assets/BG/drawerbg.svg';
 
   //Clipart
   static const String twoFaSecurity = 'assets/Clipart/2fa_security.svg';
