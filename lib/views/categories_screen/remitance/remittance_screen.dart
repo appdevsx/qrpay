@@ -39,6 +39,7 @@ class RemittanceScreen extends StatelessWidget {
         children: [
           _inputFieldWidget(),
           _sendingAmountWidet(context),
+          _previewWidget(context),
         ],
       );
     });
@@ -157,7 +158,8 @@ class RemittanceScreen extends StatelessWidget {
         addVerticalSpace(Dimensions.heightSize),
         //bank input widget
         Visibility(
-         visible: controller.receivingMethod.value==controller.receivingList[1],
+          visible:
+              controller.receivingMethod.value == controller.receivingList[1],
           child: PrimaryInputWidget(
             controller: controller.bankCountryController,
             hintText: controller.bankMethod.value,
@@ -264,7 +266,6 @@ class RemittanceScreen extends StatelessWidget {
   _sendingAmountWidet(BuildContext context) {
     return Column(
       children: [
-      
         Row(
           mainAxisAlignment: mainSpaceBet,
           children: [
@@ -304,8 +305,6 @@ class RemittanceScreen extends StatelessWidget {
           ],
         ),
         addVerticalSpace(Dimensions.heightSize),
-
-       
         Row(
           mainAxisAlignment: mainSpaceBet,
           children: [
@@ -345,6 +344,207 @@ class RemittanceScreen extends StatelessWidget {
           ],
         ),
       ],
+    );
+  }
+
+  _previewWidget(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.4,
+      width: MediaQuery.of(context).size.width,
+      padding:
+          EdgeInsets.symmetric(vertical: Dimensions.defaultPaddingSize * 0.3),
+      margin: EdgeInsets.only(
+        top: Dimensions.marginSize * 2,
+        bottom: Dimensions.marginSize * 5,
+      ),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(Dimensions.radius * 1.5),
+        color: CustomColor.primaryColor.withOpacity(0.2),
+      ),
+      child: Column(
+        crossAxisAlignment: crossStart,
+        children: [
+          Padding(
+            padding: EdgeInsets.symmetric(
+              horizontal: Dimensions.defaultPaddingSize * 0.6,
+            ),
+            child: Text(
+              Strings.preview,
+              style: CustomStyle.smallTextStyle,
+            ),
+          ),
+          const Divider(
+            color: CustomColor.whiteColor,
+          ),
+
+          //started Row widget
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.sendingCountry,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.unitedState,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.receivingCountry,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.unitedState,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+
+          //amount
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.receipient,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.remansoGrip,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.receivingMethod,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.qRPayWallet,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.sendingAmount,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.uSD100,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.transferFee,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.uSD2,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.exchangeRate,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.uSD1Equal,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+          Divider(
+            color: CustomColor.primaryColor.withOpacity(0.3),
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: Dimensions.defaultPaddingSize * 0.6),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  Strings.recipientReceived,
+                  style: CustomStyle.billTypeTextStyle,
+                ),
+                Text(
+                  Strings.usd15,
+                  style: CustomStyle.smallTextStyle,
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

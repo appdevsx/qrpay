@@ -28,7 +28,7 @@ class AddReceipientScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: Strings.addReceipient),
       bottomSheet: CustomBottomShet(
-          img: Assets.edit,
+          img: Assets.person,
           ontap: () {
             showBottomSheet(context);
           },
@@ -171,7 +171,7 @@ class AddReceipientScreen extends StatelessWidget {
             mainAxisAlignment: mainCenter,
             children: [
               SvgPicture.asset(
-                Assets.edit,
+                Assets.addimage,
                 color: CustomColor.borderColor,
               ),
               addHorizontalSpace(
@@ -209,7 +209,7 @@ class AddReceipientScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: mainCenter,
               children: [
-                SvgPicture.asset(
+                Image.asset(
                   Assets.confirm,
                   height: Dimensions.heightSize * 9,
                   width: Dimensions.heightSize * 10,

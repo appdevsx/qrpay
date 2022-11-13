@@ -5,11 +5,11 @@ import 'package:get/get.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 
-import '../../controller/scan_qr_controlellers/scan_qr_controller.dart';
-import '../../utils/assets.dart';
-import '../../utils/custom_color.dart';
-import '../../utils/dimensions.dart';
-import '../../utils/size.dart';
+import '../../../controller/scan_qr_controlellers/scan_qr_controller.dart';
+import '../../../utils/assets.dart';
+import '../../../utils/custom_color.dart';
+import '../../../utils/dimensions.dart';
+import '../../../utils/size.dart';
 
 class ScanQrScreen extends StatelessWidget {
    ScanQrScreen({super.key});

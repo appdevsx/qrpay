@@ -377,7 +377,7 @@ class CardViewScreen extends StatelessWidget {
               mainAxisAlignment: mainCenter,
               children: [
                 Image.asset(
-                  Assets.confirms,
+                  Assets.confirm,
                   height: Dimensions.heightSize * 9,
                   width: Dimensions.heightSize * 10,
                 ),

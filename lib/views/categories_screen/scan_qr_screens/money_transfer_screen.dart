@@ -9,8 +9,8 @@ import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/input_widget/primary_input_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 
-import '../../controller/scan_qr_controlellers/money_transfer_controller.dart';
-import '../../widgets/others/bottom_sheet_widget.dart';
+import '../../../controller/scan_qr_controlellers/money_transfer_controller.dart';
+import '../../../widgets/others/bottom_sheet_widget.dart';
 
 class MoneyTransferScreen extends StatelessWidget {
   MoneyTransferScreen({super.key});

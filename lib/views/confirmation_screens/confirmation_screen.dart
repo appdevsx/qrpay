@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import '../../../utils/custom_style.dart';
 import '../../../utils/dimensions.dart';
@@ -32,8 +31,8 @@ class CongratulationScreen extends StatelessWidget {
 
   _congratulationImg(BuildContext context) {
     final isCongratulation = congratulationData["isCongratulation"];
-    return SvgPicture.asset(
-      isCongratulation == true ? Assets.confirm : Assets.wrong,
+    return Image.asset(
+      isCongratulation == true ? Assets.confirms : Assets.wrong,
       height: MediaQuery.of(context).size.height * 0.19,
       width: MediaQuery.of(context).size.height * 0.19,
     );

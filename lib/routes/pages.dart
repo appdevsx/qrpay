@@ -1,6 +1,7 @@
 // ignore_for_file: unused_import
 
 import 'package:get/get.dart';
+import 'package:qrpay/controller/profile_controllers/two_factor_otp_controller.dart';
 import 'package:qrpay/views/auth/sign_in_screens/reset_password.dart';
 import 'package:qrpay/views/auth/sign_in_screens/sign_in_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/facelock_enter_screen.dart';
@@ -33,7 +34,7 @@ import 'package:qrpay/views/profile_screens/profile_screen.dart';
 import 'package:qrpay/views/profile_screens/two_factor_secuirity_screen.dart';
 import 'package:qrpay/views/profile_screens/update_kyc_screen.dart';
 import 'package:qrpay/views/profile_screens/update_profile_screen.dart';
-import 'package:qrpay/views/scan_qr_screens/scan_qr_screen.dart';
+import 'package:qrpay/views/categories_screen/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
@@ -43,8 +44,9 @@ import '../views/bottom_navbar/dashboard_screen.dart';
 import '../views/categories_screen/money_receive_screen.dart';
 import '../views/confirmation_screens/confirmation_screen.dart';
 import '../views/confirmation_screens/wait_for_aproval_screen.dart';
-import '../views/scan_qr_screens/money_transfer_screen.dart';
-import '../views/scan_qr_screens/preview_screen.dart';
+import '../views/profile_screens/two_factor_otp_screen.dart';
+import '../views/categories_screen/scan_qr_screens/money_transfer_screen.dart';
+import '../views/categories_screen/scan_qr_screens/preview_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
 import 'routes.dart';
 
@@ -125,7 +127,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.previewScreen,
-      page: () => PreviewScreen(),
+      page: () => const PreviewScreen(),
     ),
     GetPage(
       name: Routes.scanQrScreen,
@@ -212,7 +214,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.profileScreen,
-      page: () =>  ProfileScreen(),
+      page: () => ProfileScreen(),
     ),
     GetPage(
       name: Routes.myWalletScreen,
@@ -220,7 +222,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.updateProfileScreen,
-      page: () =>  UpdateProfileScreen(),
+      page: () => UpdateProfileScreen(),
     ),
     GetPage(
       name: Routes.updateKycScreen,
@@ -228,7 +230,11 @@ class Pages {
     ),
     GetPage(
       name: Routes.twoFactorSecuirityScreen,
-      page: () =>  TwoFactorSecuirityScreen(),
+      page: () => TwoFactorSecuirityScreen(),
+    ),
+    GetPage(
+      name: Routes.twoFactorOtpScreen,
+      page: () => TwoFactorOtpScreen(),
     ),
   ];
 }

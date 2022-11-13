@@ -371,4 +371,5 @@ class Strings {
   static const String deleteAccount = 'Delete Account';
   static const String oldPassword = 'Old Password';
   static const String enterOldPassword = 'Enter Old Password';
+  static const String weAskForVerification = 'We’ll ask for a verification code via your security method if we notice a login from an unrecogn-ized device or browser. Enable your 2FA Security';
 }

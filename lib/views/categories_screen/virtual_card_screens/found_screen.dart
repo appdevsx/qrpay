@@ -315,7 +315,7 @@ class FoundScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: mainCenter,
               children: [
-                SvgPicture.asset(
+                Image.asset(
                   Assets.confirm,
                   height: Dimensions.heightSize * 9,
                   width: Dimensions.heightSize * 10,

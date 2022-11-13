@@ -10,12 +10,14 @@ import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/button_widget/primary_button.dart';
 import 'package:qrpay/widgets/others/dashboard_appbar.dart';
 
-import '../../controller/scan_qr_controlellers/preview_controller.dart';
-import '../../utils/dimensions.dart';
+import '../../../controller/scan_qr_controlellers/preview_controller.dart';
+import '../../../utils/dimensions.dart';
+
+final controller = Get.put(PreviewController());
 
 class PreviewScreen extends StatelessWidget {
-   PreviewScreen({super.key});
-final controller=Get.put(PreviewController());
+  const PreviewScreen({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -353,53 +355,104 @@ final controller=Get.put(PreviewController());
     );
   }
 
-  showBottomSheet(BuildContext context) => 
-  showModalBottomSheet<void>(
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.only(
-         topLeft: Radius.circular(Dimensions.radius * 1.5),
-              topRight: Radius.circular(Dimensions.radius * 1.5),
-      )
-    ),
+  //wrong botom sheet
+  showBottomSheet(BuildContext context) => showModalBottomSheet<void>(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(Dimensions.radius * 1.5),
+          topRight: Radius.circular(Dimensions.radius * 1.5),
+        )),
         elevation: 0,
         backgroundColor: CustomColor.whiteColor,
         context: context,
         builder: (BuildContext context) {
           return Container(
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(Dimensions.radius * 1.5),
-              topRight: Radius.circular(Dimensions.radius * 1.5),
-            )),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(Dimensions.radius * 1.5),
+                topRight: Radius.circular(Dimensions.radius * 1.5),
+              ),
+            ),
             padding: EdgeInsets.all(Dimensions.marginSize * 0.9),
-            height: MediaQuery.of(context).size.height * 0.42,
+            height: MediaQuery.of(context).size.height * 0.43,
             child: Column(
               mainAxisAlignment: mainCenter,
               children: [
-                SvgPicture.asset(
-                  Assets.confirm,
-                  height: Dimensions.heightSize * 9,
-                  width: Dimensions.heightSize * 10,
+                Image.asset(
+                  Assets.wrong,
+                  height: Dimensions.heightSize * 8,
+                  width: Dimensions.heightSize * 8,
                 ),
                 addVerticalSpace(Dimensions.heightSize),
                 Text(
-                  Strings.transferSuccess,
+                  Strings.transferFailed,
                   style: CustomStyle.boldTitleTextStyle,
                 ),
                 Text(
-                  Strings.yourmoneySenSuccess,
+                  Strings.yourMoneyhasBeeenFailed,
                   textAlign: TextAlign.center,
                   style: CustomStyle.defaultSubTitleTextStyle,
                 ),
                 addVerticalSpace(Dimensions.heightSize * 2),
                 PrimaryButtonWidget(
-                    text: Strings.backtoHome,
-                    onPressed: () {
-                      controller.onPresedbackToHome();
-                    }),
+                  backgroundColor: const Color(0xFFF83838),
+                  text: Strings.tryAgain,
+                  onPressed: () {
+                    rightShowBottomSheet(context);
+                  },
+                ),
               ],
             ),
           );
         },
       );
 }
+
+//Right bottom sheet
+rightShowBottomSheet(BuildContext context) => showModalBottomSheet<void>(
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.only(
+        topLeft: Radius.circular(Dimensions.radius * 1.5),
+        topRight: Radius.circular(Dimensions.radius * 1.5),
+      )),
+      elevation: 0,
+      backgroundColor: CustomColor.whiteColor,
+      context: context,
+      builder: (BuildContext context) {
+        return Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(
+            topLeft: Radius.circular(Dimensions.radius * 1.5),
+            topRight: Radius.circular(Dimensions.radius * 1.5),
+          )),
+          padding: EdgeInsets.all(Dimensions.marginSize * 0.9),
+          height: MediaQuery.of(context).size.height * 0.43,
+          child: Column(
+            mainAxisAlignment: mainCenter,
+            children: [
+              Image.asset(
+                Assets.confirm,
+                height: Dimensions.heightSize * 8,
+                width: Dimensions.heightSize * 8,
+              ),
+              addVerticalSpace(Dimensions.heightSize),
+              Text(
+                Strings.transferSuccess,
+                style: CustomStyle.boldTitleTextStyle,
+              ),
+              Text(
+                Strings.yourmoneySenSuccess,
+                textAlign: TextAlign.center,
+                style: CustomStyle.defaultSubTitleTextStyle,
+              ),
+              addVerticalSpace(Dimensions.heightSize * 2),
+              PrimaryButtonWidget(
+                  text: Strings.backtoHome,
+                  onPressed: () {
+                    controller.onPresedbackToHome();
+                  }),
+            ],
+          ),
+        );
+      },
+    );

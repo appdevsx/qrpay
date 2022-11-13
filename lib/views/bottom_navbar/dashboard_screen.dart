@@ -70,10 +70,15 @@ class DashBordScreen extends StatelessWidget {
           padding: EdgeInsets.only(
               top: Dimensions.defaultPaddingSize * 0.2,
               right: Dimensions.defaultPaddingSize * 0.6),
-          child: CircleAvatar(
-            radius: 16,
-            backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
-            child: Image.asset(Assets.profile),
+          child: InkWell(
+            onTap: (){
+              controller.onTapProfile();
+            },
+            child: CircleAvatar(
+              radius: 16,
+              backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
+              child: Image.asset(Assets.profile),
+            ),
           ),
         )
       ],

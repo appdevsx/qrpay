@@ -7,7 +7,7 @@ class DashBoardController extends GetxController {
   }
 
   void onTapSend() {
-    Get.toNamed(Routes.moneyTransferScreen);
+    Get.toNamed(Routes.scanQrScreen);
   }
 
   void onTapRemittance() {
@@ -36,5 +36,9 @@ class DashBoardController extends GetxController {
 
   void onPresedQRScan() {
     Get.toNamed(Routes.scanQrScreen);
+  }
+
+  void onTapProfile() {
+    Get.toNamed(Routes.profileScreen);
   }
 }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/dimensions.dart';
@@ -374,7 +373,7 @@ class BillPayScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: mainCenter,
               children: [
-                SvgPicture.asset(
+                Image.asset(
                   Assets.confirm,
                   height: Dimensions.heightSize * 9,
                   width: Dimensions.heightSize * 10,

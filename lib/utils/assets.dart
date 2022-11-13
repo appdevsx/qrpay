@@ -18,15 +18,16 @@ class Assets {
   static const String redCard = 'assets/BG/redCard.png';
   static const String drawerBg = 'assets/BG/drawerBg.png';
   static const String myWallett = 'assets/BG/my_wallet.png';
+  static const String idcard= 'assets/BG/idcard.png';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
 
   //Clipart
-  static const String twoFaSecurity = 'assets/Clipart/2fa_security.svg';
-  static const String confirm = 'assets/Clipart/confirm.svg';
+  static const String twoFaSecurity = 'assets/Clipart/2fa_security.png';
+  static const String confirm = 'assets/Clipart/confirm.png';
   static const String confirms = 'assets/Clipart/confirm.png';
   static const String myqr = 'assets/Clipart/my_qr.svg';
-  static const String warn = 'assets/Clipart/warn.svg';
-  static const String wrong = 'assets/Clipart/wrong.svg';
+  static const String warn = 'assets/Clipart/warn.png';
+  static const String wrong = 'assets/Clipart/wrong.png';
   static const String profile = 'assets/Clipart/profile.png';
   static const String iconBG = 'assets/Clipart/iconBG.png';
   static const String qrCode = 'assets/Clipart/qrCodes.png';
@@ -86,4 +87,6 @@ class Assets {
   static const String receipient = 'assets/Icon/receipient.svg';
   static const String netflix = 'assets/Icon/netflix.svg';
   static const String forwad = 'assets/Icon/forwad.svg';
+  static const String person = 'assets/Icon/person.svg';
+  static const String addimage = 'assets/Icon/addimage.svg';
 }
