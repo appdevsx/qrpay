@@ -10,7 +10,8 @@ class Routes {
   static const String waitForApprovalScreen = '/waitForApprovalScreen';
   static const String signInOptionsScreen = '/signInOptionsScreen';
   static const String signInScreen = '/signInScreen';
-  static const String signinOTPVerificationScreen = '/signinOTPVerificationScreen';
+  static const String signinOTPVerificationScreen =
+      '/signinOTPVerificationScreen';
   static const String resetPasswordScreen = '/resetPasswordScreen';
   static const String congratulationScreen = '/congratulationScreen';
   static const String bottomNavBarScreen = '/bottomNavBarScreen';
@@ -30,4 +31,13 @@ class Routes {
   static const String myGiftCardScreen = '/myGiftCardScreen';
   static const String cardViewScreen = '/CardViewScreen';
   static const String buyGiftCardScreen = '/buyGiftCardScreen';
+
+  //drawer
+  static const String saveReceipientScreen = '/SaveReceipientScreen';
+  static const String transactionLogScreen = '/TransactionLogScreen';
+  static const String giftCardLogScreen = '/GiftCardLogScreen';
+  static const String billPaymentLogScreen = '/BillPaymentLogScreen';
+  static const String mobileTopUpLogScreen = '/MobileTopUpLogScreen';
+  static const String settingScreen = '/SettingScreen';
+  static const String changePasswordScreen = '/ChangePasswordScreen';
 }

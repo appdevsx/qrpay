@@ -11,6 +11,7 @@ class CustomColor {
 
   static const Color borderColor = Color(0xFFBDBDBD);
   static const Color transparentColor = Colors.transparent;
+  static const Color draweBackGround = Color(0xFFA5C7FB);
 
   static const Color blackColor = Color(0xFF1D1D1D);
   static const Color whiteColor = Color(0xFFFFFFFF);

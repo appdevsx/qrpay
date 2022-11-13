@@ -62,20 +62,26 @@ class CustomStyle {
     fontSize: Dimensions.mediumTextSize,
     fontWeight: FontWeight.w600,
   );
-  static var currentAmountTexStyle = GoogleFonts.inter(
-    color: CustomColor.whiteColor,
-    fontSize: Dimensions.onboardsubTitle,
-    fontWeight: FontWeight.w700,
-  );
-
-  static var nameTexStyle = GoogleFonts.inter(
-    color: CustomColor.whiteColor,
-    fontSize: Dimensions.mediumTextSize * 1.06,
-    fontWeight: FontWeight.w700,
-  );
+ 
   static var qrAddressTextStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
     fontSize: Dimensions.smallestTextSize * 1.06,
+    fontWeight: FontWeight.w600,
+  );
+
+  static var transactionTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor.withOpacity(0.8),
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  static var addUsdTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.defaultTextSize,
+    fontWeight: FontWeight.w600,
+  );
+  static var costTextStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor.withOpacity(0.8),
+    fontSize: Dimensions.smallTextSize,
     fontWeight: FontWeight.w600,
   );
   static var amountTextStyle = GoogleFonts.inter(
@@ -98,20 +104,16 @@ class CustomStyle {
     fontSize: Dimensions.subTitleText,
     fontWeight: FontWeight.w700,
   );
-  static var transactionTextStyle = GoogleFonts.inter(
-    color: CustomColor.whiteColor.withOpacity(0.8),
-    fontSize: Dimensions.defaultTextSize,
-    fontWeight: FontWeight.w600,
-  );
-  static var addUsdTextStyle = GoogleFonts.inter(
+   static var currentAmountTexStyle = GoogleFonts.inter(
     color: CustomColor.whiteColor,
-    fontSize: Dimensions.defaultTextSize,
-    fontWeight: FontWeight.w600,
+    fontSize: Dimensions.onboardsubTitle,
+    fontWeight: FontWeight.w700,
   );
-  static var costTextStyle = GoogleFonts.inter(
-    color: CustomColor.whiteColor.withOpacity(0.8),
-    fontSize: Dimensions.smallTextSize,
-    fontWeight: FontWeight.w600,
+
+  static var nameTexStyle = GoogleFonts.inter(
+    color: CustomColor.whiteColor,
+    fontSize: Dimensions.mediumTextSize * 1.06,
+    fontWeight: FontWeight.w700,
   );
   //primary color text style
   static var transferFeeTextStyle = GoogleFonts.inter(

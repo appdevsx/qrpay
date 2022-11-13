@@ -237,48 +237,51 @@ class Strings {
   static const String agencyFb = '9864 1326 7135 3126';
   static const String details = 'Details';
   static const String found = 'Found';
-  static const String transaction= 'Transaction';
+  static const String transaction = 'Transaction';
 
   //bill pay
-  static const String  selectBillCategory="Select Bill Category";
-  static const String  enterBillNumber="Enter Bill Number";
-  static const String  billType="Bill Type";
-  static const String  billNumber="Bill Number";
-  static const String  payBill="Pay Bill";
-  static const String  paymentSuccess="Payment Success";
-  static const String  electicity="Electicity";
-  static const String  charge="Charge";
-  static const String  receivedAmount="Received Amount";
-  static const String  bN135678951="B/N135678951";
-  static const String  yourBillHasBeenPaid="Your bill has been paid Successfully. Thanks for using QRPay";
+  static const String selectBillCategory = "Select Bill Category";
+  static const String enterBillNumber = "Enter Bill Number";
+  static const String billType = "Bill Type";
+  static const String billNumber = "Bill Number";
+  static const String payBill = "Pay Bill";
+  static const String paymentSuccess = "Payment Success";
+  static const String electicity = "Electicity";
+  static const String charge = "Charge";
+  static const String receivedAmount = "Received Amount";
+  static const String bN135678951 = "B/N135678951";
+  static const String yourBillHasBeenPaid =
+      "Your bill has been paid Successfully. Thanks for using QRPay";
 
   //mobile top up
-  static const String mobileNumber="Mobile Number";
-  static const String enterMobileNumber="Enter Mobile Number";
-  static const String mobileTopUpType="Mobile Top Up Type";
-  static const String selectMobileCategory="Select Mobile Category";
-  static const String aTtMobility="AT&T Mobility";
-  static const String plus1611="+1 611 2357 896";
-  static const String topUpNow="Top Up Now";
-  static const String mobileTopUpSuccess="Mobile Top Up Success";
-  static const String yourMobileTopUp="Your mobile top up has been Successfull. Thanks for using QRPay";
+  static const String mobileNumber = "Mobile Number";
+  static const String enterMobileNumber = "Enter Mobile Number";
+  static const String mobileTopUpType = "Mobile Top Up Type";
+  static const String selectMobileCategory = "Select Mobile Category";
+  static const String aTtMobility = "AT&T Mobility";
+  static const String plus1611 = "+1 611 2357 896";
+  static const String topUpNow = "Top Up Now";
+  static const String mobileTopUpSuccess = "Mobile Top Up Success";
+  static const String yourMobileTopUp =
+      "Your mobile top up has been Successfull. Thanks for using QRPay";
 
-  //buy giftCard 
-  static const String googlePlay="Google Play";
-  static const String googlePlayGiftCard="Google Play Gift Card";
-  static const String category="Category";
-  static const String five="5";
-  static const String cards="/cards";
-  static const String priceCard="Price/card";
-  static const String moreInfo="More Info";
-  static const String price="Price";
-  static const String cardDetails="Card Details";
-  static const String quantity="Quantity";
-  static const String giftcardPurchase="Giftcard Purchase";
-  static const String uSDzero="0.00 USD";
-  static const String subCategory="Sub Category";
-  static const String googlePlay60="Google Play 60";
-  static const String yourGiffCard="Your Giftcard has been purchase Successfully. Thanks for using QRPay";
+  //buy giftCard
+  static const String googlePlay = "Google Play";
+  static const String googlePlayGiftCard = "Google Play Gift Card";
+  static const String category = "Category";
+  static const String five = "5";
+  static const String cards = "/cards";
+  static const String priceCard = "Price/card";
+  static const String moreInfo = "More Info";
+  static const String price = "Price";
+  static const String cardDetails = "Card Details";
+  static const String quantity = "Quantity";
+  static const String giftcardPurchase = "Giftcard Purchase";
+  static const String uSDzero = "0.00 USD";
+  static const String subCategory = "Sub Category";
+  static const String googlePlay60 = "Google Play 60";
+  static const String yourGiffCard =
+      "Your Giftcard has been purchase Successfully. Thanks for using QRPay";
 
   //Profile
   static const String profile = 'Profile';
@@ -293,8 +296,9 @@ class Strings {
   static const String plusBuyNewCard = '+ Buy New Card';
   static const String enterAmount = 'Enter Amount';
   static const String addFund = 'Add Fund';
-  static const String addFundSucces= 'Add Fund Success';
-  static const String yourMoneyAddedSucces= 'Your money has been added Successfully. Thanks for using QRPay';
+  static const String addFundSucces = 'Add Fund Success';
+  static const String yourMoneyAddedSucces =
+      'Your money has been added Successfully. Thanks for using QRPay';
 
   //update profile && update kyc
   static const String uploadPassportNidDri =
@@ -311,12 +315,19 @@ class Strings {
 
   //drawer
   static const String transactionsLog = 'Transactions Log';
+  static const String transactionLog = 'Transaction Log';
   static const String virtualCardLog = 'Virtual Card Log';
   static const String settings = 'Settings';
   static const String helpCenter = 'Help Center';
   static const String privacyPolicy = 'Privacy & Policy';
   static const String aboutUs = 'About Us';
+  static const String colnelArichart = 'Colnel Arichart';
+  static const String colnelGmail= 'Colnelarichart@gmail.com';
   static const String signOut = 'Sign Out';
+  static const String savedReceipients = 'Saved Receipients';
+  static const String giftcardLog = 'Giftcard Log';
+  static const String billPaymentLog = 'Bill Payment Log';
+  static const String mobileTopUpLog = 'Mobile Top Up LogOut';
 
   //setting
   static const String changePassword = 'Change Password';

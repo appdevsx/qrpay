@@ -20,6 +20,13 @@ import 'package:qrpay/views/categories_screen/virtual_card_screens/details_scree
 import 'package:qrpay/views/categories_screen/virtual_card_screens/found_screen.dart';
 import 'package:qrpay/views/categories_screen/virtual_card_screens/transaction_screen.dart';
 import 'package:qrpay/views/categories_screen/virtual_card_screens/virtual_card_screen.dart';
+import 'package:qrpay/views/drawer_screens/bill_payment_log_screen.dart';
+import 'package:qrpay/views/drawer_screens/giftcard_log_screen.dart';
+import 'package:qrpay/views/drawer_screens/mobile_topup_log_screen.dart';
+import 'package:qrpay/views/drawer_screens/save_receipient_screen.dart';
+import 'package:qrpay/views/drawer_screens/settings/change_password_screen.dart';
+import 'package:qrpay/views/drawer_screens/settings/settings_screen.dart';
+import 'package:qrpay/views/drawer_screens/transactions_log_screen.dart';
 import 'package:qrpay/views/onboard/onboard_screen.dart';
 import 'package:qrpay/views/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
@@ -141,7 +148,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.foundScreen,
-      page: () =>  FoundScreen(),
+      page: () => FoundScreen(),
     ),
     GetPage(
       name: Routes.transactionScreen,
@@ -149,23 +156,54 @@ class Pages {
     ),
     GetPage(
       name: Routes.billPayScreen,
-      page: () =>  BillPayScreen(),
+      page: () => BillPayScreen(),
     ),
     GetPage(
       name: Routes.mobileTopUpScreen,
-      page: () =>  MobileTopUpScreen(),
+      page: () => MobileTopUpScreen(),
     ),
     GetPage(
       name: Routes.myGiftCardScreen,
-      page: () =>  const MyGiftCardScreen(),
+      page: () => const MyGiftCardScreen(),
     ),
     GetPage(
       name: Routes.buyGiftCardScreen,
-      page: () =>   BuyGiftCardScreen(),
+      page: () => BuyGiftCardScreen(),
     ),
-     GetPage(
+    GetPage(
       name: Routes.cardViewScreen,
-      page: () =>   CardViewScreen(),
+      page: () => CardViewScreen(),
+    ),
+
+    //drawer
+    GetPage(
+      name: Routes.saveReceipientScreen,
+      page: () => const SaveReceipientScreen(),
+    ),
+    GetPage(
+      name: Routes.transactionLogScreen,
+      page: () => const TransactionLogScreen(),
+    ),
+    GetPage(
+      name: Routes.giftCardLogScreen,
+      page: () => const GiftCardLogScreen(),
+    ),
+    GetPage(
+      name: Routes.billPaymentLogScreen,
+      page: () => const BillPaymentLogScreen(),
+    ),
+
+    GetPage(
+      name: Routes.mobileTopUpLogScreen,
+      page: () => const MobileTopUpLogScreen(),
+    ),
+    GetPage(
+      name: Routes.settingScreen,
+      page: () => const SettingScreen(),
+    ),
+    GetPage(
+      name: Routes.changePasswordScreen,
+      page: () => const ChangePasswordScreen(),
     ),
   ];
 }
