@@ -9,11 +9,15 @@ class Assets {
 
   //Bg
   static const String dashboard = 'assets/BG/dashboard.png';
+  static const String man1 = 'assets/BG/man1.png';
+  static const String man2 = 'assets/BG/man2.png';
+  static const String man3 = 'assets/BG/man3.png';
+  static const String man4 = 'assets/BG/man4.png';
+  static const String women = 'assets/BG/women.png';
   static const String buyCard = 'assets/BG/buyCard.png';
-  static const String drawerMenu = 'assets/BG/drawer_menu.png';
+  static const String drawerBg = 'assets/BG/drawerBg.png';
   static const String myWallett = 'assets/BG/my_wallet.svg';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
-  static const String drawerbg = 'assets/BG/drawerbg.svg';
 
   //Clipart
   static const String twoFaSecurity = 'assets/Clipart/2fa_security.svg';

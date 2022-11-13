@@ -26,7 +26,7 @@ class CustomDrawer extends StatelessWidget {
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage(Assets.drawerMenu), fit: BoxFit.cover),
+                image: AssetImage(Assets.drawerBg), fit: BoxFit.cover),
           ),
           child: ListView(
             children: [

@@ -329,6 +329,37 @@ class Strings {
   static const String billPaymentLog = 'Bill Payment Log';
   static const String mobileTopUpLog = 'Mobile Top Up Log';
 
+  //save receipient
+ static const String admanWarm="Adman Warm";
+ static const String admangmail="admanwarm@gmail.com";
+ static const String anthonyGolsambir="Anthony Golsambir";
+ static const String antonygmail="anthony@gmail.com";
+ static const String dostanZim="Dostan Zim";
+ static const String dostanZimgmail="zim@gmail.com";
+ static const String henryGems="Henry Gems";
+ static const String henryGemsGmail="henrygems@gmail.com";
+ static const String nagasuki="Nagasuki";
+ static const String nagasukigmail="nagasuki@gmail.com";
+ static const String sayokM="Sayok M.";
+ static const String sayokgmail="sayok@gmail.com ";
+ static const String zYaafil="Z. Yaafil";
+ static const String yaafilgmail="yaafil@gmail.com";
+ static const String wingston="Wingston";
+ static const String wingstonGmail="wingston@gmail.com";
+
+ //giftcard 
+ static const String buyCard='Buy Card';
+ static const String cN20236598='#CN-20236598';
+ static const String usd15='15.00 USD';
+ static const String usd5='5.00 USD';
+ static const String usd10='10.00 USD';
+ static const String redeemCard='Redeem Card';
+ static const String tMobileUS='T-Mobile US';
+ static const String verizon='Verizon';
+ static const String education='Education';
+ static const String gassBill='GassBill';
+ static const String internet='Internet';
+ static const String telephone='Telephone';
   //setting
   static const String changePassword = 'Change Password';
   static const String changeLanguage = 'Change Language';
