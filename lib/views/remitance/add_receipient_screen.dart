@@ -5,8 +5,6 @@ import 'package:get/get.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/bottom_sheet_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
-
-import '../../../controller/categories_controller/remitance_controller/add_receipient_controller.dart';
 import '../../../utils/assets.dart';
 import '../../../utils/custom_color.dart';
 import '../../../utils/custom_style.dart';
@@ -16,6 +14,7 @@ import '../../../widgets/button_widget/primary_button.dart';
 import '../../../widgets/input_widget/country_picker.dart';
 import '../../../widgets/input_widget/phone_number_input.dart';
 import '../../../widgets/input_widget/primary_input_widget.dart';
+import '../../controller/remitance_controller/add_receipient_controller.dart';
 
 final controller = Get.put(AddReceipientController());
 
@@ -146,8 +145,10 @@ class AddReceipientScreen extends StatelessWidget {
             ),
             //phone number code
             PhoneNumberWithCountryCodeInput(
+              suffix: SvgPicture.asset(Assets.inputRight),
               controller: controller.phoneNumberController,
-              hintText: Strings.phoneNumber,
+              hintText: "01774930284",
+              labelText: Strings.phoneNumber,
             ),
             addVerticalSpace(Dimensions.heightSize * 1.5)
           ],

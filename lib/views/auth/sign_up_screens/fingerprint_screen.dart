@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
@@ -7,7 +8,7 @@ import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/button_widget/primary_button.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
+import 'package:percent_indicator/percent_indicator.dart';
 import '../../../controller/auth/sign_up_controllers/finger_print_controller.dart';
 import '../../../utils/assets.dart';
 
@@ -57,11 +58,19 @@ class FingerPrintScreen extends StatelessWidget {
   _imgWidget(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: Dimensions.marginSize * 3.5,
+        vertical: Dimensions.marginSize * 3,
       ),
       child: Column(
         children: [
-          SvgPicture.asset(Assets.fingerlock),
+           CircularPercentIndicator(
+                      
+                  radius: 70.0,
+                  lineWidth: 5.0,
+                  percent: 0.4,
+                  backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
+                  center:   SvgPicture.asset(Assets.fingerlock),
+                  progressColor: CustomColor.primaryColor,
+           ),
           addVerticalSpace(Dimensions.heightSize * 2.4),
           Text(
             Strings.fourtyPercent,

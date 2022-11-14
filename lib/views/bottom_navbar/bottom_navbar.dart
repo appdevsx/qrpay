@@ -12,8 +12,8 @@ import '../../utils/strings.dart';
 import '../../widgets/bottom_navbar_widget/bottom_navbar_widget.dart';
 import '../../widgets/drawer_widget/custom_drawer_widget.dart';
 
+final controller = Get.put(DashBoardController());
 
-final controller=Get.put(DashBoardController());
 class BottomNavBarScreen extends StatelessWidget {
   final bottomNavBarController =
       Get.put(BottomNavBarController(), permanent: false);
@@ -26,9 +26,9 @@ class BottomNavBarScreen extends StatelessWidget {
       () => Scaffold(
         drawer: const CustomDrawer(),
         key: scaffoldKey,
-        // appBar:AppBar(bottom: ),
-        // extendBody: true,
-        backgroundColor: Colors.white,
+        appBar: appbarWidget(context),
+        extendBody: true,
+        backgroundColor: CustomColor.whiteColor,
         bottomNavigationBar:
             buildBottomNavigationMenu(context, bottomNavBarController),
         floatingActionButton: _midButtonWidget(context),
@@ -65,9 +65,9 @@ class BottomNavBarScreen extends StatelessWidget {
   appbarWidget(BuildContext context) {
     return AppBar(
       backgroundColor: bottomNavBarController.selectedIndex.value == 0
-          ? CustomColor.transparentColor
+          ? CustomColor.primaryColor.withOpacity(0.7)
           : CustomColor.whiteColor,
-      elevation: bottomNavBarController.selectedIndex.value == 0 ? 3 : 0,
+      elevation: bottomNavBarController.selectedIndex.value == 0 ? 0 : 3,
       centerTitle:
           bottomNavBarController.selectedIndex.value == 0 ? true : false,
       leading: bottomNavBarController.selectedIndex.value == 0
@@ -75,18 +75,23 @@ class BottomNavBarScreen extends StatelessWidget {
               onTap: () {
                 bottomNavBarController.onPressedMenuIcon();
               },
-              child: Padding(
-                padding: EdgeInsets.all(Dimensions.defaultPaddingSize * 0.65),
-                child: InkWell(
-                    onTap: () {
-                      scaffoldKey.currentState!.openDrawer();
-                    },
-                    child: SvgPicture.asset(
-                      Assets.menu,
-                      height: Dimensions.heightSize,
-                    )),
-              ),
-            )
+              child: InkWell(
+                  onTap: () {
+                    scaffoldKey.currentState!.openDrawer();
+                  },
+                  child:Padding(
+          padding: EdgeInsets.only(
+              left: Dimensions.defaultPaddingSize,
+              right: Dimensions.defaultPaddingSize * 0.2),
+          child: SvgPicture.asset(
+            Assets.menu,
+            height: 13,
+            width: 17,
+            color: CustomColor.whiteColor
+          ),
+        ),
+      ),
+          )
           : const BackButtonWidget(),
       title: bottomNavBarController.selectedIndex.value == 0
           ? Padding(
@@ -100,16 +105,21 @@ class BottomNavBarScreen extends StatelessWidget {
             ),
       actions: [
         bottomNavBarController.selectedIndex.value == 0
-            ? InkWell(
-                onTap: () {
-                  bottomNavBarController.onPressedNotification();
-                },
-                child: Padding(
-                  padding:
-                      EdgeInsets.only(right: Dimensions.defaultPaddingSize),
-                  child: SvgPicture.asset(Assets.notification),
-                ),
-              )
+            ? Padding(
+          padding: EdgeInsets.only(
+              top: Dimensions.defaultPaddingSize * 0.2,
+              right: Dimensions.defaultPaddingSize * 0.6),
+          child: InkWell(
+            onTap: (){
+              controller.onTapProfile();
+            },
+            child: CircleAvatar(
+              radius: 16,
+              backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
+              child: Image.asset(Assets.profile),
+            ),
+          ),
+        )
             : Container(),
       ],
     );

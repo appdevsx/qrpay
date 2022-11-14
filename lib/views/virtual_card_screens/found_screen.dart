@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:qrpay/controller/categories_controller/virtual_card_controller/found_controller.dart';
 import 'package:qrpay/utils/custom_color.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/size.dart';
@@ -12,6 +11,7 @@ import '../../../utils/assets.dart';
 import '../../../utils/dimensions.dart';
 import '../../../widgets/button_widget/primary_button.dart';
 import '../../../widgets/others/dashboard_appbar.dart';
+import '../../controller/virtual_card_controller/found_controller.dart';
 
 class FoundScreen extends StatelessWidget {
   FoundScreen({super.key});

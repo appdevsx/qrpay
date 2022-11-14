@@ -1,6 +1,10 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:image_picker/image_picker.dart';
 import 'package:qrpay/routes/routes.dart';
+import 'package:qrpay/utils/strings.dart';
 
 class KYCFromController extends GetxController {
   final firstNameController = TextEditingController();
@@ -27,10 +31,31 @@ class KYCFromController extends GetxController {
     super.dispose();
   }
 
+  RxString selectCityMethod = Strings.selectCity.obs;
+  List<String> selectCityList = ["Kabul", "Herat"];
   void onPressedSignIn() {
     Get.toNamed(Routes.signInScreen);
   }
 
+  File? image;
+  final picker = ImagePicker();
+  Future chooseFromGallery() async {
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      image = File(pickedFile.path);
+    } else {}
+    update();
+  }
+
+  Future chooseFromCamera() async {
+    final pickedFile = await picker.pickImage(source: ImageSource.camera);
+    if (pickedFile != null) {
+      image = File(pickedFile.path);
+    } else {}
+    update();
+  }
+
+  
   void onPressedUserAgriment() {}
 
   void onPressedPrivacy() {}

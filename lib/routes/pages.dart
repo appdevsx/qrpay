@@ -2,8 +2,8 @@
 
 import 'package:get/get.dart';
 import 'package:qrpay/controller/profile_controllers/two_factor_otp_controller.dart';
-import 'package:qrpay/views/auth/sign_in_screens/reset_password.dart';
-import 'package:qrpay/views/auth/sign_in_screens/sign_in_screen.dart';
+import 'package:qrpay/views/auth/sign_in_screen/reset_password.dart';
+import 'package:qrpay/views/auth/sign_in_screen/sign_in_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/facelock_enter_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/facelock_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/fingerprint_screen.dart';
@@ -28,8 +28,8 @@ import 'package:qrpay/views/profile_screens/update_kyc_screen.dart';
 import 'package:qrpay/views/profile_screens/update_profile_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
-import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
-import '../views/auth/sign_in_screens/signin_otp_verification.dart';
+import '../views/auth/sign_in_screen/sign_in_options_screen.dart';
+import '../views/auth/sign_in_screen/signin_otp_verification.dart';
 import '../views/bottom_navbar/bottom_navbar.dart';
 import '../views/bottom_navbar/dashboard_screen.dart';
 import '../views/buy_giftcard/buy_giftcard_screen.dart';

@@ -25,6 +25,7 @@ class Strings {
   static const String continues = 'Continue';
   static const String alreadyHaveAnAccount = 'Already have an account? ';
   static const String signIn = 'Sign In';
+  static const String signUp = 'Sign Up';
 
   //Otp verification
   static const String oTPVerification = 'OTP Verification';

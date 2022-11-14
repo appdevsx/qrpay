@@ -5,14 +5,13 @@ import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/bottom_sheet_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
-
-import '../../../controller/categories_controller/buy_giftcard_controller/card_view_controller.dart';
 import '../../../utils/assets.dart';
 import '../../../utils/custom_color.dart';
 import '../../../utils/custom_style.dart';
 import '../../../utils/size.dart';
 import '../../../widgets/button_widget/primary_button.dart';
 import '../../../widgets/others/item_count_widget.dart';
+import '../../controller/buy_giftcard_controller/card_view_controller.dart';
 
 class CardViewScreen extends StatelessWidget {
   CardViewScreen({super.key});

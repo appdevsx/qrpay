@@ -8,9 +8,8 @@ import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
-
-import '../../../controller/categories_controller/virtual_card_controller/virtual_card_controller.dart';
 import '../../../widgets/transaction_widget/recen_transaction_widget.dart';
+import '../../controller/virtual_card_controller/virtual_card_controller.dart';
 
 class VirtualCardScreen extends StatelessWidget {
   VirtualCardScreen({super.key});

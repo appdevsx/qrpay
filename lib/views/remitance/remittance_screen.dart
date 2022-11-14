@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:qrpay/controller/categories_controller/remitance_controller/remittance_controller.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/dimensions.dart';
@@ -12,6 +11,7 @@ import 'package:qrpay/widgets/others/bottom_sheet_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 
 import '../../../utils/custom_color.dart';
+import '../../controller/remitance_controller/remittance_controller.dart';
 
 class RemittanceScreen extends StatelessWidget {
   RemittanceScreen({super.key});

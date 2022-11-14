@@ -141,9 +141,11 @@ class UpdateProfileScreen extends StatelessWidget {
           ),
           //phone number code
           PhoneNumberWithCountryCodeInput(
-            controller: controller.phoneNumberController,
-            hintText: Strings.phoneNumber,
-          ),
+              suffix: SvgPicture.asset(Assets.inputRight),
+              controller: controller.phoneNumberController,
+              hintText: "01774930284",
+              labelText: Strings.phoneNumber,
+            ),
           addVerticalSpace(Dimensions.heightSize * 7)
         ],
       ),

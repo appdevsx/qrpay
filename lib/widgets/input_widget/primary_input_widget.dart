@@ -69,9 +69,10 @@ class _PrimaryInputWidgetState extends State<PrimaryInputWidget> {
               labelText: widget.labelText,
               hintText: widget.hintText,
               suffixIcon: Padding(
-                padding:  EdgeInsets.symmetric(
-                  vertical: Dimensions.defaultPaddingSize*0.3,
-                  horizontal: Dimensions.defaultPaddingSize*0.3
+                padding:  EdgeInsets.only(
+                  top: Dimensions.defaultPaddingSize*0.3,
+                  bottom: Dimensions.defaultPaddingSize*0.3,
+                  right: Dimensions.defaultPaddingSize*0.3
                 ),
                 child: widget.suffix,
               ),

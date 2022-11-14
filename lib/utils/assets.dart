@@ -19,7 +19,7 @@ class Assets {
   static const String drawerBg = 'assets/BG/drawerBg.png';
   static const String myWallett = 'assets/BG/my_wallet.png';
   static const String person1 = 'assets/BG/person1.png';
-  static const String idcard= 'assets/BG/idcard.png';
+  static const String idcard = 'assets/BG/idcard.png';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
 
   //Clipart
@@ -90,4 +90,5 @@ class Assets {
   static const String forwad = 'assets/Icon/forwad.svg';
   static const String person = 'assets/Icon/person.svg';
   static const String addimage = 'assets/Icon/addimage.svg';
+  static const String inputRight = 'assets/Icon/inputRight.svg';
 }

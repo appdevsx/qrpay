@@ -4,7 +4,7 @@ import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/categories_widget/buygift_card_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 
-import '../../../controller/categories_controller/buy_giftcard_controller/buy_giftcard_controller.dart';
+import '../../controller/buy_giftcard_controller/buy_giftcard_controller.dart';
 
 class BuyGiftCardScreen extends StatelessWidget {
   BuyGiftCardScreen({super.key});

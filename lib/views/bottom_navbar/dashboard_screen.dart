@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
-import 'package:qrpay/widgets/others/dashboard_appbar.dart';
 import 'package:qrpay/widgets/transaction_widget/recen_transaction_widget.dart';
 import '../../controller/bottom_navbar_controller/dashboard_controller.dart';
 import '../../utils/custom_color.dart';
@@ -38,49 +36,11 @@ class DashBordScreen extends StatelessWidget {
 
   _bodyWidget(BuildContext context) {
     return ListView(
+      physics: const BouncingScrollPhysics(),
       children: [
-        _customAppbar(context),
         _currentAmountWidget(context),
         _categoriesWidget(context),
         _recentTransactionWidget(context),
-      ],
-    );
-  }
-
-  _customAppbar(BuildContext context) {
-    return DashboardAppBar(
-      ledeaing: InkWell(
-        onTap: () {
-          scaffoldKey.currentState!.openDrawer();
-        },
-        child: Padding(
-          padding: EdgeInsets.only(
-              left: Dimensions.defaultPaddingSize,
-              right: Dimensions.defaultPaddingSize * 0.2),
-          child: SvgPicture.asset(
-            Assets.menu,
-            height: 13,
-            width: 17,
-          ),
-        ),
-      ),
-      title: Strings.qrpay,
-      actions: [
-        Padding(
-          padding: EdgeInsets.only(
-              top: Dimensions.defaultPaddingSize * 0.2,
-              right: Dimensions.defaultPaddingSize * 0.6),
-          child: InkWell(
-            onTap: (){
-              controller.onTapProfile();
-            },
-            child: CircleAvatar(
-              radius: 16,
-              backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
-              child: Image.asset(Assets.profile),
-            ),
-          ),
-        )
       ],
     );
   }

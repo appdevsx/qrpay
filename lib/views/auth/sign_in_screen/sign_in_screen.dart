@@ -31,18 +31,17 @@ class SignInScreen extends StatelessWidget {
   }
 
   _bodyWidget(BuildContext context) {
-    return Container(
+    return ListView(
       padding: EdgeInsets.symmetric(
         horizontal: Dimensions.defaultPaddingSize * 0.6,
       ),
-      child: ListView(
-        children: [
-          _logoWidget(context),
-          _textWidget(context),
-          _inputAndForgotWidget(context),
-          _buttonWidget(context),
-        ],
-      ),
+      physics: const BouncingScrollPhysics(),
+      children: [
+        _logoWidget(context),
+        _textWidget(context),
+        _inputAndForgotWidget(context),
+        _buttonWidget(context),
+      ],
     );
   }
 
@@ -150,7 +149,7 @@ class SignInScreen extends StatelessWidget {
                     onPressed: () {
                       controller.onPressedSignUP();
                     },
-                    text: Strings.signIn,
+                    text: Strings.signUp,
                   ),
                 ),
               ],
@@ -176,7 +175,7 @@ _openDialogue(BuildContext context) {
         builder: (context) {
           var width = MediaQuery.of(context).size.width;
           return Container(
-            width: width * 0.9,
+            width: width * 1,
             height: MediaQuery.of(context).size.height * 0.4,
             padding: EdgeInsets.all(Dimensions.defaultPaddingSize * 0.4),
             child: Column(

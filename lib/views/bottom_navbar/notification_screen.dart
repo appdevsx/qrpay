@@ -3,7 +3,6 @@ import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
-import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:qrpay/widgets/transaction_widget/notification_widget.dart';
 
 class NotificationScreen extends StatelessWidget {
@@ -12,7 +11,7 @@ class NotificationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(title: Strings.notification),
+    
       body: _bodyWidget(context),
     );
   }
