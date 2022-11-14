@@ -10,10 +10,13 @@ class SignUpController extends GetxController {
     phoneNumberController.dispose();
     super.dispose();
   }
-RxString countryCode = ''.obs;
+
+  RxString countryCode = ''.obs;
   void onPressedContinue() {
     Get.toNamed(Routes.otpVerificationScreen);
   }
 
-  void onPressedSignIn() {}
+  void onPressedSignIn() {
+    Get.toNamed(Routes.signInScreen);
+  }
 }

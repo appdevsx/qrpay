@@ -11,16 +11,8 @@ import 'package:qrpay/views/auth/sign_up_screens/kyc_from_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/otp_verification_screen.dart';
 import 'package:qrpay/views/auth/sign_up_screens/sign_up.dart';
 import 'package:qrpay/views/categories_screen/billpay_screen.dart';
-import 'package:qrpay/views/categories_screen/buy_giftcard/buy_giftcard_screen.dart';
-import 'package:qrpay/views/categories_screen/buy_giftcard/card_view_screen.dart';
 import 'package:qrpay/views/categories_screen/mobile_top_up_screen.dart';
 import 'package:qrpay/views/categories_screen/my_giftcard_screen.dart';
-import 'package:qrpay/views/categories_screen/remitance/add_receipient_screen.dart';
-import 'package:qrpay/views/categories_screen/remitance/remittance_screen.dart';
-import 'package:qrpay/views/categories_screen/virtual_card_screens/details_screen.dart';
-import 'package:qrpay/views/categories_screen/virtual_card_screens/found_screen.dart';
-import 'package:qrpay/views/categories_screen/virtual_card_screens/transaction_screen.dart';
-import 'package:qrpay/views/categories_screen/virtual_card_screens/virtual_card_screen.dart';
 import 'package:qrpay/views/drawer_screens/bill_payment_log_screen.dart';
 import 'package:qrpay/views/drawer_screens/giftcard_log_screen.dart';
 import 'package:qrpay/views/drawer_screens/mobile_topup_log_screen.dart';
@@ -34,20 +26,28 @@ import 'package:qrpay/views/profile_screens/profile_screen.dart';
 import 'package:qrpay/views/profile_screens/two_factor_secuirity_screen.dart';
 import 'package:qrpay/views/profile_screens/update_kyc_screen.dart';
 import 'package:qrpay/views/profile_screens/update_profile_screen.dart';
-import 'package:qrpay/views/categories_screen/scan_qr_screens/scan_qr_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screens/sign_in_options_screen.dart';
 import '../views/auth/sign_in_screens/signin_otp_verification.dart';
 import '../views/bottom_navbar/bottom_navbar.dart';
 import '../views/bottom_navbar/dashboard_screen.dart';
+import '../views/buy_giftcard/buy_giftcard_screen.dart';
+import '../views/buy_giftcard/card_view_screen.dart';
 import '../views/categories_screen/money_receive_screen.dart';
 import '../views/confirmation_screens/confirmation_screen.dart';
 import '../views/confirmation_screens/wait_for_aproval_screen.dart';
 import '../views/profile_screens/two_factor_otp_screen.dart';
-import '../views/categories_screen/scan_qr_screens/money_transfer_screen.dart';
-import '../views/categories_screen/scan_qr_screens/preview_screen.dart';
+import '../views/remitance/add_receipient_screen.dart';
+import '../views/remitance/remittance_screen.dart';
+import '../views/scan_qr_screens/money_transfer_screen.dart';
+import '../views/scan_qr_screens/preview_screen.dart';
+import '../views/scan_qr_screens/scan_qr_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
+import '../views/virtual_card_screens/details_screen.dart';
+import '../views/virtual_card_screens/found_screen.dart';
+import '../views/virtual_card_screens/transaction_screen.dart';
+import '../views/virtual_card_screens/virtual_card_screen.dart';
 import 'routes.dart';
 
 class Pages {
@@ -99,7 +99,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.signInScreen,
-      page: () => const SignInScreen(),
+      page: () => SignInScreen(),
     ),
     GetPage(
       name: Routes.signinOTPVerificationScreen,

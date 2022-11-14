@@ -17,10 +17,11 @@ import '../../../utils/dimensions.dart';
 import '../../../widgets/button_widget/custom_text_button.dart';
 
 final controller = Get.put(SignInController());
+final phoneNumberFormKey = GlobalKey<FormState>();
 
 class SignInScreen extends StatelessWidget {
-  const SignInScreen({super.key});
-
+  SignInScreen({super.key});
+  final signInFormKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -87,35 +88,38 @@ class SignInScreen extends StatelessWidget {
   }
 
   _inputAndForgotWidget(BuildContext context) {
-    return Column(
-      crossAxisAlignment: crossEnd,
-      children: [
-        CountryPhoneWidget(
-          controller: controller.countryPhoneController,
-          hintText: "XXX XXXX XXX",
-          labelText: Strings.phoneNumber,
-        ),
-        addVerticalSpace(Dimensions.heightSize * 1),
-        PrimaryInputWidget(
-          controller: controller.passwordController,
-          hintText: Strings.enterPassword,
-          labelText: Strings.password,
-        ),
-        addVerticalSpace(
-          Dimensions.heightSize * 0.3,
-        ),
-        InkWell(
-          onTap: () {
-            _openDialogue(context);
-          },
-          child: Text(Strings.forgotPasswordd,
-              style: GoogleFonts.inter(
-                fontSize: Dimensions.smallTextSize,
-                color: CustomColor.primaryColor,
-                fontWeight: FontWeight.w600,
-              )),
-        )
-      ],
+    return Form(
+      key: signInFormKey,
+      child: Column(
+        crossAxisAlignment: crossEnd,
+        children: [
+          CountryPhoneWidget(
+            controller: controller.countryPhoneController,
+            hintText: "XXX XXXX XXX",
+            labelText: Strings.phoneNumber,
+          ),
+          addVerticalSpace(Dimensions.heightSize * 1),
+          PrimaryInputWidget(
+            controller: controller.passwordController,
+            hintText: Strings.enterPassword,
+            labelText: Strings.password,
+          ),
+          addVerticalSpace(
+            Dimensions.heightSize * 0.3,
+          ),
+          InkWell(
+            onTap: () {
+              _openDialogue(context);
+            },
+            child: Text(Strings.forgotPasswordd,
+                style: GoogleFonts.inter(
+                  fontSize: Dimensions.smallTextSize,
+                  color: CustomColor.primaryColor,
+                  fontWeight: FontWeight.w600,
+                )),
+          )
+        ],
+      ),
     );
   }
 

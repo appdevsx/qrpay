@@ -18,6 +18,7 @@ class Assets {
   static const String redCard = 'assets/BG/redCard.png';
   static const String drawerBg = 'assets/BG/drawerBg.png';
   static const String myWallett = 'assets/BG/my_wallet.png';
+  static const String person1 = 'assets/BG/person1.png';
   static const String idcard= 'assets/BG/idcard.png';
   static const String virtualCard = 'assets/BG/virtual_Card.svg';
 
