@@ -11,6 +11,7 @@ import '../../utils/assets.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/size.dart';
 import '../../widgets/input_widget/country_picker.dart';
+import '../../widgets/input_widget/drop_down_input.dart';
 import '../../widgets/input_widget/phone_number_input.dart';
 import '../../widgets/input_widget/primary_input_widget.dart';
 
@@ -101,6 +102,13 @@ class UpdateProfileScreen extends StatelessWidget {
 
           //email address input
           PrimaryInputWidget(
+            suffix: Padding(
+              padding: EdgeInsets.symmetric(
+                  vertical: Dimensions.defaultPaddingSize * 0.1),
+              child: SvgPicture.asset(
+                Assets.inputRight,
+              ),
+            ),
             controller: controller.emailAddressController,
             hintText: Strings.enterEmailAddress,
             labelText: Strings.emailAddress,
@@ -120,11 +128,35 @@ class UpdateProfileScreen extends StatelessWidget {
           Row(
             children: [
               Expanded(
-                child: PrimaryInputWidget(
-                  controller: controller.selectCityController,
-                  hintText: Strings.selectCity,
-                  labelText: Strings.selectCity,
-                ),
+                child: Obx(() {
+                  return DropdownInputWidget(
+                    widget: DropdownButton(
+                      iconSize: Dimensions.heightSize * 2,
+                      dropdownColor: CustomColor.whiteColor,
+                      underline: Container(height: 0),
+                      items: controller.selectCityList
+                          .map<DropdownMenuItem<String>>((value) {
+                        return DropdownMenuItem<String>(
+                          value: value.toString(),
+                          child: Text(
+                            value.toString(),
+                            style: TextStyle(
+                              color: controller.selectCityMethod.value == value
+                                  ? CustomColor.primaryColor
+                                  : CustomColor.primaryColor,
+                            ),
+                          ),
+                        );
+                      }).toList(),
+                      onChanged: (String? value) {
+                        controller.selectCityMethod.value = value!;
+                      },
+                    ),
+                    controller: controller.selectCityController,
+                    hintText: controller.selectCityMethod.value,
+                    labelText: Strings.selectCity,
+                  );
+                }),
               ),
               addHorizontalSpace(Dimensions.widthSize * 2),
               Expanded(
@@ -141,12 +173,12 @@ class UpdateProfileScreen extends StatelessWidget {
           ),
           //phone number code
           PhoneNumberWithCountryCodeInput(
-              suffix: SvgPicture.asset(Assets.inputRight),
-              controller: controller.phoneNumberController,
-              hintText: "01774930284",
-              labelText: Strings.phoneNumber,
-            ),
-          addVerticalSpace(Dimensions.heightSize * 7)
+            suffix: SvgPicture.asset(Assets.inputRight),
+            controller: controller.phoneNumberController,
+            hintText: "01774930284",
+            labelText: Strings.phoneNumber,
+          ),
+          addVerticalSpace(Dimensions.heightSize * 8)
         ],
       ),
     );

@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:qrpay/controller/categories_controller/mobile_top_up_controller.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:qrpay/utils/assets.dart';
 import 'package:qrpay/utils/dimensions.dart';
@@ -372,7 +371,7 @@ class MobileTopUpScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: mainCenter,
               children: [
-                SvgPicture.asset(
+                Image.asset(
                   Assets.confirm,
                   height: Dimensions.heightSize * 9,
                   width: Dimensions.heightSize * 10,

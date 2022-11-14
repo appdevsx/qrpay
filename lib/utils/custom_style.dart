@@ -12,7 +12,7 @@ class CustomStyle {
   );
 
   static var defaultTitleTextTitle = GoogleFonts.inter(
-    color: CustomColor.secondaryTextColor,
+    color: CustomColor.textButtonColor,
     fontSize: Dimensions.largeTextSize,
     fontWeight: FontWeight.w600,
   );

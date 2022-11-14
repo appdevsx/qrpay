@@ -76,23 +76,23 @@ class BottomNavBarScreen extends StatelessWidget {
                 bottomNavBarController.onPressedMenuIcon();
               },
               child: InkWell(
-                  onTap: () {
-                    scaffoldKey.currentState!.openDrawer();
-                  },
-                  child:Padding(
-          padding: EdgeInsets.only(
-              left: Dimensions.defaultPaddingSize,
-              right: Dimensions.defaultPaddingSize * 0.2),
-          child: SvgPicture.asset(
-            Assets.menu,
-            height: 13,
-            width: 17,
-            color: CustomColor.whiteColor
-          ),
-        ),
-      ),
-          )
-          : const BackButtonWidget(),
+                onTap: () {
+                  scaffoldKey.currentState!.openDrawer();
+                },
+                child: Padding(
+                  padding: EdgeInsets.only(
+                      left: Dimensions.defaultPaddingSize,
+                      right: Dimensions.defaultPaddingSize * 0.2),
+                  child: SvgPicture.asset(Assets.menu,
+                      height: 13, width: 17, color: CustomColor.whiteColor),
+                ),
+              ),
+            )
+          : Padding(
+              padding:
+                  EdgeInsets.symmetric(vertical: Dimensions.marginSize * 0.1),
+              child: const BackButtonWidget(),
+            ),
       title: bottomNavBarController.selectedIndex.value == 0
           ? Padding(
               padding: EdgeInsets.all(Dimensions.defaultPaddingSize * 1.2),
@@ -106,20 +106,20 @@ class BottomNavBarScreen extends StatelessWidget {
       actions: [
         bottomNavBarController.selectedIndex.value == 0
             ? Padding(
-          padding: EdgeInsets.only(
-              top: Dimensions.defaultPaddingSize * 0.2,
-              right: Dimensions.defaultPaddingSize * 0.6),
-          child: InkWell(
-            onTap: (){
-              controller.onTapProfile();
-            },
-            child: CircleAvatar(
-              radius: 16,
-              backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
-              child: Image.asset(Assets.profile),
-            ),
-          ),
-        )
+                padding: EdgeInsets.only(
+                    top: Dimensions.defaultPaddingSize * 0.2,
+                    right: Dimensions.defaultPaddingSize * 0.6),
+                child: InkWell(
+                  onTap: () {
+                    controller.onTapProfile();
+                  },
+                  child: CircleAvatar(
+                    radius: 16,
+                    backgroundColor: CustomColor.primaryColor.withOpacity(0.2),
+                    child: Image.asset(Assets.profile),
+                  ),
+                ),
+              )
             : Container(),
       ],
     );

@@ -12,6 +12,7 @@ import '../../../utils/size.dart';
 import '../../../widgets/button_widget/primary_button.dart';
 import '../../../widgets/others/item_count_widget.dart';
 import '../../controller/buy_giftcard_controller/card_view_controller.dart';
+import '../../widgets/others/cardview_timelines.dart';
 
 class CardViewScreen extends StatelessWidget {
   CardViewScreen({super.key});
@@ -128,7 +129,12 @@ class CardViewScreen extends StatelessWidget {
         Text(
           Strings.cardDetails,
           style: CustomStyle.extraLargeBlackTextStyle,
-        )
+        ),
+        addVerticalSpace(Dimensions.heightSize),
+        Container(
+            alignment: Alignment.topLeft,
+            height: MediaQuery.of(context).size.height * 0.25,
+            child: const CardDetailsPage()),
       ],
     );
   }
@@ -141,6 +147,7 @@ class CardViewScreen extends StatelessWidget {
           Strings.buyNow,
           style: CustomStyle.extraLargeBlackTextStyle,
         ),
+        addVerticalSpace(Dimensions.heightSize),
         Container(
           margin: EdgeInsets.symmetric(
               horizontal: Dimensions.defaultPaddingSize * 0.2),
@@ -170,7 +177,9 @@ class CardViewScreen extends StatelessWidget {
           ),
         ),
         Container(
-          padding: EdgeInsets.only(top: Dimensions.defaultPaddingSize),
+          padding: EdgeInsets.only(
+            top: Dimensions.defaultPaddingSize * 0.8,
+          ),
           margin: EdgeInsets.symmetric(
               horizontal: Dimensions.defaultPaddingSize * 0.2),
           child: Row(
@@ -197,9 +206,8 @@ class CardViewScreen extends StatelessWidget {
       width: MediaQuery.of(context).size.width,
       padding:
           EdgeInsets.symmetric(vertical: Dimensions.defaultPaddingSize * 0.3),
-      margin: EdgeInsets.symmetric(
-        vertical: Dimensions.marginSize * 2,
-      ),
+      margin: EdgeInsets.only(
+          top: Dimensions.marginSize * 2, bottom: Dimensions.marginSize * 5),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(Dimensions.radius * 1.5),
         color: CustomColor.primaryColor.withOpacity(0.2),

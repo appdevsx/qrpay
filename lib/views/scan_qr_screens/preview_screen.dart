@@ -68,7 +68,7 @@ class PreviewScreen extends StatelessWidget {
           centerTitle: false,
           ledeaing: Container(
             padding:
-                EdgeInsets.symmetric(vertical: Dimensions.heightSize * 0.8),
+                EdgeInsets.symmetric(vertical: Dimensions.heightSize),
             child: GestureDetector(
               onTap: () {
                 Get.back();

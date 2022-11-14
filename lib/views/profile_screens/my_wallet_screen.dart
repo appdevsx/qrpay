@@ -33,7 +33,7 @@ class MyWalletScreen extends StatelessWidget {
 
   _cardWidget(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.27,
+      height: MediaQuery.of(context).size.height * 0.25,
       margin: EdgeInsets.symmetric(
           vertical: Dimensions.marginSize, horizontal: Dimensions.marginSize),
       decoration: BoxDecoration(

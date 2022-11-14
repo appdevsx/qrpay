@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
+import '../../utils/strings.dart';
+
 class UpdateProfileController extends GetxController{
   final firstNameController = TextEditingController();
   final lasstNameController = TextEditingController();
@@ -24,7 +26,8 @@ class UpdateProfileController extends GetxController{
     phoneNumberController.dispose();
     super.dispose();
   }
-
+  RxString selectCityMethod = Strings.selectCity.obs;
+  List<String> selectCityList = ["Kabul", "Herat"];
   File? image;
   final picker = ImagePicker();
   Future chooseFromGallery() async {

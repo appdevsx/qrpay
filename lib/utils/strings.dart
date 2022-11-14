@@ -358,7 +358,7 @@ class Strings {
   static const String tMobileUS = 'T-Mobile US';
   static const String verizon = 'Verizon';
   static const String education = 'Education';
-  static const String gassBill = 'GassBill';
+  static const String gassBill = 'Gass Bill';
   static const String internet = 'Internet';
   static const String telephone = 'Telephone';
   static const String trX9VW3SWKA9Y = 'TRX-6J9VW3SWKA9Y';
@@ -372,5 +372,6 @@ class Strings {
   static const String deleteAccount = 'Delete Account';
   static const String oldPassword = 'Old Password';
   static const String enterOldPassword = 'Enter Old Password';
-  static const String weAskForVerification = 'We’ll ask for a verification code via your security method if we notice a login from an unrecogn-ized device or browser. Enable your 2FA Security';
+  static const String weAskForVerification =
+      'We’ll ask for a verification code via your security method if we notice a login from an unrecogn-ized device or browser. Enable your 2FA Security';
 }

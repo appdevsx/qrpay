@@ -145,7 +145,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
-          addVerticalSpace(Dimensions.heightSize),
+          addVerticalSpace(Dimensions.heightSize*1.5),
           Row(
             children: [
               SvgPicture.asset(
@@ -164,7 +164,7 @@ class ProfileScreen extends StatelessWidget {
               ),
             ],
           ),
-          addVerticalSpace(Dimensions.heightSize),
+                   addVerticalSpace(Dimensions.heightSize*1.5),
           Row(
             children: [
               SvgPicture.asset(

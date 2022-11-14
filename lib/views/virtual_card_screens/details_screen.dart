@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qrpay/utils/custom_color.dart';
+import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
 import 'package:qrpay/utils/strings.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
+
+import '../../widgets/others/details_timelines_widget.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
@@ -18,13 +21,15 @@ class DetailsScreen extends StatelessWidget {
   }
 
   _bodyWidget(BuildContext context) {
-    return Padding(
+    return ListView(
+      physics: const BouncingScrollPhysics(),
       padding: EdgeInsets.symmetric(
         horizontal: Dimensions.defaultPaddingSize * 0.6,
       ),
-      child: Column(
-        children: [_cardWidget(context), _cardDetailsWidget(context)],
-      ),
+      children: [
+        _cardWidget(context),
+        _cardDetailsWidget(context),
+      ],
     );
   }
 
@@ -67,8 +72,16 @@ class DetailsScreen extends StatelessWidget {
 
   _cardDetailsWidget(BuildContext context) {
     return Column(
-      children: const [
-        Text("dsfkh"),
+      crossAxisAlignment: crossStart,
+      children: [
+        Text(
+          Strings.cardDetails,
+          style: CustomStyle.extraLargeBlackTextStyle,
+        ),
+        Container(
+            alignment: Alignment.topLeft,
+            height: MediaQuery.of(context).size.height * 0.6,
+            child: const DetailsTimelinesPage()),
       ],
     );
   }

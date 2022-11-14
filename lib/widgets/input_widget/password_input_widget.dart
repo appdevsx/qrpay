@@ -49,6 +49,7 @@ class _PrimaryInputWidgetState extends State<PasswordInputWidget> {
           height: 52,
           margin: EdgeInsets.only(top: Dimensions.marginSize * 0.6),
           child: TextFormField(
+            obscureText: isVisibility,
             textInputAction: TextInputAction.next,
             controller: widget.controller,
             onTap: () {

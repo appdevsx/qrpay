@@ -2,6 +2,7 @@ import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+import 'package:qrpay/controller/auth/sign_up_controllers/entered_faceloack_controller.dart';
 import 'package:qrpay/utils/custom_style.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/size.dart';
@@ -12,6 +13,8 @@ import 'package:qrpay/widgets/others/custom_appbar.dart';
 import '../../../controller/auth/sign_up_controllers/facelock_capture_controller.dart';
 import '../../../utils/assets.dart';
 import '../../../utils/custom_color.dart';
+
+final controller = Get.put(EnteredFacelockController());
 
 class FacelockEnterScreen extends StatelessWidget {
   FacelockEnterScreen({super.key});
@@ -71,7 +74,7 @@ class FacelockEnterScreen extends StatelessWidget {
 
             child: Container(
               alignment: Alignment.center,
-              margin: EdgeInsets.all(Dimensions.marginSize*0.3),
+              margin: EdgeInsets.all(Dimensions.marginSize * 0.3),
               height: MediaQuery.of(context).size.height * 0.25,
               width: MediaQuery.of(context).size.width * 0.5,
               decoration: const BoxDecoration(
@@ -81,9 +84,18 @@ class FacelockEnterScreen extends StatelessWidget {
                     ),
                     fit: BoxFit.cover),
               ),
-              child: SvgPicture.asset(
-                Assets.camera,
-                height: 20,
+              child: GestureDetector(
+                onTap: () {
+                  _openImageSourceOptions(context);
+                },
+                child: CircleAvatar(
+                  radius: 20,
+                  backgroundColor: CustomColor.blackColor.withOpacity(0.5),
+                  child: SvgPicture.asset(
+                    Assets.camera,
+                    height: 18,
+                  ),
+                ),
               ),
             ),
           ),
@@ -116,4 +128,84 @@ class FacelockEnterScreen extends StatelessWidget {
       ],
     );
   }
+}
+
+_openImageSourceOptions(BuildContext context) {
+  showGeneralDialog(
+      barrierLabel: MaterialLocalizations.of(context).modalBarrierDismissLabel,
+      barrierDismissible: true,
+      barrierColor: Colors.black.withOpacity(0.6),
+      transitionDuration: const Duration(milliseconds: 700),
+      context: context,
+      pageBuilder: (_, __, ___) {
+        return Material(
+          type: MaterialType.transparency,
+          child: Align(
+            alignment: Alignment.center,
+            child: Container(
+              height: Dimensions.heightSize * 13,
+              width: Dimensions.widthSize * 25,
+              decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(Dimensions.radius)),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        child: const Icon(
+                          Icons.camera_alt,
+                          size: 40.0,
+                          color: Colors.blue,
+                        ),
+                        onTap: () {
+                          controller.chooseFromCamera();
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      Text(
+                        'from Camera',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: Dimensions.smallTextSize),
+                      )
+                    ],
+                  ),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        child: const Icon(
+                          Icons.photo,
+                          size: 40.0,
+                          color: Colors.green,
+                        ),
+                        onTap: () {
+                          controller.chooseFromGallery();
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      Text(
+                        'From Gallery',
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: Dimensions.smallTextSize),
+                      )
+                    ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
+      },
+      transitionBuilder: (_, anim, __, child) {
+        return SlideTransition(
+          position: Tween(begin: const Offset(0, 1), end: const Offset(0, 0))
+              .animate(anim),
+          child: child,
+        );
+      });
 }

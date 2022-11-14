@@ -32,11 +32,8 @@ class RemittanceController extends GetxController {
     Strings.americanBank,
   ];
 //select city 
-   RxString selectCityMethod = "melbourne".obs;
-  List<String> selectCityList = [
-  "melbourne",
-  "sidney",
-  ];
+    RxString selectCityMethod = Strings.selectCity.obs;
+  List<String> selectCityList = ["Kabul", "Herat"];
 
    RxString selectStreetMethod = "adilade.N".obs;
   List<String> selectStreetList = [

@@ -12,6 +12,7 @@ import 'package:qrpay/widgets/others/custom_appbar.dart';
 
 import '../../../utils/custom_color.dart';
 import '../../controller/remitance_controller/remittance_controller.dart';
+import '../../widgets/input_widget/drop_down_input.dart';
 
 class RemittanceScreen extends StatelessWidget {
   RemittanceScreen({super.key});
@@ -196,11 +197,8 @@ class RemittanceScreen extends StatelessWidget {
             mainAxisAlignment: mainSpaceBet,
             children: [
               Expanded(
-                child: PrimaryInputWidget(
-                  controller: controller.selectCityCountryController,
-                  hintText: controller.selectCityMethod.value,
-                  labelText: Strings.selectCity,
-                  suffix: DropdownButton(
+                child: DropdownInputWidget(
+                  widget: DropdownButton(
                     iconSize: Dimensions.heightSize * 2,
                     dropdownColor: CustomColor.whiteColor,
                     underline: Container(height: 0),
@@ -213,7 +211,7 @@ class RemittanceScreen extends StatelessWidget {
                           style: TextStyle(
                             color: controller.selectCityMethod.value == value
                                 ? CustomColor.primaryColor
-                                : CustomColor.blackColor,
+                                : CustomColor.primaryColor,
                           ),
                         ),
                       );
@@ -222,17 +220,17 @@ class RemittanceScreen extends StatelessWidget {
                       controller.selectCityMethod.value = value!;
                     },
                   ),
+                  controller: controller.selectCityCountryController,
+                  hintText: controller.selectCityMethod.value,
+                  labelText: Strings.selectCity,
                 ),
               ),
               addHorizontalSpace(
                 Dimensions.widthSize,
               ),
               Expanded(
-                child: PrimaryInputWidget(
-                  controller: controller.selectStreetCountryController,
-                  hintText: controller.selectStreetMethod.value,
-                  labelText: Strings.selectStreet,
-                  suffix: DropdownButton(
+                child: DropdownInputWidget(
+                  widget: DropdownButton(
                     iconSize: Dimensions.heightSize * 2,
                     dropdownColor: CustomColor.whiteColor,
                     underline: Container(height: 0),
@@ -245,7 +243,7 @@ class RemittanceScreen extends StatelessWidget {
                           style: TextStyle(
                             color: controller.selectStreetMethod.value == value
                                 ? CustomColor.primaryColor
-                                : CustomColor.blackColor,
+                                : CustomColor.primaryColor,
                           ),
                         ),
                       );
@@ -254,6 +252,9 @@ class RemittanceScreen extends StatelessWidget {
                       controller.selectStreetMethod.value = value!;
                     },
                   ),
+                  controller: controller.selectStreetCountryController,
+                  hintText: controller.selectStreetMethod.value,
+                  labelText: Strings.selectCity,
                 ),
               ),
             ],
