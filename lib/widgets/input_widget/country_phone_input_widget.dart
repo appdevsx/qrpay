@@ -67,67 +67,67 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
             textAlign: TextAlign.left,
             style: CustomStyle.inputTextStyle,
             decoration: InputDecoration(
-                floatingLabelBehavior: FloatingLabelBehavior.always,
-                labelText: widget.labelText,
-                hintText: widget.hintText,
-                labelStyle: GoogleFonts.inter(
-                  color: focusNode!.hasFocus
-                      ? CustomColor.primaryColor
-                      : CustomColor.secondaryTextColor,
-                  fontSize: Dimensions.smallTextSize,
-                  fontWeight: FontWeight.w500,
-                ),
-                hintStyle: GoogleFonts.inter(
-                  color: focusNode!.hasFocus
-                      ? CustomColor.primaryColor.withOpacity(0.6)
-                      : CustomColor.borderColor,
-                  fontSize: Dimensions.smallTextSize,
-                  fontWeight: FontWeight.w600,
-                ),
-                enabledBorder: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(Dimensions.radius * 0.7),
-                    borderSide: BorderSide(
-                      color: focusNode!.hasFocus
-                          ? CustomColor.primaryColor
-                          : CustomColor.secondaryTextColor,
-                      width: 2,
-                    )),
-                focusedBorder: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(Dimensions.radius * 0.7),
-                    borderSide: const BorderSide(
-                      color: CustomColor.primaryColor,
-                      width: 2,
-                    )),
-                disabledBorder: OutlineInputBorder(
+              floatingLabelBehavior: FloatingLabelBehavior.always,
+              labelText: widget.labelText,
+              hintText: widget.hintText,
+              labelStyle: GoogleFonts.inter(
+                color: focusNode!.hasFocus
+                    ? CustomColor.primaryColor
+                    : CustomColor.secondaryTextColor,
+                fontSize: Dimensions.smallTextSize,
+                fontWeight: FontWeight.w500,
+              ),
+              hintStyle: GoogleFonts.inter(
+                color: focusNode!.hasFocus
+                    ? CustomColor.primaryColor.withOpacity(0.6)
+                    : CustomColor.borderColor,
+                fontSize: Dimensions.smallTextSize,
+                fontWeight: FontWeight.w600,
+              ),
+              enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
+                  borderSide: BorderSide(
+                    color: focusNode!.hasFocus
+                        ? CustomColor.primaryColor
+                        : CustomColor.secondaryTextColor,
+                    width: 2,
+                  )),
+              focusedBorder: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
                   borderSide: const BorderSide(
                     color: CustomColor.primaryColor,
                     width: 2,
-                  ),
+                  )),
+              disabledBorder: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
+                borderSide: const BorderSide(
+                  color: CustomColor.primaryColor,
+                  width: 2,
                 ),
-                contentPadding: EdgeInsets.zero,
-                prefixIcon: SizedBox(
-                  width: Dimensions.widthSize * 11,
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: CountryCodePicker(
-                            padding: EdgeInsets.zero,
-                            initialSelection: "US",
-                            flagWidth: 20),
-                      ),
-                      const Text(
-                        '|',
-                        style: TextStyle(color: CustomColor.primaryColor),
-                      ),
-                      addHorizontalSpace(Dimensions.widthSize * 0.2),
-                    ],
-                  ),
-                )),
+              ),
+              contentPadding: EdgeInsets.zero,
+              prefixIcon: SizedBox(
+                width: Dimensions.widthSize * 11,
+                child: Row(
+                  children: [
+                    CountryCodePicker(
+                      // flagDecoration: const BoxDecoration(
+                      //   shape: BoxShape.circle,
+                      // ),
+                      padding: const EdgeInsets.only(left: 0),
+                      initialSelection: "US",
+                    ),
+                    const Text(
+                      '|',
+                      style: TextStyle(color: CustomColor.primaryColor),
+                    ),
+                    addHorizontalSpace(Dimensions.widthSize * 0.1),
+                  ],
+                ),
+              ),
+            ),
           ),
-        )
+        ),
       ],
     );
   }
