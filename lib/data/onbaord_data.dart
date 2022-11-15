@@ -7,6 +7,7 @@ import '../widgets/onboard_widget/onboard_widget.dart';
 
 List<OnboardWidget> onboardData = [
   const OnboardWidget(
+    
     bgColor: CustomColor.whiteColor,
     img: Assets.onboard1,
     text1: Strings.easyFast,
