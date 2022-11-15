@@ -20,7 +20,11 @@ class Assets {
   static const String myWallett = 'assets/BG/my_wallet.png';
   static const String person1 = 'assets/BG/person1.png';
   static const String idcard = 'assets/BG/idcard.png';
-  static const String virtualCard = 'assets/BG/virtual_Card.svg';
+  static const String googleFront = 'assets/BG/googleFront.png';
+  static const String googleBack = 'assets/BG/googleBack.png';
+  static const String netflixBack = 'assets/BG/netflixBack.png';
+  static const String netflixFront = 'assets/BG/netflixFront.png';
+  static const String virtualCard = 'assets/BG/virtualCard.png';
 
   //Clipart
   static const String twoFaSecurity = 'assets/Clipart/2fa_security.png';

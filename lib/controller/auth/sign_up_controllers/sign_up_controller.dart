@@ -11,7 +11,7 @@ class SignUpController extends GetxController {
     super.dispose();
   }
 
-  RxString countryCode = '+1'.obs;
+  RxString countryCode = '    +1'.obs;
   void onPressedContinue() {
     Get.toNamed(Routes.otpVerificationScreen);
   }

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:qrpay/utils/dimensions.dart';
 import 'package:qrpay/utils/strings.dart';
@@ -35,39 +34,32 @@ class MyGiftCardScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: Dimensions.defaultPaddingSize * 0.1,
-        vertical: Dimensions.defaultPaddingSize * 0.1,
       ),
       child: FlipCard(
         fill: Fill.fillBack,
         direction: FlipDirection.HORIZONTAL,
         front: Container(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.31,
           margin: EdgeInsets.only(
             top: Dimensions.marginSize * 0.8,
             left: Dimensions.marginSize * 0.6,
             right: Dimensions.marginSize * 0.6,
           ),
           padding: EdgeInsets.symmetric(
-            horizontal: Dimensions.defaultPaddingSize * 0.7,
+            horizontal: Dimensions.defaultPaddingSize,
             vertical: Dimensions.defaultPaddingSize * 0.6,
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radius * 1.3),
-            color: CustomColor.blackColor,
+            image: const DecorationImage(
+              image: AssetImage(Assets.googleFront),
+              fit: BoxFit.cover,
+            ),
           ),
           child: Column(
-            mainAxisAlignment: mainSpaceBet,
+            crossAxisAlignment: crossStart,
             children: [
-              Row(
-                mainAxisAlignment: mainSpaceBet,
-                children: [
-                  Text(
-                    Strings.googlePlay,
-                    style: CustomStyle.addUsdTextStyle,
-                  ),
-                  SvgPicture.asset(Assets.playstore)
-                ],
-              ),
+              addVerticalSpace(Dimensions.heightSize * 6),
               Text(
                 "9864 1326 7135 3126",
                 style: TextStyle(
@@ -77,6 +69,7 @@ class MyGiftCardScreen extends StatelessWidget {
                   color: CustomColor.whiteColor.withOpacity(0.6),
                 ),
               ),
+              addVerticalSpace(Dimensions.heightSize * 2),
               Row(
                 mainAxisAlignment: mainSpaceBet,
                 children: [
@@ -112,7 +105,7 @@ class MyGiftCardScreen extends StatelessWidget {
           ),
         ),
         back: Container(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.31,
           margin: EdgeInsets.only(
             top: Dimensions.marginSize * 0.8,
             left: Dimensions.marginSize * 0.6,
@@ -120,14 +113,17 @@ class MyGiftCardScreen extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radius * 1.3),
-            color: CustomColor.blackColor,
+            image: const DecorationImage(
+              image: AssetImage(Assets.googleBack),
+              fit: BoxFit.cover,
+            ),
           ),
           child: Column(
             crossAxisAlignment: crossEnd,
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: Dimensions.defaultPaddingSize * 0.6,
+                  top: Dimensions.defaultPaddingSize * 1.1,
                   right: Dimensions.defaultPaddingSize * 0.6,
                 ),
                 child: Text(
@@ -136,13 +132,10 @@ class MyGiftCardScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                height: Dimensions.heightSize * 3.6,
-                color: CustomColor.whiteColor.withOpacity(0.2),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  vertical: Dimensions.defaultPaddingSize * 0.6,
-                  horizontal: Dimensions.defaultPaddingSize * 0.6,
+                padding: EdgeInsets.only(
+                  top: Dimensions.defaultPaddingSize * 2,
+                  left: Dimensions.defaultPaddingSize * 0.6,
+                  right: Dimensions.defaultPaddingSize * 0.6,
                 ),
                 child: Column(
                   crossAxisAlignment: crossStart,
@@ -201,39 +194,32 @@ class MyGiftCardScreen extends StatelessWidget {
     return Container(
       margin: EdgeInsets.symmetric(
         horizontal: Dimensions.defaultPaddingSize * 0.1,
-        vertical: Dimensions.defaultPaddingSize * 0.1,
       ),
       child: FlipCard(
         fill: Fill.fillBack,
         direction: FlipDirection.HORIZONTAL,
         front: Container(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.31,
           margin: EdgeInsets.only(
             top: Dimensions.marginSize * 0.8,
             left: Dimensions.marginSize * 0.6,
             right: Dimensions.marginSize * 0.6,
           ),
           padding: EdgeInsets.symmetric(
-            horizontal: Dimensions.defaultPaddingSize * 0.7,
+            horizontal: Dimensions.defaultPaddingSize,
             vertical: Dimensions.defaultPaddingSize * 0.6,
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radius * 1.3),
-            color: CustomColor.redColor,
+            image: const DecorationImage(
+              image: AssetImage(Assets.netflixBack),
+              fit: BoxFit.cover,
+            ),
           ),
           child: Column(
-            mainAxisAlignment: mainSpaceBet,
+            crossAxisAlignment: crossStart,
             children: [
-              Row(
-                mainAxisAlignment: mainSpaceBet,
-                children: [
-                  Text(
-                    Strings.netflix99,
-                    style: CustomStyle.addUsdTextStyle,
-                  ),
-                  SvgPicture.asset(Assets.netflix)
-                ],
-              ),
+              addVerticalSpace(Dimensions.heightSize * 6),
               Text(
                 "9864 1326 7135 3126",
                 style: TextStyle(
@@ -243,6 +229,7 @@ class MyGiftCardScreen extends StatelessWidget {
                   color: CustomColor.whiteColor.withOpacity(0.6),
                 ),
               ),
+              addVerticalSpace(Dimensions.heightSize * 2),
               Row(
                 mainAxisAlignment: mainSpaceBet,
                 children: [
@@ -278,7 +265,7 @@ class MyGiftCardScreen extends StatelessWidget {
           ),
         ),
         back: Container(
-          height: MediaQuery.of(context).size.height * 0.27,
+          height: MediaQuery.of(context).size.height * 0.31,
           margin: EdgeInsets.only(
             top: Dimensions.marginSize * 0.8,
             left: Dimensions.marginSize * 0.6,
@@ -286,14 +273,17 @@ class MyGiftCardScreen extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(Dimensions.radius * 1.3),
-            color: CustomColor.redColor,
+            image: const DecorationImage(
+              image: AssetImage(Assets.netflixFront),
+              fit: BoxFit.cover,
+            ),
           ),
           child: Column(
             crossAxisAlignment: crossEnd,
             children: [
               Padding(
                 padding: EdgeInsets.only(
-                  top: Dimensions.defaultPaddingSize * 0.6,
+                  top: Dimensions.defaultPaddingSize * 1.1,
                   right: Dimensions.defaultPaddingSize * 0.6,
                 ),
                 child: Text(
@@ -302,13 +292,10 @@ class MyGiftCardScreen extends StatelessWidget {
                 ),
               ),
               Container(
-                height: Dimensions.heightSize * 3.6,
-                color: CustomColor.whiteColor.withOpacity(0.2),
-              ),
-              Container(
-                padding: EdgeInsets.symmetric(
-                  vertical: Dimensions.defaultPaddingSize * 0.6,
-                  horizontal: Dimensions.defaultPaddingSize * 0.6,
+                padding: EdgeInsets.only(
+                  top: Dimensions.defaultPaddingSize * 2,
+                  left: Dimensions.defaultPaddingSize * 0.6,
+                  right: Dimensions.defaultPaddingSize * 0.6,
                 ),
                 child: Column(
                   crossAxisAlignment: crossStart,

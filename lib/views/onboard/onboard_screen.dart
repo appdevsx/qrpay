@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
-import 'package:qrpay/routes/routes.dart';
 import 'package:qrpay/widgets/onboard_widget/onboard_widget.dart';
 import '../../controller/onboard_controller/onboard_controller.dart';
 import '../../data/onbaord_data.dart';
@@ -16,11 +15,9 @@ final controller = Get.put(OnboardController());
 class OnboardSceen extends StatelessWidget {
   const OnboardSceen({super.key});
 
-  @override
   Widget _buildDot(int index) {
     double selectedness = Curves.easeOut.transform(
       max(
-        
         0.0,
         1.0 - ((controller.currentPage) - index).abs(),
       ),
@@ -31,8 +28,12 @@ class OnboardSceen extends StatelessWidget {
       child: Center(
         child: Material(
           color: controller.liquidController.currentPage == 0
-              ? Colors.grey
-              : Colors.white,
+              ? CustomColor.blackColor
+              : controller.liquidController.currentPage == 1
+                  ? CustomColor.whiteColor
+                  : controller.liquidController.currentPage == 2
+                      ? CustomColor.whiteColor
+                      : CustomColor.whiteColor,
           type: MaterialType.button,
           child: SizedBox(
             width: 8.0 * zoom,
@@ -69,17 +70,17 @@ class OnboardSceen extends StatelessWidget {
             positionSlideIcon: 0.8,
             slideIconWidget: InkWell(
               onTap: () {
-                Get.toNamed(Routes.signUpScreen);
+                controller.onTapIcon();
               },
               child: CircleAvatar(
                 radius: 17,
-                backgroundColor: controller.liquidController.currentPage == 0
+                backgroundColor: controller.liquidController.currentPage == 2
                     ? CustomColor.whiteColor
-                    : CustomColor.blackColor,
+                    : CustomColor.whiteColor.withOpacity(0.5),
                 child: CircleAvatar(
                   backgroundColor: controller.liquidController.currentPage == 0
                       ? CustomColor.primaryColor
-                      : CustomColor.whiteColor,
+                      : const Color(0xff5200FF),
                   radius: 15,
                   child: Icon(
                     Icons.arrow_forward_ios,
@@ -95,7 +96,7 @@ class OnboardSceen extends StatelessWidget {
             liquidController: controller.liquidController,
             fullTransitionValue: 880,
             enableSideReveal: true,
-            enableLoop: true,
+            enableLoop: false,
             ignoreUserGestureWhileAnimating: true,
           ),
           Padding(
@@ -134,7 +135,7 @@ class OnboardSceen extends StatelessWidget {
                   right: Dimensions.defaultPaddingSize),
               child: InkWell(
                 onTap: () {
-                  controller.skip();
+                  controller.onTapSkip();
                 },
                 child: Text(
                   Strings.skip,

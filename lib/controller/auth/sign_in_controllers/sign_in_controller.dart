@@ -4,11 +4,13 @@ import 'package:qrpay/routes/routes.dart';
 
 class SignInController extends GetxController {
   final countryPhoneController = TextEditingController();
+  final phoneController = TextEditingController();
   final passwordController = TextEditingController();
 
   @override
   void dispose() {
     countryPhoneController.dispose();
+    phoneController.dispose();
     passwordController.dispose();
     super.dispose();
   }

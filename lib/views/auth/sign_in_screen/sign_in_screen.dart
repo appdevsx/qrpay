@@ -204,7 +204,7 @@ _openDialogue(BuildContext context) {
                   ),
                 ),
                 CountryPhoneWidget(
-                  controller: controller.countryPhoneController,
+                  controller: controller.phoneController,
                   hintText: "XXX XXXX XXX",
                   labelText: Strings.phoneNumber,
                 ),

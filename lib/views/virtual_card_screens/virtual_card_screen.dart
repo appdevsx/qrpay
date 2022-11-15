@@ -32,90 +32,73 @@ class VirtualCardScreen extends StatelessWidget {
       children: [
         _cardWidget(context),
         _cardCategoriesWidget(context),
-        _recentTransWidget(context)
+        _recentTransWidget(context),
       ],
     );
   }
 
   _cardWidget(BuildContext context) {
-    return Card(
-      elevation: 4,
-      margin: EdgeInsets.only(top: Dimensions.marginSize),
-      shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(Dimensions.radius * 1.5)),
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.3,
-        padding: EdgeInsets.symmetric(
-          horizontal: Dimensions.defaultPaddingSize * 0.5,
-          vertical: Dimensions.defaultPaddingSize,
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.3,
+      padding: EdgeInsets.symmetric(
+        horizontal: Dimensions.defaultPaddingSize * 0.5,
+        vertical: Dimensions.defaultPaddingSize,
+      ),
+      decoration: BoxDecoration(
+        image: const DecorationImage(
+            image: AssetImage(Assets.virtualCard), fit: BoxFit.cover),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(Dimensions.radius * 1.5),
+          topRight: Radius.circular(Dimensions.radius * 1.5),
+          bottomLeft: Radius.circular(Dimensions.radius * 1.5),
+          bottomRight: Radius.circular(Dimensions.radius * 10),
         ),
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-              begin: Alignment.topLeft,
-              end: Alignment.bottomRight,
-              colors: [Color(0xff348DFD), Color(0xff0150B1)]),
-          borderRadius: BorderRadius.only(
-            topLeft: Radius.circular(Dimensions.radius * 1.5),
-            topRight: Radius.circular(Dimensions.radius * 1.5),
-            bottomLeft: Radius.circular(Dimensions.radius * 1.5),
-            bottomRight: Radius.circular(Dimensions.radius * 10),
+      ),
+      child: Column(
+        children: [
+          addVerticalSpace(Dimensions.heightSize * 5),
+          Text(
+            "9864 1326 7135 3126",
+            style: TextStyle(
+              fontFamily: "AgencyFB",
+              fontSize: 32,
+              fontWeight: FontWeight.w700,
+              color: CustomColor.whiteColor.withOpacity(0.6),
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: mainSpaceBet,
-          children: [
-            Row(
-              mainAxisAlignment: mainSpaceBet,
-              children: [
-                Text(
-                  Strings.qrpay,
-                  style: CustomStyle.recipientInformationTexStyle,
-                ),
-                SvgPicture.asset(Assets.scanqr)
-              ],
-            ),
-            Text(
-              "9864 1326 7135 3126",
-              style: TextStyle(
-                fontFamily: "AgencyFB",
-                fontSize: 32,
-                fontWeight: FontWeight.w700,
-                color: CustomColor.whiteColor.withOpacity(0.6),
+          addVerticalSpace(Dimensions.heightSize*2),
+          Row(
+            children: [
+              Column(
+                mainAxisAlignment: mainCenter,
+                children: [
+                  Text(
+                    Strings.nineElevent,
+                    style: CustomStyle.transactionTextStyle,
+                  ),
+                  Text(
+                    Strings.expiryDate,
+                    style: CustomStyle.expiryTextStyle,
+                  ),
+                ],
               ),
-            ),
-            Row(
-              children: [
-                Column(
-                  mainAxisAlignment: mainCenter,
-                  children: [
-                    Text(
-                      Strings.nineElevent,
-                      style: CustomStyle.transactionTextStyle,
-                    ),
-                    Text(
-                      Strings.expiryDate,
-                      style: CustomStyle.expiryTextStyle,
-                    ),
-                  ],
-                ),
-                addHorizontalSpace(Dimensions.widthSize * 6),
-                Column(
-                  mainAxisAlignment: mainCenter,
-                  children: [
-                    Text(
-                      Strings.nineSix,
-                      style: CustomStyle.transactionTextStyle,
-                    ),
-                    Text(
-                      Strings.cvc,
-                      style: CustomStyle.expiryTextStyle,
-                    ),
-                  ],
-                ),
-              ],
-            )
-          ],
-        ),
+              addHorizontalSpace(Dimensions.widthSize * 6),
+              Column(
+                mainAxisAlignment: mainCenter,
+                children: [
+                  Text(
+                    Strings.nineSix,
+                    style: CustomStyle.transactionTextStyle,
+                  ),
+                  Text(
+                    Strings.cvc,
+                    style: CustomStyle.expiryTextStyle,
+                  ),
+                ],
+              ),
+            ],
+          )
+        ],
       ),
     );
   }

@@ -18,7 +18,7 @@ class Routes {
   static const String dashBordScreen = '/dashBordScreen';
   static const String moneyTransferScreen = '/moneyTransferScreen';
   static const String previewScreen = '/previewScreen';
-  static const String scanQrScreen = '/scanQrScreen';
+  static const String scanQrScreen = '/ScanQrScreen';
   static const String moneyReceiveScreen = '/moneyReceiveScreen';
   static const String remittanceScreen = '/remittanceScreen';
   static const String addReceipientScreen = '/addReceipientScreen';
@@ -49,6 +49,7 @@ class Routes {
   static const String updateKycScreen = '/updateKycScreen';
   static const String twoFactorSecuirityScreen = '/twoFactorSecuirityScreen';
   static const String twoFactorOtpScreen = '/TwoFactorOtpScreen';
+  static const String scanScreen = '/ScanScreen';
   
 
 }

@@ -52,16 +52,6 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
           child: TextFormField(
             textInputAction: TextInputAction.next,
             controller: widget.controller,
-            onTap: () {
-              setState(() {
-                focusNode!.requestFocus();
-              });
-            },
-            onFieldSubmitted: (value) {
-              setState(() {
-                focusNode!.unfocus();
-              });
-            },
             focusNode: focusNode,
             textAlign: TextAlign.left,
             style: CustomStyle.inputTextStyle,
@@ -134,7 +124,7 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
                           decoration: InputDecoration(
                               contentPadding: EdgeInsets.zero,
                               border: InputBorder.none,
-                              hintText: "+1",
+                              hintText: "   +1",
                               hintStyle: CustomStyle.inputTextStyle),
                         ),
                       ),

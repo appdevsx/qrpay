@@ -26,6 +26,7 @@ import 'package:qrpay/views/profile_screens/profile_screen.dart';
 import 'package:qrpay/views/profile_screens/two_factor_secuirity_screen.dart';
 import 'package:qrpay/views/profile_screens/update_kyc_screen.dart';
 import 'package:qrpay/views/profile_screens/update_profile_screen.dart';
+import 'package:qrpay/views/scan_qr_screens/scanner_screen.dart';
 import '../binding/splash_binding.dart';
 import '../controller/splsh_controller/splash_controller.dart';
 import '../views/auth/sign_in_screen/sign_in_options_screen.dart';
@@ -42,7 +43,6 @@ import '../views/remitance/add_receipient_screen.dart';
 import '../views/remitance/remittance_screen.dart';
 import '../views/scan_qr_screens/money_transfer_screen.dart';
 import '../views/scan_qr_screens/preview_screen.dart';
-import '../views/scan_qr_screens/scan_qr_screen.dart';
 import '../views/splash_screen/splash_screen.dart';
 import '../views/virtual_card_screens/details_screen.dart';
 import '../views/virtual_card_screens/found_screen.dart';
@@ -63,7 +63,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.onboardScreen,
-      page: () => OnboardSceen(),
+      page: () => const OnboardSceen(),
     ),
     GetPage(
       name: Routes.signUpScreen,
@@ -131,7 +131,7 @@ class Pages {
     ),
     GetPage(
       name: Routes.scanQrScreen,
-      page: () => ScanQrScreen(),
+      page: () => const ScanQrScreen(),
     ),
     GetPage(
       name: Routes.moneyReceiveScreen,

@@ -2,31 +2,28 @@ import 'package:get/get.dart';
 import 'package:liquid_swipe/PageHelpers/LiquidController.dart';
 import 'package:qrpay/routes/routes.dart';
 
-
 class OnboardController extends GetxController {
-
-
-
   final liquidController = LiquidController();
 
   RxInt currentPage = 0.obs;
   pageChangeCallback(int activePageIndex) {
     currentPage.value = activePageIndex;
   }
-   skip()=>liquidController.jumpToPage(page: 2);
 
-
-
-void onPressdLiquidBUtton() {
+  void onTapSkip() {
     Get.toNamed(Routes.signUpScreen);
   }
 
+  void onTapIcon() {
+    Get.toNamed(Routes.signUpScreen);
+  }
 
+  // pageNavigate() {
+  //   Get.toNamed(Routes.signUpScreen);
+  // }
 
-
-
-
-
-
- 
+  // animatedNextSlide() {
+  //   int nextPage = liquidController.currentPage + 1;
+  //   liquidController.animateToPage(page: nextPage);
+  // }
 }
