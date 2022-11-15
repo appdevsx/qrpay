@@ -1,3 +1,4 @@
+import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:country_phone_code_picker/country_phone_code_picker.dart';
@@ -12,7 +13,7 @@ class CountryPhoneWidget extends StatefulWidget {
   final int maxLines;
   final Icon? prefixIcon;
   final TextEditingController controller;
-  const CountryPhoneWidget({
+  CountryPhoneWidget({
     Key? key,
     required this.controller,
     this.maxLines = 1,
@@ -23,11 +24,12 @@ class CountryPhoneWidget extends StatefulWidget {
 
   @override
   State<CountryPhoneWidget> createState() => _PrimaryInputWidgetState();
+
+  CountryController countryController = CountryController();
 }
 
 class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
   FocusNode? focusNode;
-  bool isVisibility = true;
   @override
   void initState() {
     super.initState();
@@ -50,8 +52,17 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
           height: 52,
           margin: EdgeInsets.only(top: Dimensions.marginSize * 0.6),
           child: TextFormField(
-            textInputAction: TextInputAction.next,
             controller: widget.controller,
+            onTap: () {
+              setState(() {
+                focusNode!.requestFocus();
+              });
+            },
+            onFieldSubmitted: (value) {
+              setState(() {
+                focusNode!.unfocus();
+              });
+            },
             focusNode: focusNode,
             textAlign: TextAlign.left,
             style: CustomStyle.inputTextStyle,
@@ -90,43 +101,22 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
                       width: 2,
                     )),
                 disabledBorder: OutlineInputBorder(
-                    borderRadius:
-                        BorderRadius.circular(Dimensions.radius * 0.7),
-                    borderSide: const BorderSide(
-                      color: CustomColor.primaryColor,
-                      width: 2,
-                    )),
-                contentPadding: EdgeInsets.only(
-                  left: Dimensions.widthSize * 1,
-                  top: Dimensions.heightSize * 0.4,
-                  bottom: Dimensions.heightSize * 0.4,
+                  borderRadius: BorderRadius.circular(Dimensions.radius * 0.7),
+                  borderSide: const BorderSide(
+                    color: CustomColor.primaryColor,
+                    width: 2,
+                  ),
                 ),
+                contentPadding: EdgeInsets.zero,
                 prefixIcon: SizedBox(
-                  width: Dimensions.widthSize * 12,
+                  width: Dimensions.widthSize * 11,
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Expanded(
-                        child: CountryPhoneCodePicker(
-                          enabledBorder: InputBorder.none,
-                          focusedBorder: InputBorder.none,
-                          flagHeight: 20,
-                          flagWidth: 20,
-                          style: const TextStyle(fontSize: 16),
-                          searchBarHintText: 'Search by name',
-                        ),
-                      ),
-                      Expanded(
-                        child: TextField(
-                          style: CustomStyle.inputTextStyle,
-                          keyboardType: TextInputType.number,
-                          cursorColor: CustomColor.primaryColor,
-                          decoration: InputDecoration(
-                              contentPadding: EdgeInsets.zero,
-                              border: InputBorder.none,
-                              hintText: "   +1",
-                              hintStyle: CustomStyle.inputTextStyle),
-                        ),
+                        child: CountryCodePicker(
+                            padding: EdgeInsets.zero,
+                            initialSelection: "US",
+                            flagWidth: 20),
                       ),
                       const Text(
                         '|',

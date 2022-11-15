@@ -107,9 +107,7 @@ class SignInScreen extends StatelessWidget {
             Dimensions.heightSize * 0.3,
           ),
           InkWell(
-            onTap: () {
-              _openDialogue(context);
-            },
+            onTap: () => _openDialogue(context),
             child: Text(Strings.forgotPasswordd,
                 style: GoogleFonts.inter(
                   fontSize: Dimensions.smallTextSize,

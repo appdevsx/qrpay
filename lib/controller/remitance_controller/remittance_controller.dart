@@ -31,17 +31,21 @@ class RemittanceController extends GetxController {
     Strings.americanBank,
     Strings.americanBank,
   ];
-//select city 
-    RxString selectCityMethod = Strings.selectCity.obs;
+//select city
+  RxString selectCityMethod = Strings.selectCity.obs;
   List<String> selectCityList = ["Kabul", "Herat"];
 
-   RxString selectStreetMethod = "adilade.N".obs;
+  RxString selectStreetMethod = "adilade.N".obs;
   List<String> selectStreetList = [
-   "adilade",
-   "road.N",
+    "adilade",
+    "road.N",
   ];
 
   void onTapADDPlus() {
     Get.toNamed(Routes.addReceipientScreen);
+  }
+
+  void onPresedbackToHome() {
+    Get.toNamed(Routes.bottomNavBarScreen);
   }
 }

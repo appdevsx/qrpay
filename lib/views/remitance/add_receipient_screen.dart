@@ -27,11 +27,10 @@ class AddReceipientScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: Strings.addReceipient),
       bottomSheet: CustomBottomShet(
-          img: Assets.person,
-          ontap: () {
-            showBottomSheet(context);
-          },
-          text: Strings.addReceipient),
+        img: Assets.person,
+        ontap: () {},
+        text: Strings.addReceipient,
+      ),
       body: _bodyWidget(context),
     );
   }

@@ -12,6 +12,7 @@ import 'package:qrpay/widgets/others/custom_appbar.dart';
 
 import '../../../utils/custom_color.dart';
 import '../../controller/remitance_controller/remittance_controller.dart';
+import '../../widgets/button_widget/primary_button.dart';
 import '../../widgets/input_widget/drop_down_input.dart';
 
 class RemittanceScreen extends StatelessWidget {
@@ -22,7 +23,9 @@ class RemittanceScreen extends StatelessWidget {
     return Scaffold(
       appBar: CustomAppBar(title: Strings.remittance),
       bottomSheet: CustomBottomShet(
-        ontap: () {},
+        ontap: () {
+          showBottomSheet(context);
+        },
         text: Strings.send,
         img: Assets.send,
       ),
@@ -109,7 +112,7 @@ class RemittanceScreen extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.center,
                   margin: EdgeInsets.only(top: Dimensions.marginSize * 0.4),
-                  height: Dimensions.heightSize * 3.9,
+                  height: Dimensions.heightSize * 3.6,
                   decoration: BoxDecoration(
                     color: CustomColor.primaryColor,
                     borderRadius: BorderRadius.circular(
@@ -264,6 +267,7 @@ class RemittanceScreen extends StatelessWidget {
     );
   }
 
+//sending amount
   _sendingAmountWidet(BuildContext context) {
     return Column(
       children: [
@@ -281,25 +285,20 @@ class RemittanceScreen extends StatelessWidget {
             addHorizontalSpace(Dimensions.widthSize * 0.5),
             Expanded(
               flex: 2,
-              child: GestureDetector(
-                onTap: () {
-                  controller.onTapADDPlus();
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: Dimensions.marginSize * 0.4),
-                  height: Dimensions.heightSize * 3.9,
-                  decoration: BoxDecoration(
-                    color: CustomColor.primaryColor,
-                    borderRadius: BorderRadius.circular(
-                      Dimensions.radius * 0.5,
-                    ),
+              child: Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: Dimensions.marginSize * 0.4),
+                height: Dimensions.heightSize * 3.5,
+                decoration: BoxDecoration(
+                  color: CustomColor.primaryColor,
+                  borderRadius: BorderRadius.circular(
+                    Dimensions.radius * 0.5,
                   ),
-                  child: Text(
-                    Strings.uSD,
-                    textAlign: TextAlign.center,
-                    style: CustomStyle.addUsdTextStyle,
-                  ),
+                ),
+                child: Text(
+                  Strings.uSD,
+                  textAlign: TextAlign.center,
+                  style: CustomStyle.addUsdTextStyle,
                 ),
               ),
             )
@@ -320,25 +319,20 @@ class RemittanceScreen extends StatelessWidget {
             addHorizontalSpace(Dimensions.widthSize * 0.5),
             Expanded(
               flex: 2,
-              child: GestureDetector(
-                onTap: () {
-                  controller.onTapADDPlus();
-                },
-                child: Container(
-                  alignment: Alignment.center,
-                  margin: EdgeInsets.only(top: Dimensions.marginSize * 0.4),
-                  height: Dimensions.heightSize * 3.9,
-                  decoration: BoxDecoration(
-                    color: CustomColor.primaryColor,
-                    borderRadius: BorderRadius.circular(
-                      Dimensions.radius * 0.5,
-                    ),
+              child: Container(
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(top: Dimensions.marginSize * 0.4),
+                height: Dimensions.heightSize * 3.5,
+                decoration: BoxDecoration(
+                  color: CustomColor.primaryColor,
+                  borderRadius: BorderRadius.circular(
+                    Dimensions.radius * 0.5,
                   ),
-                  child: Text(
-                    Strings.aud,
-                    textAlign: TextAlign.center,
-                    style: CustomStyle.addUsdTextStyle,
-                  ),
+                ),
+                child: Text(
+                  Strings.aud,
+                  textAlign: TextAlign.center,
+                  style: CustomStyle.addUsdTextStyle,
                 ),
               ),
             )
@@ -548,4 +542,52 @@ class RemittanceScreen extends StatelessWidget {
       ),
     );
   }
+
+  showBottomSheet(BuildContext context) => showModalBottomSheet<void>(
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(Dimensions.radius * 1.5),
+          topRight: Radius.circular(Dimensions.radius * 1.5),
+        )),
+        elevation: 0,
+        backgroundColor: CustomColor.whiteColor,
+        context: context,
+        builder: (BuildContext context) {
+          return Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(Dimensions.radius * 1.5),
+              topRight: Radius.circular(Dimensions.radius * 1.5),
+            )),
+            padding: EdgeInsets.all(Dimensions.marginSize * 0.9),
+            height: MediaQuery.of(context).size.height * 0.42,
+            child: Column(
+              mainAxisAlignment: mainCenter,
+              children: [
+                Image.asset(
+                  Assets.confirm,
+                  height: Dimensions.heightSize * 9,
+                  width: Dimensions.heightSize * 10,
+                ),
+                addVerticalSpace(Dimensions.heightSize),
+                Text(
+                  Strings.transferSuccess,
+                  style: CustomStyle.boldTitleTextStyle,
+                ),
+                Text(
+                  Strings.yourmoneySenSuccess,
+                  textAlign: TextAlign.center,
+                  style: CustomStyle.defaultSubTitleTextStyle,
+                ),
+                addVerticalSpace(Dimensions.heightSize * 2),
+                PrimaryButtonWidget(
+                    text: Strings.backtoHome,
+                    onPressed: () {
+                      controller.onPresedbackToHome();
+                    }),
+              ],
+            ),
+          );
+        },
+      );
 }

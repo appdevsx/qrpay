@@ -20,13 +20,14 @@ class MoneyTransferScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(title: Strings.moneyTransfer),
-     
-      bottomSheet:
-          CustomBottomShet(ontap: () {
-              controller.onpresedSend();
-          }, text: Strings.send, img: Assets.send,),
-
-           body: _bodyWidget(context),
+      bottomSheet: CustomBottomShet(
+        ontap: () {
+          controller.onpresedSend();
+        },
+        text: Strings.send,
+        img: Assets.send,
+      ),
+      body: _bodyWidget(context),
     );
   }
 
@@ -73,7 +74,7 @@ class MoneyTransferScreen extends StatelessWidget {
           mainAxisAlignment: mainCenter,
           children: [
             Expanded(
-              flex: 6,
+              flex: 9,
               child: PrimaryInputWidget(
                 controller: controller.amountController,
                 hintText: Strings.zero00,
@@ -84,10 +85,10 @@ class MoneyTransferScreen extends StatelessWidget {
               Dimensions.widthSize,
             ),
             Expanded(
-              flex: 3,
+              flex: 4,
               child: Container(
                 margin: EdgeInsets.only(top: Dimensions.marginSize * 0.33),
-                height: Dimensions.heightSize * 3.7,
+                height: Dimensions.heightSize * 3.5,
                 width: Dimensions.widthSize * 4,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(
@@ -104,11 +105,10 @@ class MoneyTransferScreen extends StatelessWidget {
                     ),
                     addHorizontalSpace(0),
                     DropdownButton(
-                      alignment: Alignment.topLeft,
                       iconEnabledColor: CustomColor.whiteColor,
                       iconSize: Dimensions.heightSize * 2,
                       dropdownColor: CustomColor.whiteColor,
-                      underline: Container(height: 0),
+                      underline: Container(),
                       items: controller.currencyList
                           .map<DropdownMenuItem<String>>((value) {
                         return DropdownMenuItem<String>(

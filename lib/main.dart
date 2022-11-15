@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
           primaryColor: CustomColor.primaryColor,
         ),
         navigatorKey: Get.key,
-        initialRoute: Routes.bottomNavBarScreen,
+        initialRoute: Routes.signInScreen,
         getPages: Pages.list,
         builder: (context, widget) {
           ScreenUtil.init(context);

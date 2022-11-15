@@ -39,9 +39,9 @@ class VirtualCardScreen extends StatelessWidget {
 
   _cardWidget(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * 0.3,
+      height: MediaQuery.of(context).size.height * 0.34,
       padding: EdgeInsets.symmetric(
-        horizontal: Dimensions.defaultPaddingSize * 0.5,
+        horizontal: Dimensions.defaultPaddingSize*0.7,
         vertical: Dimensions.defaultPaddingSize,
       ),
       decoration: BoxDecoration(
@@ -55,6 +55,7 @@ class VirtualCardScreen extends StatelessWidget {
         ),
       ),
       child: Column(
+        crossAxisAlignment: crossStart,
         children: [
           addVerticalSpace(Dimensions.heightSize * 5),
           Text(
@@ -66,7 +67,7 @@ class VirtualCardScreen extends StatelessWidget {
               color: CustomColor.whiteColor.withOpacity(0.6),
             ),
           ),
-          addVerticalSpace(Dimensions.heightSize*2),
+          addVerticalSpace(Dimensions.heightSize * 2),
           Row(
             children: [
               Column(
