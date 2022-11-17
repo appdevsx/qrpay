@@ -15,6 +15,7 @@ import 'package:qrpay/widgets/input_widget/phone_number_input.dart';
 import 'package:qrpay/widgets/input_widget/primary_input_widget.dart';
 import 'package:qrpay/widgets/others/custom_appbar.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:qrpay/widgets/others/custom_drop_down.dart';
 import '../../../controller/auth/sign_up_controllers/kyc_from_controller.dart';
 import '../../../widgets/button_widget/custom_text_button.dart';
 
@@ -102,28 +103,10 @@ class KYCFromScreen extends StatelessWidget {
               children: [
                 Expanded(
                   child: DropdownInputWidget(
-                    widget: DropdownButton(
-                      iconSize: Dimensions.heightSize * 2,
-                      dropdownColor: CustomColor.whiteColor,
-                      underline: Container(height: 0),
-                      items: controller.selectCityList
-                          .map<DropdownMenuItem<String>>((value) {
-                        return DropdownMenuItem<String>(
-                          value: value.toString(),
-                          child: Text(
-                            value.toString(),
-                            style: TextStyle(
-                              color: controller.selectCityMethod.value == value
-                                  ? CustomColor.primaryColor
-                                  : CustomColor.primaryColor,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        controller.selectCityMethod.value = value!;
-                      },
-                    ),
+                    widget: CustomDropDown(
+                        itemsList: controller.selectCityList,
+                        selectMethod: controller.selectCityMethod),
+                   
                     controller: controller.selectCityController,
                     hintText: controller.selectCityMethod.value,
                     labelText: Strings.selectCity,

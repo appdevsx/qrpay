@@ -26,8 +26,8 @@ class SignInOptionsScreen extends StatelessWidget {
   }
 
   _bodyWidget(BuildContext context) {
-    return Column(
-      mainAxisAlignment: mainCenter,
+    return ListView(
+      physics: const BouncingScrollPhysics(),
       children: [
         _logoWidget(context),
         _textWidget(context),
@@ -38,10 +38,15 @@ class SignInOptionsScreen extends StatelessWidget {
   }
 
   _logoWidget(BuildContext context) {
-    return Center(
-      child: Image.asset(
-        Assets.appLogo,
-        width: MediaQuery.of(context).size.width * 0.3,
+    return Container(
+      padding: EdgeInsets.only(
+        top: Dimensions.defaultPaddingSize,
+      ),
+      child: Center(
+        child: Image.asset(
+          Assets.appLogo,
+          width: MediaQuery.of(context).size.width * 0.3,
+        ),
       ),
     );
   }

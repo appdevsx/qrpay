@@ -1,4 +1,3 @@
-import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -66,35 +65,38 @@ class FacelockEnterScreen extends StatelessWidget {
       ),
       child: Column(
         children: [
-          DottedBorder(
-            color: CustomColor.primaryColor.withOpacity(0.6),
-            // dashPattern: const [100, 90],
-            dashPattern: const [90, 90, 100, 90],
-            strokeWidth: 5,
-
-            child: Container(
-              alignment: Alignment.center,
-              margin: EdgeInsets.all(Dimensions.marginSize * 0.3),
-              height: MediaQuery.of(context).size.height * 0.25,
-              width: MediaQuery.of(context).size.width * 0.5,
-              decoration: const BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage(
-                      Assets.person1,
-                    ),
-                    fit: BoxFit.cover),
+          Container(
+            alignment: Alignment.center,
+            margin: EdgeInsets.all(Dimensions.marginSize * 0.3),
+            height: MediaQuery.of(context).size.height * 0.25,
+            width: MediaQuery.of(context).size.width * 0.5,
+            decoration: const BoxDecoration(
+              border: Border(
+                top: BorderSide(
+                  color: Color(0xff6ae792),
+                  width: 3.0,
+                ),
+                bottom: BorderSide(
+                  color: Color(0xff6ae792),
+                  width: 3.0,
+                ),
               ),
-              child: GestureDetector(
-                onTap: () {
-                  _openImageSourceOptions(context);
-                },
-                child: CircleAvatar(
-                  radius: 20,
-                  backgroundColor: CustomColor.blackColor.withOpacity(0.5),
-                  child: SvgPicture.asset(
-                    Assets.camera,
-                    height: 18,
+              image: DecorationImage(
+                  image: AssetImage(
+                    Assets.person1,
                   ),
+                  fit: BoxFit.cover),
+            ),
+            child: GestureDetector(
+              onTap: () {
+                _openImageSourceOptions(context);
+              },
+              child: CircleAvatar(
+                radius: 20,
+                backgroundColor: CustomColor.blackColor.withOpacity(0.5),
+                child: SvgPicture.asset(
+                  Assets.camera,
+                  height: 18,
                 ),
               ),
             ),

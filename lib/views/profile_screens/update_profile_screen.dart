@@ -14,6 +14,7 @@ import '../../widgets/input_widget/country_picker.dart';
 import '../../widgets/input_widget/drop_down_input.dart';
 import '../../widgets/input_widget/phone_number_input.dart';
 import '../../widgets/input_widget/primary_input_widget.dart';
+import '../../widgets/others/custom_drop_down.dart';
 
 final controller = Get.put(UpdateProfileController());
 
@@ -130,28 +131,9 @@ class UpdateProfileScreen extends StatelessWidget {
               Expanded(
                 child: Obx(() {
                   return DropdownInputWidget(
-                    widget: DropdownButton(
-                      iconSize: Dimensions.heightSize * 2,
-                      dropdownColor: CustomColor.whiteColor,
-                      underline: Container(height: 0),
-                      items: controller.selectCityList
-                          .map<DropdownMenuItem<String>>((value) {
-                        return DropdownMenuItem<String>(
-                          value: value.toString(),
-                          child: Text(
-                            value.toString(),
-                            style: TextStyle(
-                              color: controller.selectCityMethod.value == value
-                                  ? CustomColor.primaryColor
-                                  : CustomColor.primaryColor,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        controller.selectCityMethod.value = value!;
-                      },
-                    ),
+                    widget: CustomDropDown(
+                        itemsList: controller.selectCityList,
+                        selectMethod: controller.selectCityMethod),
                     controller: controller.selectCityController,
                     hintText: controller.selectCityMethod.value,
                     labelText: Strings.selectCity,

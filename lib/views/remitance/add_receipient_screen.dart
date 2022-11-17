@@ -15,6 +15,8 @@ import '../../../widgets/input_widget/country_picker.dart';
 import '../../../widgets/input_widget/phone_number_input.dart';
 import '../../../widgets/input_widget/primary_input_widget.dart';
 import '../../controller/remitance_controller/add_receipient_controller.dart';
+import '../../widgets/input_widget/drop_down_input.dart';
+import '../../widgets/others/custom_drop_down.dart';
 
 final controller = Get.put(AddReceipientController());
 
@@ -101,32 +103,13 @@ class AddReceipientScreen extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: PrimaryInputWidget(
+                  child: DropdownInputWidget(
+                    widget: CustomDropDown(
+                        itemsList: controller.cityList,
+                        selectMethod: controller.selectCityMethod),
                     controller: controller.selectCityController,
-                    hintText: Strings.selectCity,
+                    hintText: controller.selectCityMethod.value,
                     labelText: Strings.selectCity,
-                    suffix: DropdownButton(
-                      iconSize: Dimensions.heightSize * 2,
-                      dropdownColor: CustomColor.whiteColor,
-                      underline: Container(height: 0),
-                      items: controller.cityList
-                          .map<DropdownMenuItem<String>>((value) {
-                        return DropdownMenuItem<String>(
-                          value: value.toString(),
-                          child: Text(
-                            value.toString(),
-                            style: TextStyle(
-                              color: controller.selectCityMethod.value == value
-                                  ? CustomColor.primaryColor
-                                  : CustomColor.blackColor,
-                            ),
-                          ),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        controller.selectCityMethod.value = value!;
-                      },
-                    ),
                   ),
                 ),
                 addHorizontalSpace(Dimensions.widthSize * 2),

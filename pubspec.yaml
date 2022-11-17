@@ -49,6 +49,7 @@ dependencies:
   flip_card: ^0.6.0
   qr_code_scanner: ^1.0.1
   carousel_slider: ^4.1.1
+  dropdown_button2: ^1.8.9
  
 
 dev_dependencies:

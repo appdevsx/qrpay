@@ -122,7 +122,7 @@ class MoneyTransferScreen extends StatelessWidget {
                             ),
                           ),
                         );
-                      }).toList(),
+                      },).toList(),
                       onChanged: (String? value) {
                         controller.selectCurrency.value = value!;
                       },

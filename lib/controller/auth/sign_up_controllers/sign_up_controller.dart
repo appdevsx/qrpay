@@ -17,6 +17,6 @@ class SignUpController extends GetxController {
   }
 
   void onPressedSignIn() {
-    Get.toNamed(Routes.signInOptionsScreen);
+    Get.toNamed(Routes.signInScreen);
   }
 }

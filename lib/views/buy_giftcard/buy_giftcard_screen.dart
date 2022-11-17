@@ -49,8 +49,6 @@ class DashboardSlider extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final h = MediaQuery.of(context).size.height;
-    final w = MediaQuery.of(context).size.width;
     return Obx(() {
       return Column(
         children: [
@@ -67,7 +65,7 @@ class DashboardSlider extends StatelessWidget {
               onPageChanged: (index, reason) {
                 controller.current.value = index; //! Custom Dot indicator State
               },
-              height: MediaQuery.of(context).size.height * 0.6,
+              height: MediaQuery.of(context).size.height * 0.53,
               viewportFraction: 1,
               initialPage: 1,
               enableInfiniteScroll: true,
@@ -79,34 +77,32 @@ class DashboardSlider extends StatelessWidget {
               scrollDirection: Axis.horizontal,
             ),
           ),
-          Align(
-            //! Custom Dot indicator Start
-            alignment: Alignment.topCenter,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: imgList.asMap().entries.map((entry) {
-                return controller.current.value == entry.key
-                    ? Container(
-                        width: Dimensions.widthSize,
-                        height: Dimensions.heightSize * 0.7,
-                        margin: EdgeInsets.symmetric(
-                            vertical: h * 0.008, horizontal: h * 0.006),
-                        decoration: const BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: CustomColor.primaryColor,
-                        ))
-                    : Container(
-                        width: Dimensions.widthSize,
-                        height: Dimensions.heightSize * 0.7,
-                        margin: EdgeInsets.symmetric(
-                            vertical: h * 0.008, horizontal: h * 0.006),
-                        decoration: BoxDecoration(
-                          border: Border.all(color: CustomColor.primaryColor),
-                          shape: BoxShape.circle,
-                        ),
-                      );
-              }).toList(),
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: imgList.asMap().entries.map((entry) {
+              return controller.current.value == entry.key
+                  ? Container(
+                      width: Dimensions.widthSize * 1.2,
+                      height: Dimensions.heightSize * 0.9,
+                      margin: EdgeInsets.symmetric(
+                          vertical: Dimensions.marginSize * 0.2,
+                          horizontal: Dimensions.marginSize * 0.2),
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: CustomColor.primaryColor,
+                      ))
+                  : Container(
+                      width: Dimensions.widthSize,
+                      height: Dimensions.heightSize * 0.7,
+                      margin: EdgeInsets.symmetric(
+                          vertical: Dimensions.marginSize * 0.2,
+                          horizontal: Dimensions.marginSize * 0.2),
+                      decoration: BoxDecoration(
+                        color: CustomColor.primaryColor.withOpacity(0.3),
+                        shape: BoxShape.circle,
+                      ),
+                    );
+            }).toList(),
           ),
         ],
       );

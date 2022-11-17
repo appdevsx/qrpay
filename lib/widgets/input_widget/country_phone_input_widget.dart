@@ -7,6 +7,7 @@ import '../../utils/custom_style.dart';
 import '../../utils/dimensions.dart';
 import '../../utils/size.dart';
 
+// ignore: must_be_immutable
 class CountryPhoneWidget extends StatefulWidget {
   final String labelText;
   final String hintText;

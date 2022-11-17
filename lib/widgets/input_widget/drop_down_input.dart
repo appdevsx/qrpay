@@ -17,7 +17,8 @@ class DropdownInputWidget extends StatefulWidget {
     this.maxLines = 1,
     this.suffix,
     required this.hintText,
-    required this.labelText, required this.widget,
+    required this.labelText,
+    required this.widget,
   }) : super(key: key);
 
   @override
@@ -46,7 +47,7 @@ class _PrimaryInputWidgetState extends State<DropdownInputWidget> {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          height: 52,
+          height: 47,
           margin: EdgeInsets.only(top: Dimensions.marginSize * 0.6),
           child: TextFormField(
             textInputAction: TextInputAction.next,
@@ -65,10 +66,9 @@ class _PrimaryInputWidgetState extends State<DropdownInputWidget> {
             textAlign: TextAlign.left,
             style: CustomStyle.inputTextStyle,
             decoration: InputDecoration(
-             floatingLabelBehavior: FloatingLabelBehavior.always,
+              floatingLabelBehavior: FloatingLabelBehavior.always,
               labelText: widget.labelText,
               hintText: widget.hintText,
-              
               suffixIcon: widget.widget,
               labelStyle: GoogleFonts.inter(
                 color: focusNode!.hasFocus
@@ -116,10 +116,3 @@ class _PrimaryInputWidgetState extends State<DropdownInputWidget> {
     );
   }
 }
-
-
-
-
-
-
-

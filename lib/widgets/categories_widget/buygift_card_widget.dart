@@ -15,9 +15,10 @@ class BuyGiftCardWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(
-        vertical: Dimensions.defaultPaddingSize,
-        horizontal: Dimensions.defaultPaddingSize * 0.6,
+      padding: EdgeInsets.only(
+        top: Dimensions.defaultPaddingSize,
+        left: Dimensions.defaultPaddingSize * 0.6,
+        right: Dimensions.defaultPaddingSize * 0.6,
       ),
       child: Column(
         children: [
@@ -30,7 +31,7 @@ class BuyGiftCardWidget extends StatelessWidget {
               ),
             ),
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.43,
+              height: MediaQuery.of(context).size.height * 0.42,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(Dimensions.radius * 1.5),
                 image: const DecorationImage(
@@ -129,7 +130,7 @@ class BuyGiftCardWidget extends StatelessWidget {
   _textWidget(BuildContext context) {
     return Container(
       margin: EdgeInsets.symmetric(
-        vertical: Dimensions.defaultPaddingSize * 0.2,
+        vertical: Dimensions.defaultPaddingSize * 0.1,
         horizontal: Dimensions.marginSize * 0.7,
       ),
       child: Column(
