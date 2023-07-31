@@ -75,7 +75,8 @@ class PreviewScreen extends StatelessWidget {
               },
               child: SvgPicture.asset(
                 Assets.backward,
-                color: CustomColor.whiteColor,
+                  colorFilter: const ColorFilter.mode(
+                      CustomColor.whiteColor, BlendMode.srcIn),
                 height: Dimensions.heightSize,
               ),
             ),
@@ -332,7 +333,8 @@ class PreviewScreen extends StatelessWidget {
               children: [
                 SvgPicture.asset(
                   Assets.send,
-                  color: CustomColor.whiteColor,
+             colorFilter: const ColorFilter.mode(
+                      CustomColor.whiteColor, BlendMode.srcIn),
                   height: Dimensions.heightSize * 1.5,
                   width: Dimensions.widthSize * 2,
                 ),

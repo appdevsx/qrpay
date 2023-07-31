@@ -1,20 +1,20 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:country_phone_code_picker/country_phone_code_picker.dart';
+// import 'package:country_phone_code_picker/country_phone_code_picker.dart';
 import '../../utils/custom_color.dart';
 import '../../utils/custom_style.dart';
 import '../../utils/dimensions.dart';
 import '../../utils/size.dart';
 
-// ignore: must_be_immutable
+
 class CountryPhoneWidget extends StatefulWidget {
   final String labelText;
   final String hintText;
   final int maxLines;
   final Icon? prefixIcon;
   final TextEditingController controller;
-  CountryPhoneWidget({
+ const CountryPhoneWidget({
     Key? key,
     required this.controller,
     this.maxLines = 1,
@@ -26,7 +26,7 @@ class CountryPhoneWidget extends StatefulWidget {
   @override
   State<CountryPhoneWidget> createState() => _PrimaryInputWidgetState();
 
-  CountryController countryController = CountryController();
+
 }
 
 class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
@@ -111,11 +111,11 @@ class _PrimaryInputWidgetState extends State<CountryPhoneWidget> {
                 width: Dimensions.widthSize * 11,
                 child: Row(
                   children: [
-                    CountryCodePicker(
+                    const CountryCodePicker(
                       // flagDecoration: const BoxDecoration(
                       //   shape: BoxShape.circle,
                       // ),
-                      padding: const EdgeInsets.only(left: 0),
+                      padding: EdgeInsets.only(left: 0),
                       initialSelection: "US",
                     ),
                     const Text(

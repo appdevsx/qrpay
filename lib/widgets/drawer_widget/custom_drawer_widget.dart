@@ -122,7 +122,8 @@ class CustomDrawer extends StatelessWidget {
               ),
               child: SvgPicture.asset(
                 icon,
-                color: CustomColor.whiteColor,
+                colorFilter: const ColorFilter.mode(
+                    CustomColor.whiteColor, BlendMode.srcIn),
                 height: 30,
                 width: 30,
               ),

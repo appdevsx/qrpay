@@ -155,7 +155,8 @@ class AddReceipientScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.addimage,
-                color: CustomColor.borderColor,
+              colorFilter: const ColorFilter.mode(
+                      CustomColor.borderColor, BlendMode.srcIn)
               ),
               addHorizontalSpace(
                 Dimensions.heightSize * 0.7,

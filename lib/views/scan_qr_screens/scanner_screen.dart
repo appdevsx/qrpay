@@ -150,7 +150,8 @@ class ScanScreenState extends State<ScanQrScreen> {
             backgroundColor: CustomColor.primaryColor,
             child: SvgPicture.asset(
               Assets.edit,
-              color: CustomColor.whiteColor,
+          colorFilter: const ColorFilter.mode(
+                  CustomColor.whiteColor, BlendMode.srcIn),
             ),
           ),
         ),
@@ -163,7 +164,8 @@ class ScanScreenState extends State<ScanQrScreen> {
             backgroundColor: CustomColor.primaryColor,
             child: SvgPicture.asset(
               Assets.scanqr,
-              color: CustomColor.whiteColor,
+                colorFilter:
+                  const ColorFilter.mode(CustomColor.whiteColor, BlendMode.srcIn),
             ),
           ),
         ),
@@ -172,7 +174,8 @@ class ScanScreenState extends State<ScanQrScreen> {
           backgroundColor: CustomColor.primaryColor,
           child: SvgPicture.asset(
             Assets.torch,
-            color: CustomColor.whiteColor,
+           colorFilter:
+                const ColorFilter.mode(CustomColor.whiteColor, BlendMode.srcIn),
           ),
         ),
       ]),

@@ -55,7 +55,7 @@ class BottomNavBarScreen extends StatelessWidget {
               },
               child: SvgPicture.asset(
                 Assets.scanqr,
-                color: Colors.white,
+                
               ),
             ),
           )),
@@ -84,7 +84,7 @@ class BottomNavBarScreen extends StatelessWidget {
                       left: Dimensions.defaultPaddingSize,
                       right: Dimensions.defaultPaddingSize * 0.2),
                   child: SvgPicture.asset(Assets.menu,
-                      height: 13, width: 17, color: CustomColor.whiteColor),
+                      height: 13, width: 17, colorFilter:const ColorFilter.mode(CustomColor.whiteColor,  BlendMode.srcIn) ),
                 ),
               ),
             )

@@ -5,7 +5,7 @@ import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
 
 // ignore: must_be_immutable
-class DashboardAppBar extends StatelessWidget with PreferredSizeWidget {
+class DashboardAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   final Size preferredSize;
 

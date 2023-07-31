@@ -39,9 +39,9 @@ bottomItemWidget(var icon, bottomNavBarController, page) {
       child: SvgPicture.asset(
         icon,
         
-        color: bottomNavBarController.selectedIndex.value == page
-            ? CustomColor.whiteColor
-            : CustomColor.whiteColor.withOpacity(0.5),
+        colorFilter: bottomNavBarController.selectedIndex.value == page
+            ?const ColorFilter.mode(CustomColor.whiteColor, BlendMode.srcIn)
+            : ColorFilter.mode(CustomColor.whiteColor.withOpacity(0.3), BlendMode.srcIn),
         height: 26,
       ),
     ),

@@ -94,7 +94,8 @@ class ProfileScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.mywallet,
-                color: CustomColor.primaryColor,
+                colorFilter: const ColorFilter.mode(
+                      CustomColor.primaryColor, BlendMode.srcIn)
               ),
               addHorizontalSpace(
                 Dimensions.widthSize * 3,
@@ -131,7 +132,8 @@ class ProfileScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.updateProfile,
-                color: CustomColor.primaryColor,
+                   colorFilter: const ColorFilter.mode(
+                      CustomColor.primaryColor, BlendMode.srcIn)
               ),
               addHorizontalSpace(Dimensions.widthSize * 3),
                GestureDetector (
@@ -150,7 +152,8 @@ class ProfileScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.updatekycForm,
-                color: CustomColor.primaryColor,
+                  colorFilter: const ColorFilter.mode(
+                      CustomColor.primaryColor, BlendMode.srcIn)
               ),
               addHorizontalSpace(Dimensions.widthSize * 3),
               GestureDetector (
@@ -169,7 +172,8 @@ class ProfileScreen extends StatelessWidget {
             children: [
               SvgPicture.asset(
                 Assets.twoFaSecurit,
-                color: CustomColor.primaryColor,
+                  colorFilter: const ColorFilter.mode(
+                      CustomColor.primaryColor, BlendMode.srcIn)
               ),
               addHorizontalSpace(Dimensions.widthSize * 3),
               GestureDetector (

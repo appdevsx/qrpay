@@ -6,11 +6,12 @@ import '../../utils/custom_color.dart';
 import '../../utils/dimensions.dart';
 
 class CustomBottomShet extends StatelessWidget {
-  const CustomBottomShet({super.key, required this.ontap, required this.text,  this.img});
+  const CustomBottomShet(
+      {super.key, required this.ontap, required this.text, this.img});
 
- final VoidCallback ontap;
- final String text;
- final String? img;
+  final VoidCallback ontap;
+  final String text;
+  final String? img;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -60,7 +61,8 @@ class CustomBottomShet extends StatelessWidget {
                   children: [
                     SvgPicture.asset(
                       img!,
-                      color: CustomColor.whiteColor,
+                      colorFilter: const ColorFilter.mode(
+                          CustomColor.whiteColor, BlendMode.srcIn),
                       height: Dimensions.heightSize * 1.5,
                       width: Dimensions.widthSize * 2,
                     ),
