@@ -63,11 +63,11 @@ flutter:
   
   # To add assets to your application, add an assets section, like this:
   assets:
-    - packages/qrpay/assets/BG/
-    - packages/qrpay/assets/Clipart/
-    - packages/qrpay/assets/Icon/
-    - packages/qrpay/assets/Onboard/
-    - packages/qrpay/assets/Logo/
+    - assets/BG/
+    - assets/Clipart/
+    - assets/Icon/
+    - assets/Onboard/
+    - assets/Logo/
 
 
   fonts:
