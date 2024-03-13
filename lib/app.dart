@@ -7,7 +7,7 @@ import 'package:qrpay/routes/routes.dart';
 import 'utils/custom_color.dart';
 import 'utils/strings.dart';
 
-void main() {
+void MyQrpay() {
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([

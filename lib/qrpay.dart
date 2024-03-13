@@ -1,3 +1,3 @@
 library qrpay;
 
-export 'main.dart';
+export 'app.dart';
